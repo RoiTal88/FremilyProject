@@ -1,0 +1,17 @@
+{
+  "name": "FinalProject",
+  "version": "0.0.0",
+  "description": "FremilyMainServer",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.12.1",
+    "mongoose": "^3.8.24"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

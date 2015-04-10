@@ -1,0 +1,9 @@
+{
+	familyName : "String",
+	parents : [{name : "Name" , gender : "Female/Male/null" , dateOfBirth : "Date of birth" },
+			   {name : "String" , gender : "Female/Male/null" , dateOfBirth : "String"}],
+	email: "User email",
+	password : "User password",
+	address : "Address",
+	numberOfChildren : "NUMBER",
+}

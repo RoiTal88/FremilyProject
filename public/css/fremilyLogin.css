@@ -1,0 +1,118 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 14/03/2015, 14:19:30
+    Author     : Barak
+*/
+
+.loginFields{
+    color: #E08917;
+    font-family: cursive;
+    font-size: 17px;
+}
+
+.inputText{
+    font-size: 16px;
+}
+
+#submitButton{
+    position:relative;
+    left: 40px;
+    background-color: #E08917;
+    padding: 2px 30px;
+    font: 13px sans-serif;
+    border: 1px solid #000;
+    border-color: #aaa #444 #444 #aaa;
+}
+
+#signupButton{
+    position:relative;
+    left: 60px;
+    background-color: #E08917;
+    padding: 2px 30px;
+    font: 13px sans-serif;
+    border: 1px solid #000;
+    border-color: #aaa #444 #444 #aaa;
+}
+
+.noInputAlert {
+  border:2px solid red;
+}
+
+#secondaryLogo{
+  position: absolute;
+  left: 40%;
+}
+
+#signUpTable, 
+#childreninfo{
+    border-collapse: separate;
+    border-spacing: 55px 25px;
+    display: none;
+}
+
+#welcome{
+    display: none;
+}
+
+#familyTypeTable{
+    border-collapse: separate;
+    border-spacing: 20px 5px;
+}
+
+.titles{
+    font-size: 30px;
+    font-family: cursive;
+    position: absolute;
+    left: 25%;
+}
+
+.subtitles{
+  font-size: 15px;
+  font-family: cursive;
+  position: absolute;
+  left: 30%;
+}
+
+.secondtitles{
+  font-size: 15px;
+  font-family: cursive;
+  position: absolute;
+  left: 20%;
+}
+
+#nextButton{
+    position:relative;
+    left: 210px;
+    top: 20px;
+    background-color: #E08917;
+    padding: 2px 30px;
+    font: 13px sans-serif;
+    border: 1px solid #000;
+    border-color: #aaa #444 #444 #aaa;
+}
+
+#previousButton{
+    position:relative;
+    left: 170px;
+    top: 20px;
+    background-color: #E08917;
+    padding: 2px 30px;
+    font: 13px sans-serif;
+    border: 1px solid #000;
+    border-color: #aaa #444 #444 #aaa;
+}
+
+#familyname{
+  color: chocolate;
+  font-size: 25px;
+  font-family: cursive;
+  position: absolute;
+  left: 15%;
+  top: 25%;
+}
+
+select { font-size:16px; }
