@@ -63,6 +63,7 @@ exports.signUpNewFamily = function(req,res){
 		activated :1 //change it afterwards to mail athentication
 	});
 	//set the parents
+	//just checking the source controlvf
 	for (var i = 0 ;  i < 2 ; i++)
 	{
 		newFamily.parents[i] = objects.PersonObj;
