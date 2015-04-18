@@ -33,3 +33,9 @@ exports.checkPasswordsValidity = function (str1 , str2)
 
 
 };
+
+exports.UploadPicture = function(req , res ){
+    //to get the files from the body of the request
+    //or to check how much files are in the req.
+    //
+};

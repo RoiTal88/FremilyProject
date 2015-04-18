@@ -1,8 +1,8 @@
 var objects = require('./objects.js');
 var mongoose = require('mongoose');
 var siteFiles = require('./siteFiles.js');
-var functionsModel = require('./mainJsFunctions.js')
-mongoose.connect('mongodb://localhost/FremilyDataBase');
+var mainFunctions = require('./mainJsFunctions.js');
+mongoose.conmainJsFunctionsnect('mongodb://localhost/FremilyDataBase');
 
 
 
@@ -25,7 +25,7 @@ exports.signUpNewFamily = function(req,res){
 	console.log("signing up new family");
 	console.log(req.body);
     //check password validity
-    if(functionsModel.checkPasswordsValidity(req.body.password1 , req.body.password2) == false)
+    if(mainFunctions.checkPasswordsValidity(req.body.password1 , req.body.password2) == false)
     {
         res.statusCode = 406;
         res.setHeader('Content-Type', 'application/json');
@@ -63,7 +63,7 @@ exports.signUpNewFamily = function(req,res){
 		activated :1 //change it afterwards to mail athentication
 	});
 	//set the parents
-	//just checking the source controlvf
+	//just checking the source controlvf;
 	for (var i = 0 ;  i < 2 ; i++)
 	{
 		newFamily.parents[i] = objects.PersonObj;

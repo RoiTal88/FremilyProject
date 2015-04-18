@@ -19,7 +19,8 @@ exports.FamilyObject = {
 	email : String,
 	numberOfChildren : Number ,
 	children : [] ,
-    familyProfilePicture : Image,
     //server
-	activated : Number
+	activated : Number,
+    profilePictureURL : String
+
 };
