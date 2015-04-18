@@ -18,10 +18,9 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-app.use(function (req, res, next){
-    multer({dest: './upload'});
-    next();
-});
+app.use(multer({dest: './upload' , inMemory : true}));
+
+
 //===================================================================================================
 
 //get requests
@@ -30,15 +29,10 @@ app.get('/' , function(req,res){
 	console.log("main page loading");
 	files.getFile(req,res,'public/index.html');
 });
-
-app.get('/signup' , function(req,res)
-{
+app.get('/signup' , function(req,res){
 	console.log('loading sign up page');
 	files.getFile(req,res,'public/signUpPage.html');
 });
-
-app.post('/uploadPicture', mainFunctions.UploadPicture(req, res);
-
 app.get('*', function(req,res){
 	console.log("file " + "public"+req.url/*req.url.slice(1 , req.url.length)*/);
 	files.getFile(req,res, "public"+req.url/*.slice(1 , req.url.length)*/);
@@ -49,8 +43,10 @@ app.get('*', function(req,res){
 app.post('/login', queries.userLogin);
 app.post('/nLogin' , queries.newUserLogin);
 app.post('/signUpNewFamily' , queries.signUpNewFamily);
+app.post('/profilePicture/:id', mainFunctions.ProfilePicture);
 
 var server = http.createServer(app);
+
 server.listen(80,function(){
 	console.log("Fremily server is listining on port 80 \n");
 });

@@ -1,5 +1,8 @@
 var underscoreJS = require('underscore');
 var stringUtils = require('string');
+var fs = require('fs');
+var dataBase = require('./databaseQueries');
+
 
 
 exports.checkPasswordsValidity = function (str1 , str2)
@@ -34,8 +37,14 @@ exports.checkPasswordsValidity = function (str1 , str2)
 
 };
 
-exports.UploadPicture = function(req , res ){
-    //to get the files from the body of the request
-    //or to check how much files are in the req.
-    //
+exports.ProfilePicture = function(req , res ){
+	var uploaderID = req.params.id;
+	var picture = req.files.profilePicture;
+
+
+	fs.writeFile('users/'+uploaderID+'/profilePic/'+picture.name,picture.buffer);
+	dataBase.updatePPicture(uploaderID ,picture.name , picture.originalname);
+
+
+
 };

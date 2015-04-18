@@ -49,9 +49,11 @@ exports.getFile = function(req , res , filePath){
 			}
 
 		});
-	}
+	};
 
 exports.setFamilyNewDirectory = function(familyId){
-	fs.mkdir('files/'+familyId);
-}
+	fs.mkdir('users/'+familyId);
+	fs.mkdir('users/'+familyId+'/profilePic');
+	fs.mkdir('users/'+familyId+'/createdEventsPic');
+};
 

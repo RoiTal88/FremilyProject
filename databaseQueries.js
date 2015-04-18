@@ -2,7 +2,7 @@ var objects = require('./objects.js');
 var mongoose = require('mongoose');
 var siteFiles = require('./siteFiles.js');
 var mainFunctions = require('./mainJsFunctions.js');
-mongoose.conmainJsFunctionsnect('mongodb://localhost/FremilyDataBase');
+mongoose.connect('mongodb://localhost/FremilyDataBase');
 
 
 
@@ -13,12 +13,14 @@ var schema = mongoose.Schema;
 //creating the new schema design
 var loginSchema = new schema(objects.UserLogin);
 var familySchema = new schema(objects.FamilyObject);
+var ppictureSchema = new schema(objects.PPicture);
 //=========================================================
 
 //+++++++++++++++++++MODELS+++++++++++++++++++++++++++++++
 //creating the model witch is the collection in the data base
 var loginModel = mongoose.model('login' , loginSchema);
 var familyModel = mongoose.model('family' , familySchema);
+var ppictureModel = mongoose.model('pPictures', ppictureSchema);
 //=========================================================
 //====================DATA BASE QUERIS=====================
 exports.signUpNewFamily = function(req,res){
@@ -168,5 +170,26 @@ utilityFunction.checkForDuplicatesEmail = function(emailString){
 	});
     return isDuplicate;
 };
+
+exports.updatePPicture = function(userID , name , realName){
+	ppictureModel.findOne({familyId : userID}, function(err, doc){
+		if(err)
+		{
+
+		}
+		else
+		{
+			if (doc == null)
+			{
+				doc = new ppictureModel();
+				doc.familyId = userID;
+			}
+			doc.pictureOriginalName = realName;
+			doc.pictureDBName = name;
+			doc.save();
+		}
+	});
+};
+
 
 //=========================================================

@@ -9,6 +9,14 @@ exports.PersonObj = {
 	gender : String
 };
 
+exports.PPicture = {
+	pictureOriginalName : String ,
+	pictureDBName :String ,
+	familyId : String
+};
+
+
+
 exports.FamilyObject = {
     //client
 	familyName : String,
