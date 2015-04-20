@@ -1,7 +1,7 @@
 var underscoreJS = require('underscore');
 var stringUtils = require('string');
 var fs = require('fs');
-var dataBase = require('./databaseQueries');
+var dataBase = require('../mongodb/databaseQueries.js');
 
 
 
@@ -41,9 +41,27 @@ exports.ProfilePicture = function(req , res ){
 	var uploaderID = req.params.id;
 	var picture = req.files.profilePicture;
 
-
-	fs.writeFile('users/'+uploaderID+'/profilePic/'+picture.name,picture.buffer);
-	dataBase.updatePPicture(uploaderID ,picture.name , picture.originalname);
+	var path = 'users/'+uploaderID+'/profilePic/'+picture.name;
+	
+	dataBase.updatePPicture(uploaderID , picture.name , picture.originalname , path,function(value){
+		switch(value){
+			case 1000:
+				fs.writeFile(path, picture.buffer, function(){});
+			    res.statusCode = 200;
+        		res.setHeader('Content-Type', 'application/json');
+				res.end();
+				break;
+			case 2002:
+			    res.statusCode = 404;
+    			res.setHeader('Content-Type', 'application/json');
+				res.end(JSON.stringify({error : 2002}));
+				break;
+			case 3000:
+       			res.statusCode = 500;
+        		res.setHeader('Content-Type', 'application/json');
+				res.end(JSON.stringify({error : 3000}));
+		}
+	});
 
 
 

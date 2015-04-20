@@ -1,0 +1,2872 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'mongoose',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json FinalProject@0.0.0 No repository field.
+6 warn package.json FinalProject@0.0.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'mongoose@^3.8.24', null ]
+9 verbose cache add name=undefined spec="mongoose@^3.8.24" args=["mongoose@^3.8.24",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'mongoose@^3.8.24',
+10 verbose parsed url   path: 'mongoose@^3.8.24',
+10 verbose parsed url   href: 'mongoose@^3.8.24' }
+11 warn package.json path@0.11.14 path is also the name of a node core module.
+12 verbose cache add name="mongoose" spec="^3.8.24" args=["mongoose","^3.8.24"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '^3.8.24',
+13 verbose parsed url   path: '^3.8.24',
+13 verbose parsed url   href: '^3.8.24' }
+14 verbose addNamed [ 'mongoose', '^3.8.24' ]
+15 verbose addNamed [ null, '>=3.8.24-0 <4.0.0-0' ]
+16 silly lockFile 4c067df3-mongoose-3-8-24 mongoose@^3.8.24
+17 verbose lock mongoose@^3.8.24 C:\Users\Rock\AppData\Roaming\npm-cache\4c067df3-mongoose-3-8-24.lock
+18 silly addNameRange { name: 'mongoose',
+18 silly addNameRange   range: '>=3.8.24-0 <4.0.0-0',
+18 silly addNameRange   hasData: false }
+19 verbose url raw mongoose
+20 verbose url resolving [ 'https://registry.npmjs.org/', './mongoose' ]
+21 verbose url resolved https://registry.npmjs.org/mongoose
+22 info trying registry request attempt 1 at 09:59:21
+23 verbose etag "A11IDB6DOOBRRQJVCJYGMY3SH"
+24 http GET https://registry.npmjs.org/mongoose
+25 http 304 https://registry.npmjs.org/mongoose
+26 silly registry.get cb [ 304,
+26 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:19 GMT',
+26 silly registry.get     server: 'Apache',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:19 GMT',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     etag: '"A11IDB6DOOBRRQJVCJYGMY3SH"',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-ams4130-AMS',
+26 silly registry.get     'x-cache': 'HIT',
+26 silly registry.get     'x-cache-hits': '1',
+26 silly registry.get     'x-timer': 'S1429513159.277273,VS0,VE177',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'content-length': '0',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 verbose etag mongoose from cache
+28 silly addNameRange number 2 { name: 'mongoose', range: '>=3.8.24-0 <4.0.0-0', hasData: true }
+29 silly addNameRange versions [ 'mongoose',
+29 silly addNameRange   [ '0.0.1',
+29 silly addNameRange     '0.0.2',
+29 silly addNameRange     '0.0.3',
+29 silly addNameRange     '0.0.4',
+29 silly addNameRange     '0.0.5',
+29 silly addNameRange     '1.0.0',
+29 silly addNameRange     '1.0.1',
+29 silly addNameRange     '1.0.2',
+29 silly addNameRange     '0.0.6',
+29 silly addNameRange     '1.0.3',
+29 silly addNameRange     '1.0.4',
+29 silly addNameRange     '1.0.5',
+29 silly addNameRange     '1.0.6',
+29 silly addNameRange     '1.0.7',
+29 silly addNameRange     '1.0.8',
+29 silly addNameRange     '1.0.10',
+29 silly addNameRange     '1.0.11',
+29 silly addNameRange     '1.0.12',
+29 silly addNameRange     '1.0.13',
+29 silly addNameRange     '1.0.14',
+29 silly addNameRange     '1.0.15',
+29 silly addNameRange     '1.0.16',
+29 silly addNameRange     '1.1.0',
+29 silly addNameRange     '1.1.1',
+29 silly addNameRange     '1.1.2',
+29 silly addNameRange     '1.1.3',
+29 silly addNameRange     '1.1.4',
+29 silly addNameRange     '1.1.5',
+29 silly addNameRange     '1.1.6',
+29 silly addNameRange     '1.1.7',
+29 silly addNameRange     '1.1.8',
+29 silly addNameRange     '1.1.9',
+29 silly addNameRange     '1.1.10',
+29 silly addNameRange     '1.1.11',
+29 silly addNameRange     '1.1.12',
+29 silly addNameRange     '1.1.13',
+29 silly addNameRange     '1.1.14',
+29 silly addNameRange     '1.1.15',
+29 silly addNameRange     '1.1.16',
+29 silly addNameRange     '1.1.17',
+29 silly addNameRange     '1.1.18',
+29 silly addNameRange     '1.1.19',
+29 silly addNameRange     '1.1.20',
+29 silly addNameRange     '1.1.21',
+29 silly addNameRange     '1.1.22',
+29 silly addNameRange     '1.1.23',
+29 silly addNameRange     '1.1.24',
+29 silly addNameRange     '1.1.25',
+29 silly addNameRange     '1.2.0',
+29 silly addNameRange     '1.3.0',
+29 silly addNameRange     '1.3.1',
+29 silly addNameRange     '1.3.2',
+29 silly addNameRange     '1.3.3',
+29 silly addNameRange     '1.3.4',
+29 silly addNameRange     '1.3.5',
+29 silly addNameRange     '1.3.6',
+29 silly addNameRange     '1.3.7',
+29 silly addNameRange     '1.4.0',
+29 silly addNameRange     '1.5.0',
+29 silly addNameRange     '1.6.0',
+29 silly addNameRange     '1.7.2',
+29 silly addNameRange     '1.7.3',
+29 silly addNameRange     '1.7.4',
+29 silly addNameRange     '1.8.0',
+29 silly addNameRange     '1.8.1',
+29 silly addNameRange     '1.8.2',
+29 silly addNameRange     '1.8.3',
+29 silly addNameRange     '1.8.4',
+29 silly addNameRange     '2.0.0',
+29 silly addNameRange     '2.0.1',
+29 silly addNameRange     '2.0.2',
+29 silly addNameRange     '2.0.3',
+29 silly addNameRange     '2.0.4',
+29 silly addNameRange     '2.1.0',
+29 silly addNameRange     '2.1.1',
+29 silly addNameRange     '2.1.2',
+29 silly addNameRange     '2.1.3',
+29 silly addNameRange     '2.1.4',
+29 silly addNameRange     '2.2.0',
+29 silly addNameRange     '2.2.1',
+29 silly addNameRange     '2.2.2',
+29 silly addNameRange     '2.2.3',
+29 silly addNameRange     '2.2.4',
+29 silly addNameRange     '2.3.0',
+29 silly addNameRange     '2.3.1',
+29 silly addNameRange     '2.3.2',
+29 silly addNameRange     '2.3.3',
+29 silly addNameRange     '2.3.4',
+29 silly addNameRange     '2.3.5',
+29 silly addNameRange     '2.3.6',
+29 silly addNameRange     '2.3.7',
+29 silly addNameRange     '2.3.8',
+29 silly addNameRange     '2.3.9',
+29 silly addNameRange     '2.3.10',
+29 silly addNameRange     '2.3.11',
+29 silly addNameRange     '2.3.12',
+29 silly addNameRange     '2.3.13',
+29 silly addNameRange     '2.4.0',
+29 silly addNameRange     '2.4.1',
+29 silly addNameRange     '2.4.2',
+29 silly addNameRange     '2.4.3',
+29 silly addNameRange     '2.4.4',
+29 silly addNameRange     '2.4.5',
+29 silly addNameRange     '2.4.6',
+29 silly addNameRange     '2.4.7',
+29 silly addNameRange     '2.4.8',
+29 silly addNameRange     '2.4.9',
+29 silly addNameRange     '2.4.10',
+29 silly addNameRange     '2.5.0',
+29 silly addNameRange     '2.5.1',
+29 silly addNameRange     '2.5.2',
+29 silly addNameRange     '2.5.3',
+29 silly addNameRange     '2.5.4',
+29 silly addNameRange     '2.5.5',
+29 silly addNameRange     '2.5.6',
+29 silly addNameRange     '2.5.7',
+29 silly addNameRange     '2.5.8',
+29 silly addNameRange     '2.5.9',
+29 silly addNameRange     '2.5.10',
+29 silly addNameRange     '2.5.11',
+29 silly addNameRange     '2.5.12',
+29 silly addNameRange     '2.5.13',
+29 silly addNameRange     '2.5.14',
+29 silly addNameRange     '2.6.0',
+29 silly addNameRange     '2.6.1',
+29 silly addNameRange     '2.6.2',
+29 silly addNameRange     '2.6.3',
+29 silly addNameRange     '2.6.4',
+29 silly addNameRange     '2.6.5',
+29 silly addNameRange     '2.6.6',
+29 silly addNameRange     '2.6.7',
+29 silly addNameRange     '2.6.8',
+29 silly addNameRange     '2.7.0',
+29 silly addNameRange     '2.7.1',
+29 silly addNameRange     '2.7.2',
+29 silly addNameRange     '2.7.4',
+29 silly addNameRange     '2.7.3',
+29 silly addNameRange     '3.0.0',
+29 silly addNameRange     '3.0.1',
+29 silly addNameRange     '3.0.2',
+29 silly addNameRange     '2.8.0',
+29 silly addNameRange     '3.0.3',
+29 silly addNameRange     '3.1.0',
+29 silly addNameRange     '2.8.1',
+29 silly addNameRange     '3.1.1',
+29 silly addNameRange     '2.8.2',
+29 silly addNameRange     '2.8.3',
+29 silly addNameRange     '2.9.0',
+29 silly addNameRange     '3.2.0',
+29 silly addNameRange     '2.9.1',
+29 silly addNameRange     '3.2.1',
+29 silly addNameRange     '2.9.2',
+29 silly addNameRange     '3.2.2',
+29 silly addNameRange     '3.3.0',
+29 silly addNameRange     '3.3.1',
+29 silly addNameRange     '2.9.3',
+29 silly addNameRange     '3.4.0',
+29 silly addNameRange     '2.9.4',
+29 silly addNameRange     '2.9.5',
+29 silly addNameRange     '3.5.0',
+29 silly addNameRange     '3.5.1',
+29 silly addNameRange     '3.5.2',
+29 silly addNameRange     '3.5.3',
+29 silly addNameRange     '2.9.6',
+29 silly addNameRange     '2.9.7',
+29 silly addNameRange     '3.5.4',
+29 silly addNameRange     '3.5.5',
+29 silly addNameRange     '2.9.8',
+29 silly addNameRange     '2.9.9',
+29 silly addNameRange     '3.5.6',
+29 silly addNameRange     '3.5.7',
+29 silly addNameRange     '3.5.8',
+29 silly addNameRange     '2.9.10',
+29 silly addNameRange     '3.5.9',
+29 silly addNameRange     '3.6.2',
+29 silly addNameRange     '3.5.10',
+29 silly addNameRange     '3.6.3',
+29 silly addNameRange     '3.5.11',
+29 silly addNameRange     '3.6.4',
+29 silly addNameRange     '3.6.5',
+29 silly addNameRange     '3.6.6',
+29 silly addNameRange     '3.6.7',
+29 silly addNameRange     '3.5.12',
+29 silly addNameRange     '3.6.8',
+29 silly addNameRange     '3.6.9',
+29 silly addNameRange     '3.6.10',
+29 silly addNameRange     '3.5.13',
+29 silly addNameRange     '3.5.14',
+29 silly addNameRange     '3.6.11',
+29 silly addNameRange     '3.6.12',
+29 silly addNameRange     '3.6.13',
+29 silly addNameRange     '3.6.14',
+29 silly addNameRange     '3.6.15',
+29 silly addNameRange     '3.5.15',
+29 silly addNameRange     '3.7.0',
+29 silly addNameRange     '3.6.16',
+29 silly addNameRange     '3.5.16',
+29 silly addNameRange     '3.6.17',
+29 silly addNameRange     '3.7.2',
+29 silly addNameRange     '3.0.0-alpha1',
+29 silly addNameRange     '3.0.0-alpha2',
+29 silly addNameRange     '3.0.0-rc0',
+29 silly addNameRange     '3.6.0-rc0',
+29 silly addNameRange     '3.6.0-rc1',
+29 silly addNameRange     '3.6.18',
+29 silly addNameRange     '3.7.3',
+29 silly addNameRange     '3.6.19',
+29 silly addNameRange     '3.6.20',
+29 silly addNameRange     '3.7.4',
+29 silly addNameRange     '3.8.0',
+29 silly addNameRange     '3.8.1',
+29 silly addNameRange     '3.8.2',
+29 silly addNameRange     '3.8.3',
+29 silly addNameRange     '3.8.4',
+29 silly addNameRange     '3.8.5',
+29 silly addNameRange     '3.8.6',
+29 silly addNameRange     '3.8.7',
+29 silly addNameRange     '3.8.8',
+29 silly addNameRange     '3.8.9',
+29 silly addNameRange     '3.8.10',
+29 silly addNameRange     '3.8.11',
+29 silly addNameRange     '3.9.0',
+29 silly addNameRange     '3.8.12',
+29 silly addNameRange     '3.8.13',
+29 silly addNameRange     '3.8.14',
+29 silly addNameRange     '3.8.15',
+29 silly addNameRange     '3.9.1',
+29 silly addNameRange     '3.8.16',
+29 silly addNameRange     '3.9.2',
+29 silly addNameRange     '3.8.17',
+29 silly addNameRange     '3.9.3',
+29 silly addNameRange     '3.8.18',
+29 silly addNameRange     '3.9.4',
+29 silly addNameRange     '3.8.19',
+29 silly addNameRange     '3.9.5',
+29 silly addNameRange     '3.8.20',
+29 silly addNameRange     '3.9.6',
+29 silly addNameRange     '3.8.21',
+29 silly addNameRange     '3.9.7',
+29 silly addNameRange     '3.8.22',
+29 silly addNameRange     '4.0.0-rc0',
+29 silly addNameRange     '4.0.0-rc1',
+29 silly addNameRange     '3.8.23',
+29 silly addNameRange     '4.0.0-rc2',
+29 silly addNameRange     '3.8.24',
+29 silly addNameRange     '4.0.0-rc3',
+29 silly addNameRange     '3.8.25',
+29 silly addNameRange     '4.0.0-rc4',
+29 silly addNameRange     '4.0.0',
+29 silly addNameRange     '4.0.1',
+29 silly addNameRange     '3.8.26' ] ]
+30 verbose addNamed [ 'mongoose', '3.9.7' ]
+31 verbose addNamed [ '3.9.7', '3.9.7' ]
+32 silly lockFile ec59f034-mongoose-3-9-7 mongoose@3.9.7
+33 verbose lock mongoose@3.9.7 C:\Users\Rock\AppData\Roaming\npm-cache\ec59f034-mongoose-3-9-7.lock
+34 silly lockFile ec59f034-mongoose-3-9-7 mongoose@3.9.7
+35 silly lockFile ec59f034-mongoose-3-9-7 mongoose@3.9.7
+36 silly lockFile 4c067df3-mongoose-3-8-24 mongoose@^3.8.24
+37 silly lockFile 4c067df3-mongoose-3-8-24 mongoose@^3.8.24
+38 silly resolved [ { name: 'mongoose',
+38 silly resolved     description: 'Mongoose MongoDB ODM',
+38 silly resolved     version: '3.9.7',
+38 silly resolved     author: { name: 'Guillermo Rauch', email: 'guillermo@learnboost.com' },
+38 silly resolved     keywords:
+38 silly resolved      [ 'mongodb',
+38 silly resolved        'document',
+38 silly resolved        'model',
+38 silly resolved        'schema',
+38 silly resolved        'database',
+38 silly resolved        'odm',
+38 silly resolved        'data',
+38 silly resolved        'datastore',
+38 silly resolved        'query',
+38 silly resolved        'nosql',
+38 silly resolved        'orm',
+38 silly resolved        'db' ],
+38 silly resolved     license: 'MIT',
+38 silly resolved     dependencies:
+38 silly resolved      { hooks: '0.3.2',
+38 silly resolved        mongodb: '1.4.12',
+38 silly resolved        ms: '0.1.0',
+38 silly resolved        sliced: '0.0.5',
+38 silly resolved        muri: '0.3.1',
+38 silly resolved        mpromise: '0.5.4',
+38 silly resolved        mpath: '0.1.1',
+38 silly resolved        kareem: '0.0.4',
+38 silly resolved        'regexp-clone': '0.0.1',
+38 silly resolved        mquery: '1.0.0',
+38 silly resolved        async: '0.9.0' },
+38 silly resolved     devDependencies:
+38 silly resolved      { acquit: '0.0.3',
+38 silly resolved        benchmark: '1.0.0',
+38 silly resolved        browserify: '4.1',
+38 silly resolved        co: '3.1.0',
+38 silly resolved        dox: '0.3.1',
+38 silly resolved        'highlight.js': '7.0.1',
+38 silly resolved        jade: '0.26.3',
+38 silly resolved        karma: '0.12.16',
+38 silly resolved        'karma-chai': '0.1.0',
+38 silly resolved        'karma-mocha': '0.1.4',
+38 silly resolved        'karma-chrome-launcher': '0.1.4',
+38 silly resolved        'karma-sauce-launcher': '0.2.8',
+38 silly resolved        markdown: '0.3.1',
+38 silly resolved        marked: '0.3.2',
+38 silly resolved        mocha: '1.20.0',
+38 silly resolved        'node-static': '0.5.9',
+38 silly resolved        open: '0.0.3',
+38 silly resolved        tbd: '0.6.4',
+38 silly resolved        'uglify-js': '2.4.15',
+38 silly resolved        underscore: '1.5.2' },
+38 silly resolved     directories: { lib: './lib/mongoose' },
+38 silly resolved     scripts: { test: 'set MONGOOSE_DISABLE_STABILITY_WARNING=1 && mocha --async-only test/*.test.js' },
+38 silly resolved     main: './index.js',
+38 silly resolved     engines: { node: '>=0.6.19' },
+38 silly resolved     bugs:
+38 silly resolved      { url: 'https://github.com/learnboost/mongoose/issues/new',
+38 silly resolved        email: 'mongoose-orm@googlegroups.com' },
+38 silly resolved     repository: { type: 'git', url: 'git://github.com/LearnBoost/mongoose.git' },
+38 silly resolved     publishConfig: { tag: 'unstable' },
+38 silly resolved     homepage: 'http://mongoosejs.com',
+38 silly resolved     browser: 'lib/browser.js',
+38 silly resolved     gitHead: '7e8bd5af7d2996eacc5f54b859906a9262614684',
+38 silly resolved     _id: 'mongoose@3.9.7',
+38 silly resolved     _shasum: 'b315e6ebe5cefcce3843504b791f038828048da6',
+38 silly resolved     _from: 'mongoose@^3.8.24',
+38 silly resolved     _npmVersion: '1.4.21',
+38 silly resolved     _npmUser: { name: 'vkarpov15', email: 'valkar207@gmail.com' },
+38 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+38 silly resolved     dist:
+38 silly resolved      { shasum: 'b315e6ebe5cefcce3843504b791f038828048da6',
+38 silly resolved        tarball: 'http://registry.npmjs.org/mongoose/-/mongoose-3.9.7.tgz' },
+38 silly resolved     _resolved: 'https://registry.npmjs.org/mongoose/-/mongoose-3.9.7.tgz',
+38 silly resolved     readme: 'ERROR: No README data found!' } ]
+39 info install mongoose@3.9.7 into C:\Users\Rock\Documents\GitHub\FremilyProject
+40 info installOne mongoose@3.9.7
+41 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose unbuild
+42 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\mongoose\3.9.7\package.tgz
+43 silly lockFile 660ef98e-ilyProject-node-modules-mongoose tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+44 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose C:\Users\Rock\AppData\Roaming\npm-cache\660ef98e-ilyProject-node-modules-mongoose.lock
+45 silly lockFile 07727e26-cache-mongoose-3-9-7-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mongoose\3.9.7\package.tgz
+46 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\mongoose\3.9.7\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\07727e26-cache-mongoose-3-9-7-package-tgz.lock
+47 silly gunzTarPerm modes [ '755', '644' ]
+48 silly gunzTarPerm extractEntry package.json
+49 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+50 silly gunzTarPerm extractEntry .npmignore
+51 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+52 silly gunzTarPerm extractEntry README.md
+53 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+54 silly gunzTarPerm extractEntry static.js
+55 silly gunzTarPerm modified mode [ 'static.js', 436, 420 ]
+56 silly gunzTarPerm extractEntry index.js
+57 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+58 silly gunzTarPerm extractEntry website.js
+59 silly gunzTarPerm modified mode [ 'website.js', 436, 420 ]
+60 silly gunzTarPerm extractEntry examples/README.md
+61 silly gunzTarPerm modified mode [ 'examples/README.md', 436, 420 ]
+62 silly gunzTarPerm extractEntry examples/doc-methods.js
+63 silly gunzTarPerm modified mode [ 'examples/doc-methods.js', 436, 420 ]
+64 silly gunzTarPerm extractEntry examples/statics/person.js
+65 silly gunzTarPerm modified mode [ 'examples/statics/person.js', 436, 420 ]
+66 silly gunzTarPerm extractEntry examples/statics/statics.js
+67 silly gunzTarPerm modified mode [ 'examples/statics/statics.js', 436, 420 ]
+68 silly gunzTarPerm extractEntry examples/express/README.md
+69 silly gunzTarPerm modified mode [ 'examples/express/README.md', 436, 420 ]
+70 silly gunzTarPerm extractEntry examples/express/connection-sharing/package.json
+71 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/package.json', 436, 420 ]
+72 silly gunzTarPerm extractEntry examples/express/connection-sharing/README.md
+73 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/README.md', 436, 420 ]
+74 silly gunzTarPerm extractEntry examples/express/connection-sharing/app.js
+75 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/app.js', 436, 420 ]
+76 silly gunzTarPerm extractEntry examples/express/connection-sharing/modelA.js
+77 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/modelA.js', 436, 420 ]
+78 silly gunzTarPerm extractEntry examples/express/connection-sharing/routes.js
+79 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/routes.js', 436, 420 ]
+80 silly gunzTarPerm extractEntry examples/geospatial/package.json
+81 silly gunzTarPerm modified mode [ 'examples/geospatial/package.json', 436, 420 ]
+82 silly gunzTarPerm extractEntry examples/geospatial/geoJSONSchema.js
+83 silly gunzTarPerm modified mode [ 'examples/geospatial/geoJSONSchema.js', 436, 420 ]
+84 silly gunzTarPerm extractEntry examples/geospatial/geoJSONexample.js
+85 silly gunzTarPerm modified mode [ 'examples/geospatial/geoJSONexample.js', 436, 420 ]
+86 silly gunzTarPerm extractEntry examples/geospatial/geospatial.js
+87 silly gunzTarPerm modified mode [ 'examples/geospatial/geospatial.js', 436, 420 ]
+88 silly gunzTarPerm extractEntry examples/geospatial/person.js
+89 silly gunzTarPerm modified mode [ 'examples/geospatial/person.js', 436, 420 ]
+90 silly gunzTarPerm extractEntry examples/globalschemas/gs_example.js
+91 silly gunzTarPerm modified mode [ 'examples/globalschemas/gs_example.js', 436, 420 ]
+92 silly gunzTarPerm extractEntry examples/globalschemas/person.js
+93 silly gunzTarPerm modified mode [ 'examples/globalschemas/person.js', 436, 420 ]
+94 silly gunzTarPerm extractEntry examples/lean/package.json
+95 silly gunzTarPerm modified mode [ 'examples/lean/package.json', 436, 420 ]
+96 silly gunzTarPerm extractEntry examples/lean/lean.js
+97 silly gunzTarPerm modified mode [ 'examples/lean/lean.js', 436, 420 ]
+98 silly gunzTarPerm extractEntry examples/lean/person.js
+99 silly gunzTarPerm modified mode [ 'examples/lean/person.js', 436, 420 ]
+100 silly gunzTarPerm extractEntry examples/aggregate/package.json
+101 silly gunzTarPerm modified mode [ 'examples/aggregate/package.json', 436, 420 ]
+102 silly gunzTarPerm extractEntry examples/aggregate/aggregate.js
+103 silly gunzTarPerm modified mode [ 'examples/aggregate/aggregate.js', 436, 420 ]
+104 silly gunzTarPerm extractEntry examples/aggregate/person.js
+105 silly gunzTarPerm modified mode [ 'examples/aggregate/person.js', 436, 420 ]
+106 silly gunzTarPerm extractEntry examples/population/population-across-three-collections.js
+107 silly gunzTarPerm modified mode [ 'examples/population/population-across-three-collections.js',
+107 silly gunzTarPerm   436,
+107 silly gunzTarPerm   420 ]
+108 silly gunzTarPerm extractEntry examples/population/population-basic.js
+109 silly gunzTarPerm modified mode [ 'examples/population/population-basic.js', 436, 420 ]
+110 silly gunzTarPerm extractEntry examples/population/population-of-existing-doc.js
+111 silly gunzTarPerm modified mode [ 'examples/population/population-of-existing-doc.js', 436, 420 ]
+112 silly gunzTarPerm extractEntry examples/population/population-of-multiple-existing-docs.js
+113 silly gunzTarPerm modified mode [ 'examples/population/population-of-multiple-existing-docs.js',
+113 silly gunzTarPerm   436,
+113 silly gunzTarPerm   420 ]
+114 silly gunzTarPerm extractEntry examples/population/population-options.js
+115 silly gunzTarPerm modified mode [ 'examples/population/population-options.js', 436, 420 ]
+116 silly gunzTarPerm extractEntry examples/population/population-plain-objects.js
+117 silly gunzTarPerm modified mode [ 'examples/population/population-plain-objects.js', 436, 420 ]
+118 silly gunzTarPerm extractEntry examples/promises/package.json
+119 silly gunzTarPerm modified mode [ 'examples/promises/package.json', 436, 420 ]
+120 silly gunzTarPerm extractEntry examples/promises/person.js
+121 silly gunzTarPerm modified mode [ 'examples/promises/person.js', 436, 420 ]
+122 silly gunzTarPerm extractEntry examples/promises/promise.js
+123 silly gunzTarPerm modified mode [ 'examples/promises/promise.js', 436, 420 ]
+124 silly gunzTarPerm extractEntry examples/querybuilder/package.json
+125 silly gunzTarPerm modified mode [ 'examples/querybuilder/package.json', 436, 420 ]
+126 silly gunzTarPerm extractEntry examples/querybuilder/person.js
+127 silly gunzTarPerm modified mode [ 'examples/querybuilder/person.js', 436, 420 ]
+128 silly gunzTarPerm extractEntry examples/querybuilder/querybuilder.js
+129 silly gunzTarPerm modified mode [ 'examples/querybuilder/querybuilder.js', 436, 420 ]
+130 silly gunzTarPerm extractEntry examples/replicasets/package.json
+131 silly gunzTarPerm modified mode [ 'examples/replicasets/package.json', 436, 420 ]
+132 silly gunzTarPerm extractEntry examples/replicasets/person.js
+133 silly gunzTarPerm modified mode [ 'examples/replicasets/person.js', 436, 420 ]
+134 silly gunzTarPerm extractEntry examples/replicasets/replica-sets.js
+135 silly gunzTarPerm modified mode [ 'examples/replicasets/replica-sets.js', 436, 420 ]
+136 silly gunzTarPerm extractEntry examples/schema/schema.js
+137 silly gunzTarPerm modified mode [ 'examples/schema/schema.js', 436, 420 ]
+138 silly gunzTarPerm extractEntry examples/schema/storing-schemas-as-json/index.js
+139 silly gunzTarPerm modified mode [ 'examples/schema/storing-schemas-as-json/index.js', 436, 420 ]
+140 silly gunzTarPerm extractEntry examples/schema/storing-schemas-as-json/schema.json
+141 silly gunzTarPerm modified mode [ 'examples/schema/storing-schemas-as-json/schema.json',
+141 silly gunzTarPerm   436,
+141 silly gunzTarPerm   420 ]
+142 silly gunzTarPerm extractEntry examples/mapreduce/package.json
+143 silly gunzTarPerm modified mode [ 'examples/mapreduce/package.json', 436, 420 ]
+144 silly gunzTarPerm extractEntry examples/mapreduce/mapreduce.js
+145 silly gunzTarPerm modified mode [ 'examples/mapreduce/mapreduce.js', 436, 420 ]
+146 silly gunzTarPerm extractEntry examples/mapreduce/person.js
+147 silly gunzTarPerm modified mode [ 'examples/mapreduce/person.js', 436, 420 ]
+148 silly gunzTarPerm extractEntry .travis.yml
+149 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+150 silly gunzTarPerm extractEntry lib/aggregate.js
+151 silly gunzTarPerm modified mode [ 'lib/aggregate.js', 436, 420 ]
+152 silly gunzTarPerm extractEntry lib/document.js
+153 silly gunzTarPerm modified mode [ 'lib/document.js', 436, 420 ]
+154 silly gunzTarPerm extractEntry lib/document_provider.js
+155 silly gunzTarPerm modified mode [ 'lib/document_provider.js', 436, 420 ]
+156 silly gunzTarPerm extractEntry lib/utils.js
+157 silly gunzTarPerm modified mode [ 'lib/utils.js', 436, 420 ]
+158 silly gunzTarPerm extractEntry lib/statemachine.js
+159 silly gunzTarPerm modified mode [ 'lib/statemachine.js', 436, 420 ]
+160 silly gunzTarPerm extractEntry lib/connectionstate.js
+161 silly gunzTarPerm modified mode [ 'lib/connectionstate.js', 436, 420 ]
+162 silly gunzTarPerm extractEntry lib/index.js
+163 silly gunzTarPerm modified mode [ 'lib/index.js', 436, 420 ]
+164 silly gunzTarPerm extractEntry lib/browser.js
+165 silly gunzTarPerm modified mode [ 'lib/browser.js', 436, 420 ]
+166 silly gunzTarPerm extractEntry lib/model.js
+167 silly gunzTarPerm modified mode [ 'lib/model.js', 436, 420 ]
+168 silly gunzTarPerm extractEntry lib/promise.js
+169 silly gunzTarPerm modified mode [ 'lib/promise.js', 436, 420 ]
+170 silly gunzTarPerm extractEntry lib/query.js
+171 silly gunzTarPerm modified mode [ 'lib/query.js', 436, 420 ]
+172 silly gunzTarPerm extractEntry lib/connection.js
+173 silly gunzTarPerm modified mode [ 'lib/connection.js', 436, 420 ]
+174 silly gunzTarPerm extractEntry lib/queryhelpers.js
+175 silly gunzTarPerm modified mode [ 'lib/queryhelpers.js', 436, 420 ]
+176 silly gunzTarPerm extractEntry lib/collection.js
+177 silly gunzTarPerm modified mode [ 'lib/collection.js', 436, 420 ]
+178 silly gunzTarPerm extractEntry lib/querystream.js
+179 silly gunzTarPerm modified mode [ 'lib/querystream.js', 436, 420 ]
+180 silly gunzTarPerm extractEntry lib/cast.js
+181 silly gunzTarPerm modified mode [ 'lib/cast.js', 436, 420 ]
+182 silly gunzTarPerm extractEntry lib/schematype.js
+183 silly gunzTarPerm modified mode [ 'lib/schematype.js', 436, 420 ]
+184 silly gunzTarPerm extractEntry lib/browserDocument.js
+185 silly gunzTarPerm modified mode [ 'lib/browserDocument.js', 436, 420 ]
+186 silly gunzTarPerm extractEntry lib/schema.js
+187 silly gunzTarPerm modified mode [ 'lib/schema.js', 436, 420 ]
+188 silly gunzTarPerm extractEntry lib/error.js
+189 silly gunzTarPerm modified mode [ 'lib/error.js', 436, 420 ]
+190 silly gunzTarPerm extractEntry lib/virtualtype.js
+191 silly gunzTarPerm modified mode [ 'lib/virtualtype.js', 436, 420 ]
+192 silly gunzTarPerm extractEntry lib/internal.js
+193 silly gunzTarPerm modified mode [ 'lib/internal.js', 436, 420 ]
+194 silly gunzTarPerm extractEntry lib/schema/array.js
+195 silly gunzTarPerm modified mode [ 'lib/schema/array.js', 436, 420 ]
+196 silly gunzTarPerm extractEntry lib/schema/boolean.js
+197 silly gunzTarPerm modified mode [ 'lib/schema/boolean.js', 436, 420 ]
+198 silly gunzTarPerm extractEntry lib/schema/buffer.js
+199 silly gunzTarPerm modified mode [ 'lib/schema/buffer.js', 436, 420 ]
+200 silly gunzTarPerm extractEntry lib/schema/date.js
+201 silly gunzTarPerm modified mode [ 'lib/schema/date.js', 436, 420 ]
+202 silly gunzTarPerm extractEntry lib/schema/documentarray.js
+203 silly gunzTarPerm modified mode [ 'lib/schema/documentarray.js', 436, 420 ]
+204 silly gunzTarPerm extractEntry lib/schema/index.js
+205 silly gunzTarPerm modified mode [ 'lib/schema/index.js', 436, 420 ]
+206 silly gunzTarPerm extractEntry lib/schema/mixed.js
+207 silly gunzTarPerm modified mode [ 'lib/schema/mixed.js', 436, 420 ]
+208 silly gunzTarPerm extractEntry lib/schema/number.js
+209 silly gunzTarPerm modified mode [ 'lib/schema/number.js', 436, 420 ]
+210 silly gunzTarPerm extractEntry lib/schema/objectid.js
+211 silly gunzTarPerm modified mode [ 'lib/schema/objectid.js', 436, 420 ]
+212 silly gunzTarPerm extractEntry lib/schema/string.js
+213 silly gunzTarPerm modified mode [ 'lib/schema/string.js', 436, 420 ]
+214 silly gunzTarPerm extractEntry lib/services/updateValidators.js
+215 silly gunzTarPerm modified mode [ 'lib/services/updateValidators.js', 436, 420 ]
+216 silly gunzTarPerm extractEntry lib/error/browserMissingSchema.js
+217 silly gunzTarPerm modified mode [ 'lib/error/browserMissingSchema.js', 436, 420 ]
+218 silly gunzTarPerm extractEntry lib/error/cast.js
+219 silly gunzTarPerm modified mode [ 'lib/error/cast.js', 436, 420 ]
+220 silly gunzTarPerm extractEntry lib/error/divergentArray.js
+221 silly gunzTarPerm modified mode [ 'lib/error/divergentArray.js', 436, 420 ]
+222 silly gunzTarPerm extractEntry lib/error/messages.js
+223 silly gunzTarPerm modified mode [ 'lib/error/messages.js', 436, 420 ]
+224 silly gunzTarPerm extractEntry lib/error/missingSchema.js
+225 silly gunzTarPerm modified mode [ 'lib/error/missingSchema.js', 436, 420 ]
+226 silly gunzTarPerm extractEntry lib/error/overwriteModel.js
+227 silly gunzTarPerm modified mode [ 'lib/error/overwriteModel.js', 436, 420 ]
+228 silly gunzTarPerm extractEntry lib/error/validation.js
+229 silly gunzTarPerm modified mode [ 'lib/error/validation.js', 436, 420 ]
+230 silly gunzTarPerm extractEntry lib/error/validator.js
+231 silly gunzTarPerm modified mode [ 'lib/error/validator.js', 436, 420 ]
+232 silly gunzTarPerm extractEntry lib/error/version.js
+233 silly gunzTarPerm modified mode [ 'lib/error/version.js', 436, 420 ]
+234 silly gunzTarPerm extractEntry lib/types/array.js
+235 silly gunzTarPerm modified mode [ 'lib/types/array.js', 436, 420 ]
+236 silly gunzTarPerm extractEntry lib/types/buffer.js
+237 silly gunzTarPerm modified mode [ 'lib/types/buffer.js', 436, 420 ]
+238 silly gunzTarPerm extractEntry lib/types/documentarray.js
+239 silly gunzTarPerm modified mode [ 'lib/types/documentarray.js', 436, 420 ]
+240 silly gunzTarPerm extractEntry lib/types/embedded.js
+241 silly gunzTarPerm modified mode [ 'lib/types/embedded.js', 436, 420 ]
+242 silly gunzTarPerm extractEntry lib/types/index.js
+243 silly gunzTarPerm modified mode [ 'lib/types/index.js', 436, 420 ]
+244 silly gunzTarPerm extractEntry lib/types/objectid.js
+245 silly gunzTarPerm modified mode [ 'lib/types/objectid.js', 436, 420 ]
+246 silly gunzTarPerm extractEntry lib/drivers/SPEC.md
+247 silly gunzTarPerm modified mode [ 'lib/drivers/SPEC.md', 436, 420 ]
+248 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/binary.js
+249 silly gunzTarPerm modified mode [ 'lib/drivers/node-mongodb-native/binary.js', 436, 420 ]
+250 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/collection.js
+251 silly gunzTarPerm modified mode [ 'lib/drivers/node-mongodb-native/collection.js', 436, 420 ]
+252 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/connection.js
+253 silly gunzTarPerm modified mode [ 'lib/drivers/node-mongodb-native/connection.js', 436, 420 ]
+254 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/objectid.js
+255 silly gunzTarPerm modified mode [ 'lib/drivers/node-mongodb-native/objectid.js', 436, 420 ]
+256 silly gunzTarPerm extractEntry contRun.sh
+257 silly gunzTarPerm modified mode [ 'contRun.sh', 509, 493 ]
+258 silly gunzTarPerm extractEntry History.md
+259 silly gunzTarPerm modified mode [ 'History.md', 436, 420 ]
+260 silly gunzTarPerm extractEntry release-items.md
+261 silly gunzTarPerm modified mode [ 'release-items.md', 436, 420 ]
+262 silly gunzTarPerm extractEntry CONTRIBUTING.md
+263 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 436, 420 ]
+264 silly lockFile 660ef98e-ilyProject-node-modules-mongoose tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+265 silly lockFile 660ef98e-ilyProject-node-modules-mongoose tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+266 silly lockFile 07727e26-cache-mongoose-3-9-7-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mongoose\3.9.7\package.tgz
+267 silly lockFile 07727e26-cache-mongoose-3-9-7-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mongoose\3.9.7\package.tgz
+268 info preinstall mongoose@3.9.7
+269 verbose readDependencies using package.json deps
+270 verbose readDependencies using package.json deps
+271 verbose cache add [ 'hooks@0.3.2', null ]
+272 verbose cache add name=undefined spec="hooks@0.3.2" args=["hooks@0.3.2",null]
+273 verbose parsed url { protocol: null,
+273 verbose parsed url   slashes: null,
+273 verbose parsed url   auth: null,
+273 verbose parsed url   host: null,
+273 verbose parsed url   port: null,
+273 verbose parsed url   hostname: null,
+273 verbose parsed url   hash: null,
+273 verbose parsed url   search: null,
+273 verbose parsed url   query: null,
+273 verbose parsed url   pathname: 'hooks@0.3.2',
+273 verbose parsed url   path: 'hooks@0.3.2',
+273 verbose parsed url   href: 'hooks@0.3.2' }
+274 verbose cache add [ 'mongodb@1.4.12', null ]
+275 verbose cache add name=undefined spec="mongodb@1.4.12" args=["mongodb@1.4.12",null]
+276 verbose parsed url { protocol: null,
+276 verbose parsed url   slashes: null,
+276 verbose parsed url   auth: null,
+276 verbose parsed url   host: null,
+276 verbose parsed url   port: null,
+276 verbose parsed url   hostname: null,
+276 verbose parsed url   hash: null,
+276 verbose parsed url   search: null,
+276 verbose parsed url   query: null,
+276 verbose parsed url   pathname: 'mongodb@1.4.12',
+276 verbose parsed url   path: 'mongodb@1.4.12',
+276 verbose parsed url   href: 'mongodb@1.4.12' }
+277 verbose cache add [ 'ms@0.1.0', null ]
+278 verbose cache add name=undefined spec="ms@0.1.0" args=["ms@0.1.0",null]
+279 verbose parsed url { protocol: null,
+279 verbose parsed url   slashes: null,
+279 verbose parsed url   auth: null,
+279 verbose parsed url   host: null,
+279 verbose parsed url   port: null,
+279 verbose parsed url   hostname: null,
+279 verbose parsed url   hash: null,
+279 verbose parsed url   search: null,
+279 verbose parsed url   query: null,
+279 verbose parsed url   pathname: 'ms@0.1.0',
+279 verbose parsed url   path: 'ms@0.1.0',
+279 verbose parsed url   href: 'ms@0.1.0' }
+280 verbose cache add [ 'sliced@0.0.5', null ]
+281 verbose cache add name=undefined spec="sliced@0.0.5" args=["sliced@0.0.5",null]
+282 verbose parsed url { protocol: null,
+282 verbose parsed url   slashes: null,
+282 verbose parsed url   auth: null,
+282 verbose parsed url   host: null,
+282 verbose parsed url   port: null,
+282 verbose parsed url   hostname: null,
+282 verbose parsed url   hash: null,
+282 verbose parsed url   search: null,
+282 verbose parsed url   query: null,
+282 verbose parsed url   pathname: 'sliced@0.0.5',
+282 verbose parsed url   path: 'sliced@0.0.5',
+282 verbose parsed url   href: 'sliced@0.0.5' }
+283 verbose cache add [ 'muri@0.3.1', null ]
+284 verbose cache add name=undefined spec="muri@0.3.1" args=["muri@0.3.1",null]
+285 verbose parsed url { protocol: null,
+285 verbose parsed url   slashes: null,
+285 verbose parsed url   auth: null,
+285 verbose parsed url   host: null,
+285 verbose parsed url   port: null,
+285 verbose parsed url   hostname: null,
+285 verbose parsed url   hash: null,
+285 verbose parsed url   search: null,
+285 verbose parsed url   query: null,
+285 verbose parsed url   pathname: 'muri@0.3.1',
+285 verbose parsed url   path: 'muri@0.3.1',
+285 verbose parsed url   href: 'muri@0.3.1' }
+286 verbose cache add [ 'mpromise@0.5.4', null ]
+287 verbose cache add name=undefined spec="mpromise@0.5.4" args=["mpromise@0.5.4",null]
+288 verbose parsed url { protocol: null,
+288 verbose parsed url   slashes: null,
+288 verbose parsed url   auth: null,
+288 verbose parsed url   host: null,
+288 verbose parsed url   port: null,
+288 verbose parsed url   hostname: null,
+288 verbose parsed url   hash: null,
+288 verbose parsed url   search: null,
+288 verbose parsed url   query: null,
+288 verbose parsed url   pathname: 'mpromise@0.5.4',
+288 verbose parsed url   path: 'mpromise@0.5.4',
+288 verbose parsed url   href: 'mpromise@0.5.4' }
+289 verbose cache add [ 'mpath@0.1.1', null ]
+290 verbose cache add name=undefined spec="mpath@0.1.1" args=["mpath@0.1.1",null]
+291 verbose parsed url { protocol: null,
+291 verbose parsed url   slashes: null,
+291 verbose parsed url   auth: null,
+291 verbose parsed url   host: null,
+291 verbose parsed url   port: null,
+291 verbose parsed url   hostname: null,
+291 verbose parsed url   hash: null,
+291 verbose parsed url   search: null,
+291 verbose parsed url   query: null,
+291 verbose parsed url   pathname: 'mpath@0.1.1',
+291 verbose parsed url   path: 'mpath@0.1.1',
+291 verbose parsed url   href: 'mpath@0.1.1' }
+292 verbose cache add [ 'kareem@0.0.4', null ]
+293 verbose cache add name=undefined spec="kareem@0.0.4" args=["kareem@0.0.4",null]
+294 verbose parsed url { protocol: null,
+294 verbose parsed url   slashes: null,
+294 verbose parsed url   auth: null,
+294 verbose parsed url   host: null,
+294 verbose parsed url   port: null,
+294 verbose parsed url   hostname: null,
+294 verbose parsed url   hash: null,
+294 verbose parsed url   search: null,
+294 verbose parsed url   query: null,
+294 verbose parsed url   pathname: 'kareem@0.0.4',
+294 verbose parsed url   path: 'kareem@0.0.4',
+294 verbose parsed url   href: 'kareem@0.0.4' }
+295 verbose cache add [ 'regexp-clone@0.0.1', null ]
+296 verbose cache add name=undefined spec="regexp-clone@0.0.1" args=["regexp-clone@0.0.1",null]
+297 verbose parsed url { protocol: null,
+297 verbose parsed url   slashes: null,
+297 verbose parsed url   auth: null,
+297 verbose parsed url   host: null,
+297 verbose parsed url   port: null,
+297 verbose parsed url   hostname: null,
+297 verbose parsed url   hash: null,
+297 verbose parsed url   search: null,
+297 verbose parsed url   query: null,
+297 verbose parsed url   pathname: 'regexp-clone@0.0.1',
+297 verbose parsed url   path: 'regexp-clone@0.0.1',
+297 verbose parsed url   href: 'regexp-clone@0.0.1' }
+298 verbose cache add [ 'mquery@1.0.0', null ]
+299 verbose cache add name=undefined spec="mquery@1.0.0" args=["mquery@1.0.0",null]
+300 verbose parsed url { protocol: null,
+300 verbose parsed url   slashes: null,
+300 verbose parsed url   auth: null,
+300 verbose parsed url   host: null,
+300 verbose parsed url   port: null,
+300 verbose parsed url   hostname: null,
+300 verbose parsed url   hash: null,
+300 verbose parsed url   search: null,
+300 verbose parsed url   query: null,
+300 verbose parsed url   pathname: 'mquery@1.0.0',
+300 verbose parsed url   path: 'mquery@1.0.0',
+300 verbose parsed url   href: 'mquery@1.0.0' }
+301 verbose cache add [ 'async@0.9.0', null ]
+302 verbose cache add name=undefined spec="async@0.9.0" args=["async@0.9.0",null]
+303 verbose parsed url { protocol: null,
+303 verbose parsed url   slashes: null,
+303 verbose parsed url   auth: null,
+303 verbose parsed url   host: null,
+303 verbose parsed url   port: null,
+303 verbose parsed url   hostname: null,
+303 verbose parsed url   hash: null,
+303 verbose parsed url   search: null,
+303 verbose parsed url   query: null,
+303 verbose parsed url   pathname: 'async@0.9.0',
+303 verbose parsed url   path: 'async@0.9.0',
+303 verbose parsed url   href: 'async@0.9.0' }
+304 verbose cache add name="hooks" spec="0.3.2" args=["hooks","0.3.2"]
+305 verbose parsed url { protocol: null,
+305 verbose parsed url   slashes: null,
+305 verbose parsed url   auth: null,
+305 verbose parsed url   host: null,
+305 verbose parsed url   port: null,
+305 verbose parsed url   hostname: null,
+305 verbose parsed url   hash: null,
+305 verbose parsed url   search: null,
+305 verbose parsed url   query: null,
+305 verbose parsed url   pathname: '0.3.2',
+305 verbose parsed url   path: '0.3.2',
+305 verbose parsed url   href: '0.3.2' }
+306 verbose addNamed [ 'hooks', '0.3.2' ]
+307 verbose addNamed [ '0.3.2', '0.3.2' ]
+308 silly lockFile 462b04a3-hooks-0-3-2 hooks@0.3.2
+309 verbose lock hooks@0.3.2 C:\Users\Rock\AppData\Roaming\npm-cache\462b04a3-hooks-0-3-2.lock
+310 verbose cache add name="mongodb" spec="1.4.12" args=["mongodb","1.4.12"]
+311 verbose parsed url { protocol: null,
+311 verbose parsed url   slashes: null,
+311 verbose parsed url   auth: null,
+311 verbose parsed url   host: null,
+311 verbose parsed url   port: null,
+311 verbose parsed url   hostname: null,
+311 verbose parsed url   hash: null,
+311 verbose parsed url   search: null,
+311 verbose parsed url   query: null,
+311 verbose parsed url   pathname: '1.4.12',
+311 verbose parsed url   path: '1.4.12',
+311 verbose parsed url   href: '1.4.12' }
+312 verbose addNamed [ 'mongodb', '1.4.12' ]
+313 verbose addNamed [ '1.4.12', '1.4.12' ]
+314 silly lockFile 37bf49a3-mongodb-1-4-12 mongodb@1.4.12
+315 verbose lock mongodb@1.4.12 C:\Users\Rock\AppData\Roaming\npm-cache\37bf49a3-mongodb-1-4-12.lock
+316 verbose cache add name="ms" spec="0.1.0" args=["ms","0.1.0"]
+317 verbose parsed url { protocol: null,
+317 verbose parsed url   slashes: null,
+317 verbose parsed url   auth: null,
+317 verbose parsed url   host: null,
+317 verbose parsed url   port: null,
+317 verbose parsed url   hostname: null,
+317 verbose parsed url   hash: null,
+317 verbose parsed url   search: null,
+317 verbose parsed url   query: null,
+317 verbose parsed url   pathname: '0.1.0',
+317 verbose parsed url   path: '0.1.0',
+317 verbose parsed url   href: '0.1.0' }
+318 verbose addNamed [ 'ms', '0.1.0' ]
+319 verbose addNamed [ '0.1.0', '0.1.0' ]
+320 silly lockFile 9555626c-ms-0-1-0 ms@0.1.0
+321 verbose lock ms@0.1.0 C:\Users\Rock\AppData\Roaming\npm-cache\9555626c-ms-0-1-0.lock
+322 verbose cache add name="sliced" spec="0.0.5" args=["sliced","0.0.5"]
+323 verbose parsed url { protocol: null,
+323 verbose parsed url   slashes: null,
+323 verbose parsed url   auth: null,
+323 verbose parsed url   host: null,
+323 verbose parsed url   port: null,
+323 verbose parsed url   hostname: null,
+323 verbose parsed url   hash: null,
+323 verbose parsed url   search: null,
+323 verbose parsed url   query: null,
+323 verbose parsed url   pathname: '0.0.5',
+323 verbose parsed url   path: '0.0.5',
+323 verbose parsed url   href: '0.0.5' }
+324 verbose addNamed [ 'sliced', '0.0.5' ]
+325 verbose addNamed [ '0.0.5', '0.0.5' ]
+326 silly lockFile 146acdb0-sliced-0-0-5 sliced@0.0.5
+327 verbose lock sliced@0.0.5 C:\Users\Rock\AppData\Roaming\npm-cache\146acdb0-sliced-0-0-5.lock
+328 verbose cache add name="muri" spec="0.3.1" args=["muri","0.3.1"]
+329 verbose parsed url { protocol: null,
+329 verbose parsed url   slashes: null,
+329 verbose parsed url   auth: null,
+329 verbose parsed url   host: null,
+329 verbose parsed url   port: null,
+329 verbose parsed url   hostname: null,
+329 verbose parsed url   hash: null,
+329 verbose parsed url   search: null,
+329 verbose parsed url   query: null,
+329 verbose parsed url   pathname: '0.3.1',
+329 verbose parsed url   path: '0.3.1',
+329 verbose parsed url   href: '0.3.1' }
+330 verbose addNamed [ 'muri', '0.3.1' ]
+331 verbose addNamed [ '0.3.1', '0.3.1' ]
+332 silly lockFile 01b66c9e-muri-0-3-1 muri@0.3.1
+333 verbose lock muri@0.3.1 C:\Users\Rock\AppData\Roaming\npm-cache\01b66c9e-muri-0-3-1.lock
+334 verbose cache add name="mpromise" spec="0.5.4" args=["mpromise","0.5.4"]
+335 verbose parsed url { protocol: null,
+335 verbose parsed url   slashes: null,
+335 verbose parsed url   auth: null,
+335 verbose parsed url   host: null,
+335 verbose parsed url   port: null,
+335 verbose parsed url   hostname: null,
+335 verbose parsed url   hash: null,
+335 verbose parsed url   search: null,
+335 verbose parsed url   query: null,
+335 verbose parsed url   pathname: '0.5.4',
+335 verbose parsed url   path: '0.5.4',
+335 verbose parsed url   href: '0.5.4' }
+336 verbose addNamed [ 'mpromise', '0.5.4' ]
+337 verbose addNamed [ '0.5.4', '0.5.4' ]
+338 silly lockFile d0041b43-mpromise-0-5-4 mpromise@0.5.4
+339 verbose lock mpromise@0.5.4 C:\Users\Rock\AppData\Roaming\npm-cache\d0041b43-mpromise-0-5-4.lock
+340 verbose cache add name="mpath" spec="0.1.1" args=["mpath","0.1.1"]
+341 verbose parsed url { protocol: null,
+341 verbose parsed url   slashes: null,
+341 verbose parsed url   auth: null,
+341 verbose parsed url   host: null,
+341 verbose parsed url   port: null,
+341 verbose parsed url   hostname: null,
+341 verbose parsed url   hash: null,
+341 verbose parsed url   search: null,
+341 verbose parsed url   query: null,
+341 verbose parsed url   pathname: '0.1.1',
+341 verbose parsed url   path: '0.1.1',
+341 verbose parsed url   href: '0.1.1' }
+342 verbose addNamed [ 'mpath', '0.1.1' ]
+343 verbose addNamed [ '0.1.1', '0.1.1' ]
+344 silly lockFile 7ed304e1-mpath-0-1-1 mpath@0.1.1
+345 verbose lock mpath@0.1.1 C:\Users\Rock\AppData\Roaming\npm-cache\7ed304e1-mpath-0-1-1.lock
+346 verbose cache add name="kareem" spec="0.0.4" args=["kareem","0.0.4"]
+347 verbose parsed url { protocol: null,
+347 verbose parsed url   slashes: null,
+347 verbose parsed url   auth: null,
+347 verbose parsed url   host: null,
+347 verbose parsed url   port: null,
+347 verbose parsed url   hostname: null,
+347 verbose parsed url   hash: null,
+347 verbose parsed url   search: null,
+347 verbose parsed url   query: null,
+347 verbose parsed url   pathname: '0.0.4',
+347 verbose parsed url   path: '0.0.4',
+347 verbose parsed url   href: '0.0.4' }
+348 verbose addNamed [ 'kareem', '0.0.4' ]
+349 verbose addNamed [ '0.0.4', '0.0.4' ]
+350 silly lockFile 96bef6f3-kareem-0-0-4 kareem@0.0.4
+351 verbose lock kareem@0.0.4 C:\Users\Rock\AppData\Roaming\npm-cache\96bef6f3-kareem-0-0-4.lock
+352 verbose cache add name="regexp-clone" spec="0.0.1" args=["regexp-clone","0.0.1"]
+353 verbose parsed url { protocol: null,
+353 verbose parsed url   slashes: null,
+353 verbose parsed url   auth: null,
+353 verbose parsed url   host: null,
+353 verbose parsed url   port: null,
+353 verbose parsed url   hostname: null,
+353 verbose parsed url   hash: null,
+353 verbose parsed url   search: null,
+353 verbose parsed url   query: null,
+353 verbose parsed url   pathname: '0.0.1',
+353 verbose parsed url   path: '0.0.1',
+353 verbose parsed url   href: '0.0.1' }
+354 verbose addNamed [ 'regexp-clone', '0.0.1' ]
+355 verbose addNamed [ '0.0.1', '0.0.1' ]
+356 silly lockFile c8264751-regexp-clone-0-0-1 regexp-clone@0.0.1
+357 verbose lock regexp-clone@0.0.1 C:\Users\Rock\AppData\Roaming\npm-cache\c8264751-regexp-clone-0-0-1.lock
+358 verbose cache add name="mquery" spec="1.0.0" args=["mquery","1.0.0"]
+359 verbose parsed url { protocol: null,
+359 verbose parsed url   slashes: null,
+359 verbose parsed url   auth: null,
+359 verbose parsed url   host: null,
+359 verbose parsed url   port: null,
+359 verbose parsed url   hostname: null,
+359 verbose parsed url   hash: null,
+359 verbose parsed url   search: null,
+359 verbose parsed url   query: null,
+359 verbose parsed url   pathname: '1.0.0',
+359 verbose parsed url   path: '1.0.0',
+359 verbose parsed url   href: '1.0.0' }
+360 verbose addNamed [ 'mquery', '1.0.0' ]
+361 verbose addNamed [ '1.0.0', '1.0.0' ]
+362 silly lockFile 1aef09e8-mquery-1-0-0 mquery@1.0.0
+363 verbose lock mquery@1.0.0 C:\Users\Rock\AppData\Roaming\npm-cache\1aef09e8-mquery-1-0-0.lock
+364 verbose cache add name="async" spec="0.9.0" args=["async","0.9.0"]
+365 verbose parsed url { protocol: null,
+365 verbose parsed url   slashes: null,
+365 verbose parsed url   auth: null,
+365 verbose parsed url   host: null,
+365 verbose parsed url   port: null,
+365 verbose parsed url   hostname: null,
+365 verbose parsed url   hash: null,
+365 verbose parsed url   search: null,
+365 verbose parsed url   query: null,
+365 verbose parsed url   pathname: '0.9.0',
+365 verbose parsed url   path: '0.9.0',
+365 verbose parsed url   href: '0.9.0' }
+366 verbose addNamed [ 'async', '0.9.0' ]
+367 verbose addNamed [ '0.9.0', '0.9.0' ]
+368 silly lockFile 9a58a886-async-0-9-0 async@0.9.0
+369 verbose lock async@0.9.0 C:\Users\Rock\AppData\Roaming\npm-cache\9a58a886-async-0-9-0.lock
+370 verbose url raw muri
+371 verbose url resolving [ 'https://registry.npmjs.org/', './muri' ]
+372 verbose url resolved https://registry.npmjs.org/muri
+373 info trying registry request attempt 1 at 09:59:22
+374 verbose etag "1A8HZR3VWLZ26QA17AQVL78FR"
+375 http GET https://registry.npmjs.org/muri
+376 verbose url raw mpath
+377 verbose url resolving [ 'https://registry.npmjs.org/', './mpath' ]
+378 verbose url resolved https://registry.npmjs.org/mpath
+379 info trying registry request attempt 1 at 09:59:22
+380 verbose etag "8VGEN5FE9IYOQF0E94BS4YBYQ"
+381 http GET https://registry.npmjs.org/mpath
+382 verbose url raw mpromise
+383 verbose url resolving [ 'https://registry.npmjs.org/', './mpromise' ]
+384 verbose url resolved https://registry.npmjs.org/mpromise
+385 info trying registry request attempt 1 at 09:59:22
+386 verbose etag "ANP2S12BAVZ9XZPOEVBCCO9YG"
+387 http GET https://registry.npmjs.org/mpromise
+388 verbose url raw regexp-clone
+389 verbose url resolving [ 'https://registry.npmjs.org/', './regexp-clone' ]
+390 verbose url resolved https://registry.npmjs.org/regexp-clone
+391 info trying registry request attempt 1 at 09:59:22
+392 verbose etag "AMGTX5SC3OTT0F8UOW43HZ5FK"
+393 http GET https://registry.npmjs.org/regexp-clone
+394 verbose url raw mquery
+395 verbose url resolving [ 'https://registry.npmjs.org/', './mquery' ]
+396 verbose url resolved https://registry.npmjs.org/mquery
+397 info trying registry request attempt 1 at 09:59:22
+398 verbose etag "3ZQCO33LOR1UIZN00EUK5SMGP"
+399 http GET https://registry.npmjs.org/mquery
+400 verbose url raw kareem
+401 verbose url resolving [ 'https://registry.npmjs.org/', './kareem' ]
+402 verbose url resolved https://registry.npmjs.org/kareem
+403 info trying registry request attempt 1 at 09:59:22
+404 verbose etag "EU30IB53WJTN7X74ZMUAGG3LX"
+405 http GET https://registry.npmjs.org/kareem
+406 verbose url raw ms
+407 verbose url resolving [ 'https://registry.npmjs.org/', './ms' ]
+408 verbose url resolved https://registry.npmjs.org/ms
+409 info trying registry request attempt 1 at 09:59:22
+410 verbose etag "2CV4V1PTIW41DQWP8ODMMT2SO"
+411 http GET https://registry.npmjs.org/ms
+412 verbose url raw hooks
+413 verbose url resolving [ 'https://registry.npmjs.org/', './hooks' ]
+414 verbose url resolved https://registry.npmjs.org/hooks
+415 info trying registry request attempt 1 at 09:59:22
+416 verbose etag "18JHGG9MBLMFC2UE3KME89ME2"
+417 http GET https://registry.npmjs.org/hooks
+418 verbose url raw sliced
+419 verbose url resolving [ 'https://registry.npmjs.org/', './sliced' ]
+420 verbose url resolved https://registry.npmjs.org/sliced
+421 info trying registry request attempt 1 at 09:59:22
+422 verbose etag "BWWUVAZPK81QFONHEUJ3BBUW4"
+423 http GET https://registry.npmjs.org/sliced
+424 verbose url raw async
+425 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+426 verbose url resolved https://registry.npmjs.org/async
+427 info trying registry request attempt 1 at 09:59:22
+428 verbose etag "8ZCMFXTBIYOE54H71CHQZ41ST"
+429 http GET https://registry.npmjs.org/async
+430 verbose url raw mongodb
+431 verbose url resolving [ 'https://registry.npmjs.org/', './mongodb' ]
+432 verbose url resolved https://registry.npmjs.org/mongodb
+433 info trying registry request attempt 1 at 09:59:22
+434 verbose etag "71RW0NA0X581BZJ7MO4BK0V2X"
+435 http GET https://registry.npmjs.org/mongodb
+436 http 304 https://registry.npmjs.org/muri
+437 silly registry.get cb [ 304,
+437 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+437 silly registry.get     server: 'Apache',
+437 silly registry.get     via: '1.1 varnish',
+437 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:20 GMT',
+437 silly registry.get     'cache-control': 'max-age=60',
+437 silly registry.get     etag: '"1A8HZR3VWLZ26QA17AQVL78FR"',
+437 silly registry.get     age: '11',
+437 silly registry.get     'x-served-by': 'cache-ams4147-AMS',
+437 silly registry.get     'x-cache': 'HIT',
+437 silly registry.get     'x-cache-hits': '1',
+437 silly registry.get     'x-timer': 'S1429513160.701022,VS0,VE0',
+437 silly registry.get     vary: 'Accept',
+437 silly registry.get     'content-length': '0',
+437 silly registry.get     'keep-alive': 'timeout=10, max=50',
+437 silly registry.get     connection: 'Keep-Alive' } ]
+438 verbose etag muri from cache
+439 http 304 https://registry.npmjs.org/mquery
+440 silly registry.get cb [ 304,
+440 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+440 silly registry.get     server: 'Apache',
+440 silly registry.get     via: '1.1 varnish',
+440 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:20 GMT',
+440 silly registry.get     'cache-control': 'max-age=60',
+440 silly registry.get     etag: '"3ZQCO33LOR1UIZN00EUK5SMGP"',
+440 silly registry.get     age: '12',
+440 silly registry.get     'x-served-by': 'cache-ams4144-AMS',
+440 silly registry.get     'x-cache': 'HIT',
+440 silly registry.get     'x-cache-hits': '1',
+440 silly registry.get     'x-timer': 'S1429513160.702298,VS0,VE0',
+440 silly registry.get     vary: 'Accept',
+440 silly registry.get     'content-length': '0',
+440 silly registry.get     'keep-alive': 'timeout=10, max=50',
+440 silly registry.get     connection: 'Keep-Alive' } ]
+441 verbose etag mquery from cache
+442 http 304 https://registry.npmjs.org/mpath
+443 silly registry.get cb [ 304,
+443 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+443 silly registry.get     server: 'Apache',
+443 silly registry.get     via: '1.1 varnish',
+443 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:20 GMT',
+443 silly registry.get     'cache-control': 'max-age=60',
+443 silly registry.get     etag: '"8VGEN5FE9IYOQF0E94BS4YBYQ"',
+443 silly registry.get     age: '11',
+443 silly registry.get     'x-served-by': 'cache-ams4145-AMS',
+443 silly registry.get     'x-cache': 'HIT',
+443 silly registry.get     'x-cache-hits': '1',
+443 silly registry.get     'x-timer': 'S1429513160.704973,VS0,VE0',
+443 silly registry.get     vary: 'Accept',
+443 silly registry.get     'content-length': '0',
+443 silly registry.get     'keep-alive': 'timeout=10, max=50',
+443 silly registry.get     connection: 'Keep-Alive' } ]
+444 verbose etag mpath from cache
+445 http 304 https://registry.npmjs.org/mpromise
+446 silly registry.get cb [ 304,
+446 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+446 silly registry.get     server: 'Apache',
+446 silly registry.get     via: '1.1 varnish',
+446 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:20 GMT',
+446 silly registry.get     'cache-control': 'max-age=60',
+446 silly registry.get     etag: '"ANP2S12BAVZ9XZPOEVBCCO9YG"',
+446 silly registry.get     age: '12',
+446 silly registry.get     'x-served-by': 'cache-ams4146-AMS',
+446 silly registry.get     'x-cache': 'HIT',
+446 silly registry.get     'x-cache-hits': '1',
+446 silly registry.get     'x-timer': 'S1429513160.709077,VS0,VE0',
+446 silly registry.get     vary: 'Accept',
+446 silly registry.get     'content-length': '0',
+446 silly registry.get     'keep-alive': 'timeout=10, max=50',
+446 silly registry.get     connection: 'Keep-Alive' } ]
+447 verbose etag mpromise from cache
+448 http 304 https://registry.npmjs.org/regexp-clone
+449 silly registry.get cb [ 304,
+449 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+449 silly registry.get     server: 'Apache',
+449 silly registry.get     via: '1.1 varnish',
+449 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:20 GMT',
+449 silly registry.get     'cache-control': 'max-age=60',
+449 silly registry.get     etag: '"AMGTX5SC3OTT0F8UOW43HZ5FK"',
+449 silly registry.get     age: '12',
+449 silly registry.get     'x-served-by': 'cache-ams4132-AMS',
+449 silly registry.get     'x-cache': 'HIT',
+449 silly registry.get     'x-cache-hits': '1',
+449 silly registry.get     'x-timer': 'S1429513160.711543,VS0,VE0',
+449 silly registry.get     vary: 'Accept',
+449 silly registry.get     'content-length': '0',
+449 silly registry.get     'keep-alive': 'timeout=10, max=50',
+449 silly registry.get     connection: 'Keep-Alive' } ]
+450 verbose etag regexp-clone from cache
+451 silly lockFile 01b66c9e-muri-0-3-1 muri@0.3.1
+452 silly lockFile 01b66c9e-muri-0-3-1 muri@0.3.1
+453 silly lockFile 1aef09e8-mquery-1-0-0 mquery@1.0.0
+454 silly lockFile 1aef09e8-mquery-1-0-0 mquery@1.0.0
+455 silly lockFile 7ed304e1-mpath-0-1-1 mpath@0.1.1
+456 silly lockFile 7ed304e1-mpath-0-1-1 mpath@0.1.1
+457 silly lockFile c8264751-regexp-clone-0-0-1 regexp-clone@0.0.1
+458 silly lockFile c8264751-regexp-clone-0-0-1 regexp-clone@0.0.1
+459 silly lockFile d0041b43-mpromise-0-5-4 mpromise@0.5.4
+460 silly lockFile d0041b43-mpromise-0-5-4 mpromise@0.5.4
+461 http 304 https://registry.npmjs.org/ms
+462 silly registry.get cb [ 304,
+462 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+462 silly registry.get     server: 'Apache',
+462 silly registry.get     via: '1.1 varnish',
+462 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:58:49 GMT',
+462 silly registry.get     'cache-control': 'max-age=60',
+462 silly registry.get     etag: '"2CV4V1PTIW41DQWP8ODMMT2SO"',
+462 silly registry.get     age: '38',
+462 silly registry.get     'x-served-by': 'cache-ams4144-AMS',
+462 silly registry.get     'x-cache': 'HIT',
+462 silly registry.get     'x-cache-hits': '2',
+462 silly registry.get     'x-timer': 'S1429513160.776077,VS0,VE0',
+462 silly registry.get     vary: 'Accept',
+462 silly registry.get     'content-length': '0',
+462 silly registry.get     'keep-alive': 'timeout=10, max=49',
+462 silly registry.get     connection: 'Keep-Alive' } ]
+463 verbose etag ms from cache
+464 http 304 https://registry.npmjs.org/hooks
+465 silly registry.get cb [ 304,
+465 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+465 silly registry.get     server: 'Apache',
+465 silly registry.get     via: '1.1 varnish',
+465 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:20 GMT',
+465 silly registry.get     'cache-control': 'max-age=60',
+465 silly registry.get     etag: '"18JHGG9MBLMFC2UE3KME89ME2"',
+465 silly registry.get     age: '12',
+465 silly registry.get     'x-served-by': 'cache-ams4145-AMS',
+465 silly registry.get     'x-cache': 'HIT',
+465 silly registry.get     'x-cache-hits': '1',
+465 silly registry.get     'x-timer': 'S1429513160.778347,VS0,VE0',
+465 silly registry.get     vary: 'Accept',
+465 silly registry.get     'content-length': '0',
+465 silly registry.get     'keep-alive': 'timeout=10, max=49',
+465 silly registry.get     connection: 'Keep-Alive' } ]
+466 verbose etag hooks from cache
+467 silly lockFile 9555626c-ms-0-1-0 ms@0.1.0
+468 silly lockFile 9555626c-ms-0-1-0 ms@0.1.0
+469 http 304 https://registry.npmjs.org/sliced
+470 silly registry.get cb [ 304,
+470 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+470 silly registry.get     server: 'Apache',
+470 silly registry.get     via: '1.1 varnish',
+470 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:20 GMT',
+470 silly registry.get     'cache-control': 'max-age=60',
+470 silly registry.get     etag: '"BWWUVAZPK81QFONHEUJ3BBUW4"',
+470 silly registry.get     age: '12',
+470 silly registry.get     'x-served-by': 'cache-ams4146-AMS',
+470 silly registry.get     'x-cache': 'HIT',
+470 silly registry.get     'x-cache-hits': '1',
+470 silly registry.get     'x-timer': 'S1429513160.782482,VS0,VE0',
+470 silly registry.get     vary: 'Accept',
+470 silly registry.get     'content-length': '0',
+470 silly registry.get     'keep-alive': 'timeout=10, max=49',
+470 silly registry.get     connection: 'Keep-Alive' } ]
+471 verbose etag sliced from cache
+472 http 304 https://registry.npmjs.org/async
+473 silly registry.get cb [ 304,
+473 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+473 silly registry.get     server: 'Apache',
+473 silly registry.get     via: '1.1 varnish',
+473 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:58:53 GMT',
+473 silly registry.get     'cache-control': 'max-age=60',
+473 silly registry.get     etag: '"8ZCMFXTBIYOE54H71CHQZ41ST"',
+473 silly registry.get     age: '39',
+473 silly registry.get     'x-served-by': 'cache-ams4132-AMS',
+473 silly registry.get     'x-cache': 'HIT',
+473 silly registry.get     'x-cache-hits': '3',
+473 silly registry.get     'x-timer': 'S1429513160.783318,VS0,VE0',
+473 silly registry.get     vary: 'Accept',
+473 silly registry.get     'content-length': '0',
+473 silly registry.get     'keep-alive': 'timeout=10, max=49',
+473 silly registry.get     connection: 'Keep-Alive' } ]
+474 verbose etag async from cache
+475 silly lockFile 462b04a3-hooks-0-3-2 hooks@0.3.2
+476 silly lockFile 462b04a3-hooks-0-3-2 hooks@0.3.2
+477 silly lockFile 146acdb0-sliced-0-0-5 sliced@0.0.5
+478 silly lockFile 146acdb0-sliced-0-0-5 sliced@0.0.5
+479 silly lockFile 9a58a886-async-0-9-0 async@0.9.0
+480 silly lockFile 9a58a886-async-0-9-0 async@0.9.0
+481 http 304 https://registry.npmjs.org/kareem
+482 silly registry.get cb [ 304,
+482 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+482 silly registry.get     server: 'Apache',
+482 silly registry.get     via: '1.1 varnish',
+482 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:20 GMT',
+482 silly registry.get     'cache-control': 'max-age=60',
+482 silly registry.get     etag: '"EU30IB53WJTN7X74ZMUAGG3LX"',
+482 silly registry.get     age: '0',
+482 silly registry.get     'x-served-by': 'cache-ams4147-AMS',
+482 silly registry.get     'x-cache': 'HIT',
+482 silly registry.get     'x-cache-hits': '1',
+482 silly registry.get     'x-timer': 'S1429513160.775575,VS0,VE178',
+482 silly registry.get     vary: 'Accept',
+482 silly registry.get     'content-length': '0',
+482 silly registry.get     'keep-alive': 'timeout=10, max=49',
+482 silly registry.get     connection: 'Keep-Alive' } ]
+483 verbose etag kareem from cache
+484 silly lockFile 96bef6f3-kareem-0-0-4 kareem@0.0.4
+485 silly lockFile 96bef6f3-kareem-0-0-4 kareem@0.0.4
+486 http 304 https://registry.npmjs.org/mongodb
+487 silly registry.get cb [ 304,
+487 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:20 GMT',
+487 silly registry.get     server: 'Apache',
+487 silly registry.get     via: '1.1 varnish',
+487 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:21 GMT',
+487 silly registry.get     'cache-control': 'max-age=60',
+487 silly registry.get     etag: '"71RW0NA0X581BZJ7MO4BK0V2X"',
+487 silly registry.get     age: '0',
+487 silly registry.get     'x-served-by': 'cache-ams4144-AMS',
+487 silly registry.get     'x-cache': 'HIT',
+487 silly registry.get     'x-cache-hits': '1',
+487 silly registry.get     'x-timer': 'S1429513160.848612,VS0,VE676',
+487 silly registry.get     vary: 'Accept',
+487 silly registry.get     'content-length': '0',
+487 silly registry.get     'keep-alive': 'timeout=10, max=48',
+487 silly registry.get     connection: 'Keep-Alive' } ]
+488 verbose etag mongodb from cache
+489 silly lockFile 37bf49a3-mongodb-1-4-12 mongodb@1.4.12
+490 silly lockFile 37bf49a3-mongodb-1-4-12 mongodb@1.4.12
+491 silly resolved [ { name: 'muri',
+491 silly resolved     version: '0.3.1',
+491 silly resolved     description: 'MongoDB URI parser',
+491 silly resolved     main: 'index.js',
+491 silly resolved     scripts: { test: 'make test' },
+491 silly resolved     repository: { type: 'git', url: 'git://github.com/aheckmann/muri.git' },
+491 silly resolved     keywords: [ 'mongodb', 'uri', 'parser' ],
+491 silly resolved     author:
+491 silly resolved      { name: 'Aaron Heckmann',
+491 silly resolved        email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     license: 'MIT',
+491 silly resolved     devDependencies: { mocha: '1.6.0' },
+491 silly resolved     _id: 'muri@0.3.1',
+491 silly resolved     dist:
+491 silly resolved      { shasum: '861889c5c857f1a43700bee85d50731f61727c9a',
+491 silly resolved        tarball: 'http://registry.npmjs.org/muri/-/muri-0.3.1.tgz' },
+491 silly resolved     _from: 'muri@0.3.1',
+491 silly resolved     _npmVersion: '1.2.10',
+491 silly resolved     _npmUser: { name: 'aaron', email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     maintainers: [ [Object] ],
+491 silly resolved     directories: {},
+491 silly resolved     _shasum: '861889c5c857f1a43700bee85d50731f61727c9a',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/muri/-/muri-0.3.1.tgz',
+491 silly resolved     bugs: { url: 'https://github.com/aheckmann/muri/issues' },
+491 silly resolved     readme: 'ERROR: No README data found!',
+491 silly resolved     homepage: 'https://github.com/aheckmann/muri' },
+491 silly resolved   { name: 'regexp-clone',
+491 silly resolved     version: '0.0.1',
+491 silly resolved     description: 'Clone RegExps with options',
+491 silly resolved     main: 'index.js',
+491 silly resolved     scripts: { test: 'make test' },
+491 silly resolved     repository:
+491 silly resolved      { type: 'git',
+491 silly resolved        url: 'git://github.com/aheckmann/regexp-clone.git' },
+491 silly resolved     keywords: [ 'RegExp', 'clone' ],
+491 silly resolved     author:
+491 silly resolved      { name: 'Aaron Heckmann',
+491 silly resolved        email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     license: 'MIT',
+491 silly resolved     devDependencies: { mocha: '1.8.1' },
+491 silly resolved     readme: '#regexp-clone\n==============\n\nClones RegExps with flag preservation\n\n```js\nvar regexpClone = require(\'regexp-clone\');\n\nvar a = /somethin/g;\nconsole.log(a.global); // true\n\nvar b = regexpClone(a);\nconsole.log(b.global); // true\n```\n\n## License\n\n[MIT](https://github.com/aheckmann/regexp-clone/blob/master/LICENSE)\n',
+491 silly resolved     readmeFilename: 'README.md',
+491 silly resolved     _id: 'regexp-clone@0.0.1',
+491 silly resolved     dist:
+491 silly resolved      { shasum: 'a7c2e09891fdbf38fbb10d376fb73003e68ac589',
+491 silly resolved        tarball: 'http://registry.npmjs.org/regexp-clone/-/regexp-clone-0.0.1.tgz' },
+491 silly resolved     _from: 'regexp-clone@0.0.1',
+491 silly resolved     _npmVersion: '1.2.14',
+491 silly resolved     _npmUser: { name: 'aaron', email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     maintainers: [ [Object] ],
+491 silly resolved     directories: {},
+491 silly resolved     _shasum: 'a7c2e09891fdbf38fbb10d376fb73003e68ac589',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/regexp-clone/-/regexp-clone-0.0.1.tgz',
+491 silly resolved     bugs: { url: 'https://github.com/aheckmann/regexp-clone/issues' },
+491 silly resolved     homepage: 'https://github.com/aheckmann/regexp-clone' },
+491 silly resolved   { name: 'mquery',
+491 silly resolved     version: '1.0.0',
+491 silly resolved     description: 'Expressive query building for MongoDB',
+491 silly resolved     main: 'lib/mquery.js',
+491 silly resolved     scripts: { test: 'make test' },
+491 silly resolved     repository: { type: 'git', url: 'git://github.com/aheckmann/mquery.git' },
+491 silly resolved     dependencies: { sliced: '0.0.5', debug: '0.7.4', 'regexp-clone': '0.0.1' },
+491 silly resolved     devDependencies: { mongodb: '1.4.4', mocha: '1.9.x' },
+491 silly resolved     bugs: { url: 'https://github.com/aheckmann/mquery/issues/new' },
+491 silly resolved     author:
+491 silly resolved      { name: 'Aaron Heckmann',
+491 silly resolved        email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     license: 'MIT',
+491 silly resolved     keywords: [ 'mongodb', 'query', 'builder' ],
+491 silly resolved     homepage: 'https://github.com/aheckmann/mquery/',
+491 silly resolved     _id: 'mquery@1.0.0',
+491 silly resolved     _shasum: '6940a46d643368fe8e5abddeb94bd8dd32013f5b',
+491 silly resolved     _from: 'mquery@1.0.0',
+491 silly resolved     _npmVersion: '1.4.9',
+491 silly resolved     _npmUser: { name: 'aaron', email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     maintainers: [ [Object], [Object] ],
+491 silly resolved     dist:
+491 silly resolved      { shasum: '6940a46d643368fe8e5abddeb94bd8dd32013f5b',
+491 silly resolved        tarball: 'http://registry.npmjs.org/mquery/-/mquery-1.0.0.tgz' },
+491 silly resolved     directories: {},
+491 silly resolved     _resolved: 'https://registry.npmjs.org/mquery/-/mquery-1.0.0.tgz',
+491 silly resolved     readme: 'ERROR: No README data found!' },
+491 silly resolved   { name: 'mpath',
+491 silly resolved     version: '0.1.1',
+491 silly resolved     description: '{G,S}et object values using MongoDB path notation',
+491 silly resolved     main: 'index.js',
+491 silly resolved     scripts: { test: 'make test' },
+491 silly resolved     repository: { type: 'git', url: 'git://github.com/aheckmann/mpath.git' },
+491 silly resolved     keywords: [ 'mongodb', 'path', 'get', 'set' ],
+491 silly resolved     author:
+491 silly resolved      { name: 'Aaron Heckmann',
+491 silly resolved        email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     license: 'MIT',
+491 silly resolved     devDependencies: { mocha: '1.6.0' },
+491 silly resolved     _id: 'mpath@0.1.1',
+491 silly resolved     dist:
+491 silly resolved      { shasum: '23da852b7c232ee097f4759d29c0ee9cd22d5e46',
+491 silly resolved        tarball: 'http://registry.npmjs.org/mpath/-/mpath-0.1.1.tgz' },
+491 silly resolved     _npmVersion: '1.1.59',
+491 silly resolved     _npmUser: { name: 'aaron', email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     maintainers: [ [Object] ],
+491 silly resolved     directories: {},
+491 silly resolved     _shasum: '23da852b7c232ee097f4759d29c0ee9cd22d5e46',
+491 silly resolved     _from: 'mpath@0.1.1',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/mpath/-/mpath-0.1.1.tgz',
+491 silly resolved     bugs: { url: 'https://github.com/aheckmann/mpath/issues' },
+491 silly resolved     readme: 'ERROR: No README data found!',
+491 silly resolved     homepage: 'https://github.com/aheckmann/mpath' },
+491 silly resolved   { name: 'mpromise',
+491 silly resolved     version: '0.5.4',
+491 silly resolved     publishConfig: { tag: 'beta' },
+491 silly resolved     description: 'Promises A+ conformant implementation',
+491 silly resolved     main: 'lib/promise.js',
+491 silly resolved     scripts: { test: 'mocha' },
+491 silly resolved     devDependencies: { 'promises-aplus-tests': '2.0.3', mocha: '1.17.1' },
+491 silly resolved     repository: { type: 'git', url: 'git://github.com/aheckmann/mpromise' },
+491 silly resolved     keywords: [ 'promise', 'mongoose', 'aplus', 'a+', 'plus' ],
+491 silly resolved     author:
+491 silly resolved      { name: 'Aaron Heckmann',
+491 silly resolved        email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     license: 'MIT',
+491 silly resolved     bugs: { url: 'https://github.com/aheckmann/mpromise/issues' },
+491 silly resolved     homepage: 'https://github.com/aheckmann/mpromise',
+491 silly resolved     _id: 'mpromise@0.5.4',
+491 silly resolved     dist:
+491 silly resolved      { shasum: 'b610613ec6de37419f944b35f0783b4de9f5dc75',
+491 silly resolved        tarball: 'http://registry.npmjs.org/mpromise/-/mpromise-0.5.4.tgz' },
+491 silly resolved     _from: 'mpromise@0.5.4',
+491 silly resolved     _npmVersion: '1.3.26',
+491 silly resolved     _npmUser: { name: 'refack', email: 'refael@empeeric.com' },
+491 silly resolved     maintainers: [ [Object], [Object] ],
+491 silly resolved     directories: {},
+491 silly resolved     _shasum: 'b610613ec6de37419f944b35f0783b4de9f5dc75',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/mpromise/-/mpromise-0.5.4.tgz',
+491 silly resolved     readme: 'ERROR: No README data found!' },
+491 silly resolved   { name: 'ms',
+491 silly resolved     version: '0.1.0',
+491 silly resolved     description: 'Tiny ms conversion utility',
+491 silly resolved     main: './ms',
+491 silly resolved     devDependencies: { mocha: '*', 'expect.js': '*', serve: '*' },
+491 silly resolved     _npmUser: { name: 'rauchg', email: 'rauchg@gmail.com' },
+491 silly resolved     _id: 'ms@0.1.0',
+491 silly resolved     dependencies: {},
+491 silly resolved     engines: { node: '*' },
+491 silly resolved     _engineSupported: true,
+491 silly resolved     _npmVersion: '1.0.106',
+491 silly resolved     _nodeVersion: 'v0.4.12',
+491 silly resolved     _defaultsLoaded: true,
+491 silly resolved     dist:
+491 silly resolved      { shasum: 'f21fac490daf1d7667fd180fe9077389cc9442b2',
+491 silly resolved        tarball: 'http://registry.npmjs.org/ms/-/ms-0.1.0.tgz' },
+491 silly resolved     maintainers: [ [Object] ],
+491 silly resolved     directories: {},
+491 silly resolved     _shasum: 'f21fac490daf1d7667fd180fe9077389cc9442b2',
+491 silly resolved     _from: 'ms@0.1.0',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/ms/-/ms-0.1.0.tgz',
+491 silly resolved     readme: 'ERROR: No README data found!' },
+491 silly resolved   { name: 'hooks',
+491 silly resolved     description: 'Adds pre and post hook functionality to your JavaScript methods.',
+491 silly resolved     version: '0.3.2',
+491 silly resolved     keywords: [ 'node', 'hooks', 'middleware', 'pre', 'post' ],
+491 silly resolved     homepage: 'https://github.com/bnoguchi/hooks-js/',
+491 silly resolved     repository: { type: 'git', url: 'git://github.com/bnoguchi/hooks-js.git' },
+491 silly resolved     author:
+491 silly resolved      { name: 'Brian Noguchi',
+491 silly resolved        email: 'brian.noguchi@gmail.com',
+491 silly resolved        url: 'https://github.com/bnoguchi/' },
+491 silly resolved     main: './hooks.js',
+491 silly resolved     directories: { lib: '.' },
+491 silly resolved     scripts: { test: 'make test' },
+491 silly resolved     dependencies: {},
+491 silly resolved     devDependencies: { expresso: '>=0.7.6', should: '>=0.2.1', underscore: '>=1.1.4' },
+491 silly resolved     engines: { node: '>=0.4.0' },
+491 silly resolved     licenses: [ 'MIT' ],
+491 silly resolved     optionalDependencies: {},
+491 silly resolved     readme: 'hooks\n============\n\nAdd pre and post middleware hooks to your JavaScript methods.\n\n## Installation\n    npm install hooks\n\n## Motivation\nSuppose you have a JavaScript object with a `save` method.\n\nIt would be nice to be able to declare code that runs before `save` and after `save`.\nFor example, you might want to run validation code before every `save`,\nand you might want to dispatch a job to a background job queue after `save`.\n\nOne might have an urge to hard code this all into `save`, but that turns out to\ncouple all these pieces of functionality (validation, save, and job creation) more\ntightly than is necessary. For example, what if someone does not want to do background\njob creation after the logical save?\n\nIt is nicer to tack on functionality using what we call `pre` and `post` hooks. These\nare functions that you define and that you direct to execute before or after particular\nmethods.\n\n## Example\nWe can use `hooks` to add validation and background jobs in the following way:\n\n```javascript\nvar hooks = require(\'hooks\')\n  , Document = require(\'./path/to/some/document/constructor\');\n\n// Add hooks\' methods: `hook`, `pre`, and `post`\nfor (var k in hooks) {\n  Document[k] = hooks[k];\n}\n\n// Define a new method that is able to invoke pre and post middleware\nDocument.hook(\'save\', Document.prototype.save);\n\n// Define a middleware function to be invoked before \'save\'\nDocument.pre(\'save\', function validate (next) {\n  // The `this` context inside of `pre` and `post` functions\n  // is the Document instance\n  if (this.isValid()) next();      // next() passes control to the next middleware\n                                   // or to the target method itself\n  else next(new Error("Invalid")); // next(error) invokes an error callback\n});\n\n// Define a middleware function to be invoked after \'save\'\nDocument.post(\'save\', function createJob (next) {\n  this.sendToBackgroundQueue();\n  next();\n});\n```\n\nIf you already have defined `Document.prototype` methods for which you want pres and posts,\nthen you do not need to explicitly invoke `Document.hook(...)`. Invoking `Document.pre(methodName, fn)`\nor `Document.post(methodName, fn)` will automatically and lazily change `Document.prototype[methodName]`\nso that it plays well with `hooks`. An equivalent way to implement the previous example is:\n\n```javascript\nvar hooks = require(\'hooks\')\n  , Document = require(\'./path/to/some/document/constructor\');\n\n// Add hooks\' methods: `hook`, `pre`, and `post`\nfor (var k in hooks) {\n  Document[k] = hooks[k];\n}\n\nDocument.prototype.save = function () {\n  // ...\n};\n\n// Define a middleware function to be invoked before \'save\'\nDocument.pre(\'save\', function validate (next) {\n  // The `this` context inside of `pre` and `post` functions\n  // is the Document instance\n  if (this.isValid()) next();      // next() passes control to the next middleware\n                                   // or to the target method itself\n  else next(new Error("Invalid")); // next(error) invokes an error callback\n});\n\n// Define a middleware function to be invoked after \'save\'\nDocument.post(\'save\', function createJob (next) {\n  this.sendToBackgroundQueue();\n  next();\n});\n```\n\n## Pres and Posts as Middleware\nWe structure pres and posts as middleware to give you maximum flexibility:\n\n1. You can define **multiple** pres (or posts) for a single method.\n2. These pres (or posts) are then executed as a chain of methods.\n3. Any functions in this middleware chain can choose to halt the chain\'s execution by `next`ing an Error from that middleware function. If this occurs, then none of the other middleware in the chain will execute, and the main method (e.g., `save`) will not execute. This is nice, for example, when we don\'t want a document to save if it is invalid.\n\n## Defining multiple pres (or posts)\n`pre` and `post` are chainable, so you can define multiple via:\n```javascript\nDocument.pre(\'save\', function (next) {\n  console.log("hello");\n  next();\n}).pre(\'save\', function (next) {\n  console.log("world");\n  next();\n});\n\nDocument.post(\'save\', function (next) {\n  console.log("hello");\n  next();\n}).post(\'save\', function (next) {\n  console.log("world");\n  next();\n});\n```\n\nAs soon as one pre finishes executing, the next one will be invoked, and so on.\n\n## Error Handling\nYou can define a default error handler by passing a 2nd function as the 3rd argument to `hook`:\n```javascript\nDocument.hook(\'set\', function (path, val) {\n  this[path] = val;\n}, function (err) {\n  // Handler the error here\n  console.error(err);\n});\n```\n\nThen, we can pass errors to this handler from a pre or post middleware function:\n```javascript\nDocument.pre(\'set\', function (next, path, val) {\n  next(new Error());\n});\n```\n\nIf you do not set up a default handler, then `hooks` makes the default handler that just throws the `Error`.\n\nThe default error handler can be over-rided on a per method invocation basis.\n\nIf the main method that you are surrounding with pre and post middleware expects its last argument to be a function\nwith callback signature `function (error, ...)`, then that callback becomes the error handler, over-riding the default\nerror handler you may have set up.\n\n```javascript\nDocument.hook(\'save\', function (callback) {\n  // Save logic goes here\n  ...\n});\n\nvar doc = new Document();\ndoc.save( function (err, saved) {\n  // We can pass err via `next` in any of our pre or post middleware functions\n  if (err) console.error(err);\n\n  // Rest of callback logic follows ...\n});\n```\n\n## Mutating Arguments via Middleware\n`pre` and `post` middleware can also accept the intended arguments for the method\nthey augment. This is useful if you want to mutate the arguments before passing\nthem along to the next middleware and eventually pass a mutated arguments list to\nthe main method itself.\n\nAs a simple example, let\'s define a method `set` that just sets a key, value pair.\nIf we want to namespace the key, we can do so by adding a `pre` middleware hook\nthat runs before `set`, alters the arguments by namespacing the `key` argument, and passes them onto `set`:\n\n```javascript\nDocument.hook(\'set\', function (key, val) {\n  this[key] = val;\n});\nDocument.pre(\'set\', function (next, key, val) {\n  next(\'namespace-\' + key, val);\n});\nvar doc = new Document();\ndoc.set(\'hello\', \'world\');\nconsole.log(doc.hello); // undefined\nconsole.log(doc[\'namespace-hello\']); // \'world\'\n```\n\nAs you can see above, we pass arguments via `next`.\n\nIf you are not mutating the arguments, then you can pass zero arguments\nto `next`, and the next middleware function will still have access\nto the arguments.\n\n```javascript\nDocument.hook(\'set\', function (key, val) {\n  this[key] = val;\n});\nDocument.pre(\'set\', function (next, key, val) {\n  // I have access to key and val here\n  next(); // We don\'t need to pass anything to next\n});\nDocument.pre(\'set\', function (next, key, val) {\n  // And I still have access to the original key and val here\n  next();\n});\n```\n\nFinally, you can add arguments that downstream middleware can also see:\n\n```javascript\n// Note that in the definition of `set`, there is no 3rd argument, options\nDocument.hook(\'set\', function (key, val) {\n  // But...\n  var options = arguments[2]; // ...I have access to an options argument\n                              // because of pre function pre2 (defined below)\n  console.log(options); // \'{debug: true}\'\n  this[key] = val;\n});\nDocument.pre(\'set\', function pre1 (next, key, val) {\n  // I only have access to key and val arguments\n  console.log(arguments.length); // 3\n  next(key, val, {debug: true});\n});\nDocument.pre(\'set\', function pre2 (next, key, val, options) {\n  console.log(arguments.length); // 4\n  console.log(options); // \'{ debug: true}\'\n  next();\n});\nDocument.pre(\'set\', function pre3 (next, key, val, options) {\n  // I still have access to key, val, AND the options argument introduced via the preceding middleware\n  console.log(arguments.length); // 4\n  console.log(options); // \'{ debug: true}\'\n  next();\n});\n\nvar doc = new Document()\ndoc.set(\'hey\', \'there\');\n```\n\n## Post middleware\n\nPost middleware intercepts the callback originally sent to the asynchronous function you have hooked to.\n\nThis means that the following chain of execution will occur in a typical `save` operation:\n\n(1) doc.save -> (2) pre --(next)--> (3) save calls back -> (4) post --(next)--> (5) targetFn\n\nIllustrated below:\n\n```\nDocument.pre(\'save\', function (next) {\n  this.key = "value";\n  next();\n});\n// Post handler occurs before `set` calls back. This is useful if we need to grab something\n// async before `set` finishes.\nDocument.post(\'set\', function (next) {\n  var me = this;\n  getSomethingAsync(function(value){ // let\'s assume it returns "Hello Async"\n    me.key2 = value;\n    next();\n  });\n});\n\nvar doc = new Document();\ndoc.save(function(err){\n  console.log(this.key);  // "value" - this value was saved\n  console.log(this.key2); // "Hello Async" - this value was *not* saved\n}\n\n```\n\nPost middleware must call `next()` or execution will stop.\n\n## Parallel `pre` middleware\n\nAll middleware up to this point has been "serial" middleware -- i.e., middleware whose logic\nis executed as a serial chain.\n\nSome scenarios call for parallel middleware -- i.e., middleware that can wait for several\nasynchronous services at once to respond.\n\nFor instance, you may only want to save a Document only after you have checked\nthat the Document is valid according to two different remote services.\n\nWe accomplish asynchronous middleware by adding a second kind of flow control callback\n(the only flow control callback so far has been `next`), called `done`.\n\n- `next` passes control to the next middleware in the chain\n- `done` keeps track of how many parallel middleware have invoked `done` and passes\n   control to the target method when ALL parallel middleware have invoked `done`. If\n   you pass an `Error` to `done`, then the error is handled, and the main method that is\n   wrapped by pres and posts will not get invoked.\n\nWe declare pre middleware that is parallel by passing a 3rd boolean argument to our `pre`\ndefinition method.\n\nWe illustrate via the parallel validation example mentioned above:\n\n```javascript\nDocument.hook(\'save\', function targetFn (callback) {\n  // Save logic goes here\n  // ...\n  // This only gets run once the two `done`s are both invoked via preOne and preTwo.\n});\n\n                     // true marks this as parallel middleware\nDocument.pre(\'save\', true, function preOne (next, doneOne, callback) {\n  remoteServiceOne.validate(this.serialize(), function (err, isValid) {\n    // The code in here will probably be run after the `next` below this block\n    // and could possibly be run after the console.log("Hola") in `preTwo\n    if (err) return doneOne(err);\n    if (isValid) doneOne();\n  });\n  next(); // Pass control to the next middleware\n});\n\n// We will suppose that we need 2 different remote services to validate our document\nDocument.pre(\'save\', true, function preTwo (next, doneTwo, callback) {\n  remoteServiceTwo.validate(this.serialize(), function (err, isValid) {\n    if (err) return doneTwo(err);\n    if (isValid) doneTwo();\n  });\n  next();\n});\n\n// While preOne and preTwo are parallel, preThree is a serial pre middleware\nDocument.pre(\'save\', function preThree (next, callback) {\n  next();\n});\n\nvar doc = new Document();\ndoc.save( function (err, doc) {\n  // Do stuff with the saved doc here...\n});\n```\n\nIn the above example, flow control may happen in the following way:\n\n(1) doc.save -> (2) preOne --(next)--> (3) preTwo --(next)--> (4) preThree --(next)--> (wait for dones to invoke) -> (5) doneTwo -> (6) doneOne -> (7) targetFn\n\nSo what\'s happening is that:\n\n1. You call `doc.save(...)`\n2. First, your preOne middleware gets executed. It makes a remote call to the validation service and `next()`s to the preTwo middleware.\n3. Now, your preTwo middleware gets executed. It makes a remote call to another validation service and `next()`s to the preThree middleware.\n4. Your preThree middleware gets executed. It immediately `next()`s. But nothing else gets executing until both `doneOne` and `doneTwo` are invoked inside the callbacks handling the response from the two valiation services.\n5. We will suppose that validation remoteServiceTwo returns a response to us first. In this case, we call `doneTwo` inside the callback to remoteServiceTwo.\n6. Some fractions of a second later, remoteServiceOne returns a response to us. In this case, we call `doneOne` inside the callback to remoteServiceOne.\n7. `hooks` implementation keeps track of how many parallel middleware has been defined per target function. It detects that both asynchronous pre middlewares (`preOne` and `preTwo`) have finally called their `done` functions (`doneOne` and `doneTwo`), so the implementation finally invokes our `targetFn` (i.e., our core `save` business logic).\n\n## Removing Pres\n\nYou can remove a particular pre associated with a hook:\n\n    Document.pre(\'set\', someFn);\n    Document.removePre(\'set\', someFn);\n\nAnd you can also remove all pres associated with a hook:\n    Document.removePre(\'set\'); // Removes all declared `pre`s on the hook \'set\'\n\n## Tests\nTo run the tests:\n    make test\n\n### Contributors\n- [Brian Noguchi](https://github.com/bnoguchi)\n\n### License\nMIT License\n\n---\n### Author\nBrian Noguchi\n',
+491 silly resolved     readmeFilename: 'README.md',
+491 silly resolved     bugs: { url: 'https://github.com/bnoguchi/hooks-js/issues' },
+491 silly resolved     _id: 'hooks@0.3.2',
+491 silly resolved     dist:
+491 silly resolved      { shasum: 'a31f060c2026cea6cf1ca3eb178430e718e1c4a3',
+491 silly resolved        tarball: 'http://registry.npmjs.org/hooks/-/hooks-0.3.2.tgz' },
+491 silly resolved     _from: 'hooks@0.3.2',
+491 silly resolved     _npmVersion: '1.3.5',
+491 silly resolved     _npmUser: { name: 'bnoguchi', email: 'brian.noguchi@gmail.com' },
+491 silly resolved     maintainers: [ [Object] ],
+491 silly resolved     _shasum: 'a31f060c2026cea6cf1ca3eb178430e718e1c4a3',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/hooks/-/hooks-0.3.2.tgz' },
+491 silly resolved   { name: 'sliced',
+491 silly resolved     version: '0.0.5',
+491 silly resolved     description: 'A faster Node.js alternative to Array.prototype.slice.call(arguments)',
+491 silly resolved     main: 'index.js',
+491 silly resolved     scripts: { test: 'make test' },
+491 silly resolved     repository: { type: 'git', url: 'git://github.com/aheckmann/sliced' },
+491 silly resolved     keywords: [ 'arguments', 'slice', 'array' ],
+491 silly resolved     author:
+491 silly resolved      { name: 'Aaron Heckmann',
+491 silly resolved        email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     license: 'MIT',
+491 silly resolved     devDependencies: { mocha: '1.5.0', benchmark: '~1.0.0' },
+491 silly resolved     readme: '#sliced\n==========\n\nA faster alternative to `[].slice.call(arguments)`.\n\n[![Build Status](https://secure.travis-ci.org/aheckmann/sliced.png)](http://travis-ci.org/aheckmann/sliced)\n\nExample output from [benchmark.js](https://github.com/bestiejs/benchmark.js)\n\n    Array.prototype.slice.call x 1,320,205 ops/sec ±2.35% (92 runs sampled)\n    [].slice.call x 1,314,605 ops/sec ±1.60% (95 runs sampled)\n    cached slice.call x 10,468,380 ops/sec ±1.45% (95 runs sampled)\n    sliced x 16,608,237 ops/sec ±1.40% (92 runs sampled)\n    fastest is sliced\n\n    Array.prototype.slice.call(arguments, 1) x 1,383,584 ops/sec ±1.73% (97 runs sampled)\n    [].slice.call(arguments, 1) x 1,494,735 ops/sec ±1.33% (95 runs sampled)\n    cached slice.call(arguments, 1) x 10,085,270 ops/sec ±1.51% (97 runs sampled)\n    sliced(arguments, 1) x 16,620,480 ops/sec ±1.29% (95 runs sampled)\n    fastest is sliced(arguments, 1)\n\n    Array.prototype.slice.call(arguments, -1) x 1,303,262 ops/sec ±1.62% (94 runs sampled)\n    [].slice.call(arguments, -1) x 1,325,615 ops/sec ±1.36% (97 runs sampled)\n    cached slice.call(arguments, -1) x 9,673,603 ops/sec ±1.70% (96 runs sampled)\n    sliced(arguments, -1) x 16,384,575 ops/sec ±1.06% (91 runs sampled)\n    fastest is sliced(arguments, -1)\n\n    Array.prototype.slice.call(arguments, -2, -10) x 1,404,390 ops/sec ±1.61% (95 runs sampled)\n    [].slice.call(arguments, -2, -10) x 1,514,367 ops/sec ±1.21% (96 runs sampled)\n    cached slice.call(arguments, -2, -10) x 9,836,017 ops/sec ±1.21% (95 runs sampled)\n    sliced(arguments, -2, -10) x 18,544,882 ops/sec ±1.30% (91 runs sampled)\n    fastest is sliced(arguments, -2, -10)\n\n    Array.prototype.slice.call(arguments, -2, -1) x 1,458,604 ops/sec ±1.41% (97 runs sampled)\n    [].slice.call(arguments, -2, -1) x 1,536,547 ops/sec ±1.63% (99 runs sampled)\n    cached slice.call(arguments, -2, -1) x 10,060,633 ops/sec ±1.37% (96 runs sampled)\n    sliced(arguments, -2, -1) x 18,608,712 ops/sec ±1.08% (93 runs sampled)\n    fastest is sliced(arguments, -2, -1)\n\n_Benchmark  [source](https://github.com/aheckmann/sliced/blob/master/bench.js)._\n\n##Usage\n\n`sliced` accepts the same arguments as `Array#slice` so you can easily swap it out.\n\n```js\nfunction zing () {\n  var slow = [].slice.call(arguments, 1, 8);\n  var args = slice(arguments, 1, 8);\n\n  var slow = Array.prototype.slice.call(arguments);\n  var args = slice(arguments);\n  // etc\n}\n```\n\n## install\n\n    npm install sliced\n\n\n[LICENSE](https://github.com/aheckmann/sliced/blob/master/LICENSE)\n',
+491 silly resolved     _id: 'sliced@0.0.5',
+491 silly resolved     dist:
+491 silly resolved      { shasum: '5edc044ca4eb6f7816d50ba2fc63e25d8fe4707f',
+491 silly resolved        tarball: 'http://registry.npmjs.org/sliced/-/sliced-0.0.5.tgz' },
+491 silly resolved     _npmVersion: '1.1.59',
+491 silly resolved     _npmUser: { name: 'aaron', email: 'aaron.heckmann+github@gmail.com' },
+491 silly resolved     maintainers: [ [Object] ],
+491 silly resolved     directories: {},
+491 silly resolved     _shasum: '5edc044ca4eb6f7816d50ba2fc63e25d8fe4707f',
+491 silly resolved     _from: 'sliced@0.0.5',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/sliced/-/sliced-0.0.5.tgz',
+491 silly resolved     bugs: { url: 'https://github.com/aheckmann/sliced/issues' },
+491 silly resolved     homepage: 'https://github.com/aheckmann/sliced' },
+491 silly resolved   { name: 'async',
+491 silly resolved     description: 'Higher-order functions and common patterns for asynchronous code',
+491 silly resolved     main: './lib/async',
+491 silly resolved     author: { name: 'Caolan McMahon' },
+491 silly resolved     version: '0.9.0',
+491 silly resolved     repository: { type: 'git', url: 'https://github.com/caolan/async.git' },
+491 silly resolved     bugs: { url: 'https://github.com/caolan/async/issues' },
+491 silly resolved     licenses: [ [Object] ],
+491 silly resolved     devDependencies: { nodeunit: '>0.0.0', 'uglify-js': '1.2.x', nodelint: '>0.0.0' },
+491 silly resolved     jam: { main: 'lib/async.js', include: [Object] },
+491 silly resolved     scripts: { test: 'nodeunit test/test-async.js' },
+491 silly resolved     homepage: 'https://github.com/caolan/async',
+491 silly resolved     _id: 'async@0.9.0',
+491 silly resolved     dist:
+491 silly resolved      { shasum: 'ac3613b1da9bed1b47510bb4651b8931e47146c7',
+491 silly resolved        tarball: 'http://registry.npmjs.org/async/-/async-0.9.0.tgz' },
+491 silly resolved     _from: 'async@0.9.0',
+491 silly resolved     _npmVersion: '1.4.3',
+491 silly resolved     _npmUser: { name: 'caolan', email: 'caolan.mcmahon@gmail.com' },
+491 silly resolved     maintainers: [ [Object] ],
+491 silly resolved     directories: {},
+491 silly resolved     _shasum: 'ac3613b1da9bed1b47510bb4651b8931e47146c7',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/async/-/async-0.9.0.tgz',
+491 silly resolved     readme: 'ERROR: No README data found!' },
+491 silly resolved   { name: 'kareem',
+491 silly resolved     version: '0.0.4',
+491 silly resolved     description: 'Next-generation take on pre/post function hooks',
+491 silly resolved     main: 'index.js',
+491 silly resolved     scripts: { test: './node_modules/mocha/bin/mocha ./test/*' },
+491 silly resolved     repository: { type: 'git', url: 'git://github.com/vkarpov15/kareem.git' },
+491 silly resolved     devDependencies: { acquit: '0.0.3', mocha: '2.0.0' },
+491 silly resolved     author: { name: 'Valeri Karpov', email: 'val@karpov.io' },
+491 silly resolved     license: 'Apache 2.0',
+491 silly resolved     bugs: { url: 'https://github.com/vkarpov15/kareem/issues' },
+491 silly resolved     homepage: 'https://github.com/vkarpov15/kareem',
+491 silly resolved     _id: 'kareem@0.0.4',
+491 silly resolved     dist:
+491 silly resolved      { shasum: 'a8475defd74cf829b0071d20e6971bf15d911d2b',
+491 silly resolved        tarball: 'http://registry.npmjs.org/kareem/-/kareem-0.0.4.tgz' },
+491 silly resolved     _from: 'kareem@0.0.4',
+491 silly resolved     _npmVersion: '1.4.6',
+491 silly resolved     _npmUser: { name: 'vkarpov15', email: 'valkar207@gmail.com' },
+491 silly resolved     maintainers: [ [Object] ],
+491 silly resolved     directories: {},
+491 silly resolved     _shasum: 'a8475defd74cf829b0071d20e6971bf15d911d2b',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/kareem/-/kareem-0.0.4.tgz',
+491 silly resolved     readme: 'ERROR: No README data found!' },
+491 silly resolved   { name: 'mongodb',
+491 silly resolved     description: 'A node.js driver for MongoDB',
+491 silly resolved     keywords: [ 'mongodb', 'mongo', 'driver', 'db' ],
+491 silly resolved     version: '1.4.12',
+491 silly resolved     author: { name: 'Christian Amor Kvalheim', email: 'christkv@gmail.com' },
+491 silly resolved     contributors:
+491 silly resolved      [ [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object],
+491 silly resolved        [Object] ],
+491 silly resolved     repository:
+491 silly resolved      { type: 'git',
+491 silly resolved        url: 'http://github.com/mongodb/node-mongodb-native.git' },
+491 silly resolved     bugs: { url: 'http://github.com/mongodb/node-mongodb-native/issues' },
+491 silly resolved     dependencies: { bson: '~0.2', kerberos: '0.0.4', 'readable-stream': 'latest' },
+491 silly resolved     devDependencies:
+491 silly resolved      { dox: '0.4.4',
+491 silly resolved        'uglify-js': '1.2.5',
+491 silly resolved        ejs: '0.6.1',
+491 silly resolved        request: '2.12.0',
+491 silly resolved        nodeunit: '0.7.3',
+491 silly resolved        markdown: '0.3.1',
+491 silly resolved        gleak: '0.2.3',
+491 silly resolved        step: '0.0.5',
+491 silly resolved        async: '0.1.22',
+491 silly resolved        integra: '0.0.3',
+491 silly resolved        optimist: 'latest' },
+491 silly resolved     optionalDependencies: { kerberos: '0.0.4', 'readable-stream': 'latest' },
+491 silly resolved     config: { native: false },
+491 silly resolved     main: './lib/mongodb/index',
+491 silly resolved     homepage: 'http://mongodb.github.com/node-mongodb-native/',
+491 silly resolved     directories: { lib: './lib/mongodb' },
+491 silly resolved     engines: { node: '>=0.6.19' },
+491 silly resolved     scripts: { test: 'make test_functional' },
+491 silly resolved     licenses: [ [Object] ],
+491 silly resolved     _id: 'mongodb@1.4.12',
+491 silly resolved     dist:
+491 silly resolved      { shasum: '65cdd46ec127861e941168fdccf82bf17ad71c4d',
+491 silly resolved        tarball: 'http://registry.npmjs.org/mongodb/-/mongodb-1.4.12.tgz' },
+491 silly resolved     _from: 'mongodb@1.4.12',
+491 silly resolved     _npmVersion: '1.4.3',
+491 silly resolved     _npmUser: { name: 'christkv', email: 'christkv@gmail.com' },
+491 silly resolved     maintainers: [ [Object] ],
+491 silly resolved     _shasum: '65cdd46ec127861e941168fdccf82bf17ad71c4d',
+491 silly resolved     _resolved: 'https://registry.npmjs.org/mongodb/-/mongodb-1.4.12.tgz',
+491 silly resolved     readme: 'ERROR: No README data found!' } ]
+492 info install muri@0.3.1 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+493 info install regexp-clone@0.0.1 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+494 info install mquery@1.0.0 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+495 info install mpath@0.1.1 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+496 info install mpromise@0.5.4 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+497 info install ms@0.1.0 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+498 info install hooks@0.3.2 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+499 info install sliced@0.0.5 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+500 info install async@0.9.0 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+501 info install kareem@0.0.4 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+502 info install mongodb@1.4.12 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose
+503 info installOne muri@0.3.1
+504 info installOne regexp-clone@0.0.1
+505 info installOne mquery@1.0.0
+506 info installOne mpath@0.1.1
+507 info installOne mpromise@0.5.4
+508 info installOne ms@0.1.0
+509 info installOne hooks@0.3.2
+510 info installOne sliced@0.0.5
+511 info installOne async@0.9.0
+512 info installOne kareem@0.0.4
+513 info installOne mongodb@1.4.12
+514 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\muri unbuild
+515 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\regexp-clone unbuild
+516 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery unbuild
+517 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpath unbuild
+518 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpromise unbuild
+519 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\ms unbuild
+520 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\hooks unbuild
+521 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\sliced unbuild
+522 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\async unbuild
+523 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\kareem unbuild
+524 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb unbuild
+525 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\muri\0.3.1\package.tgz
+526 silly lockFile 287177cc-dules-mongoose-node-modules-muri tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\muri
+527 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\muri C:\Users\Rock\AppData\Roaming\npm-cache\287177cc-dules-mongoose-node-modules-muri.lock
+528 silly lockFile 7965f249-npm-cache-muri-0-3-1-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\muri\0.3.1\package.tgz
+529 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\muri\0.3.1\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\7965f249-npm-cache-muri-0-3-1-package-tgz.lock
+530 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\regexp-clone\0.0.1\package.tgz
+531 silly lockFile 46be7abd-ngoose-node-modules-regexp-clone tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\regexp-clone
+532 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\regexp-clone C:\Users\Rock\AppData\Roaming\npm-cache\46be7abd-ngoose-node-modules-regexp-clone.lock
+533 silly lockFile cc5b6a02-e-regexp-clone-0-0-1-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\regexp-clone\0.0.1\package.tgz
+534 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\regexp-clone\0.0.1\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\cc5b6a02-e-regexp-clone-0-0-1-package-tgz.lock
+535 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\mquery\1.0.0\package.tgz
+536 silly lockFile c8e4ef42-les-mongoose-node-modules-mquery tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery
+537 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery C:\Users\Rock\AppData\Roaming\npm-cache\c8e4ef42-les-mongoose-node-modules-mquery.lock
+538 silly lockFile 9c8ae939-m-cache-mquery-1-0-0-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mquery\1.0.0\package.tgz
+539 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\mquery\1.0.0\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\9c8ae939-m-cache-mquery-1-0-0-package-tgz.lock
+540 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\mpath\0.1.1\package.tgz
+541 silly lockFile 3e81531d-ules-mongoose-node-modules-mpath tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpath
+542 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpath C:\Users\Rock\AppData\Roaming\npm-cache\3e81531d-ules-mongoose-node-modules-mpath.lock
+543 silly lockFile 210888d4-pm-cache-mpath-0-1-1-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mpath\0.1.1\package.tgz
+544 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\mpath\0.1.1\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\210888d4-pm-cache-mpath-0-1-1-package-tgz.lock
+545 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\mpromise\0.5.4\package.tgz
+546 silly lockFile 0d3794f5-s-mongoose-node-modules-mpromise tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpromise
+547 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpromise C:\Users\Rock\AppData\Roaming\npm-cache\0d3794f5-s-mongoose-node-modules-mpromise.lock
+548 silly lockFile 6eaa0f6b-cache-mpromise-0-5-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mpromise\0.5.4\package.tgz
+549 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\mpromise\0.5.4\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\6eaa0f6b-cache-mpromise-0-5-4-package-tgz.lock
+550 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\ms\0.1.0\package.tgz
+551 silly lockFile 34842253-modules-mongoose-node-modules-ms tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\ms
+552 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\ms C:\Users\Rock\AppData\Roaming\npm-cache\34842253-modules-mongoose-node-modules-ms.lock
+553 silly lockFile 8f09dd48-g-npm-cache-ms-0-1-0-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\ms\0.1.0\package.tgz
+554 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\ms\0.1.0\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\8f09dd48-g-npm-cache-ms-0-1-0-package-tgz.lock
+555 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\hooks\0.3.2\package.tgz
+556 silly lockFile 09aadeda-ules-mongoose-node-modules-hooks tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\hooks
+557 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\hooks C:\Users\Rock\AppData\Roaming\npm-cache\09aadeda-ules-mongoose-node-modules-hooks.lock
+558 silly lockFile 66142873-pm-cache-hooks-0-3-2-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\hooks\0.3.2\package.tgz
+559 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\hooks\0.3.2\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\66142873-pm-cache-hooks-0-3-2-package-tgz.lock
+560 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\sliced\0.0.5\package.tgz
+561 silly lockFile 80e12a71-les-mongoose-node-modules-sliced tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\sliced
+562 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\sliced C:\Users\Rock\AppData\Roaming\npm-cache\80e12a71-les-mongoose-node-modules-sliced.lock
+563 silly lockFile 1d042417-m-cache-sliced-0-0-5-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\sliced\0.0.5\package.tgz
+564 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\sliced\0.0.5\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\1d042417-m-cache-sliced-0-0-5-package-tgz.lock
+565 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\async\0.9.0\package.tgz
+566 silly lockFile af026354-ules-mongoose-node-modules-async tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\async
+567 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\async C:\Users\Rock\AppData\Roaming\npm-cache\af026354-ules-mongoose-node-modules-async.lock
+568 silly lockFile 3025892e-pm-cache-async-0-9-0-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\async\0.9.0\package.tgz
+569 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\async\0.9.0\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\3025892e-pm-cache-async-0-9-0-package-tgz.lock
+570 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\kareem\0.0.4\package.tgz
+571 silly lockFile 3f19bb69-les-mongoose-node-modules-kareem tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\kareem
+572 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\kareem C:\Users\Rock\AppData\Roaming\npm-cache\3f19bb69-les-mongoose-node-modules-kareem.lock
+573 silly lockFile 41a0eaa1-m-cache-kareem-0-0-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\kareem\0.0.4\package.tgz
+574 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\kareem\0.0.4\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\41a0eaa1-m-cache-kareem-0-0-4-package-tgz.lock
+575 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\mongodb\1.4.12\package.tgz
+576 silly lockFile 51d8faad-es-mongoose-node-modules-mongodb tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb
+577 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb C:\Users\Rock\AppData\Roaming\npm-cache\51d8faad-es-mongoose-node-modules-mongodb.lock
+578 silly lockFile d5182150-cache-mongodb-1-4-12-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mongodb\1.4.12\package.tgz
+579 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\mongodb\1.4.12\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\d5182150-cache-mongodb-1-4-12-package-tgz.lock
+580 silly gunzTarPerm modes [ '755', '644' ]
+581 silly gunzTarPerm modes [ '755', '644' ]
+582 silly gunzTarPerm modes [ '755', '644' ]
+583 silly gunzTarPerm modes [ '755', '644' ]
+584 silly gunzTarPerm modes [ '755', '644' ]
+585 silly gunzTarPerm modes [ '755', '644' ]
+586 silly gunzTarPerm modes [ '755', '644' ]
+587 silly gunzTarPerm modes [ '755', '644' ]
+588 silly gunzTarPerm modes [ '755', '644' ]
+589 silly gunzTarPerm modes [ '755', '644' ]
+590 silly gunzTarPerm modes [ '755', '644' ]
+591 silly gunzTarPerm extractEntry package.json
+592 silly gunzTarPerm extractEntry package.json
+593 silly gunzTarPerm extractEntry package.json
+594 silly gunzTarPerm extractEntry package.json
+595 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+596 silly gunzTarPerm extractEntry package.json
+597 silly gunzTarPerm extractEntry .gitignore
+598 silly gunzTarPerm extractEntry package.json
+599 silly gunzTarPerm extractEntry package.json
+600 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+601 silly gunzTarPerm extractEntry package.json
+602 silly gunzTarPerm extractEntry package.json
+603 silly gunzTarPerm extractEntry package.json
+604 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+605 silly gunzTarPerm extractEntry .npmignore
+606 silly gunzTarPerm extractEntry README.md
+607 silly gunzTarPerm extractEntry .npmignore
+608 silly gunzTarPerm extractEntry README.md
+609 silly gunzTarPerm extractEntry .npmignore
+610 silly gunzTarPerm extractEntry README.md
+611 silly gunzTarPerm extractEntry .npmignore
+612 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+613 silly gunzTarPerm extractEntry README.md
+614 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+615 silly gunzTarPerm extractEntry Makefile
+616 silly gunzTarPerm extractEntry ms.js
+617 silly gunzTarPerm extractEntry .npmignore
+618 silly gunzTarPerm extractEntry README.md
+619 silly gunzTarPerm extractEntry README.md
+620 silly gunzTarPerm extractEntry LICENSE
+621 silly gunzTarPerm extractEntry .travis.yml
+622 silly gunzTarPerm extractEntry component.json
+623 silly gunzTarPerm extractEntry lib/async.js
+624 silly gunzTarPerm extractEntry .npmignore
+625 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+626 silly gunzTarPerm extractEntry README.md
+627 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+628 silly gunzTarPerm extractEntry LICENSE
+629 silly gunzTarPerm extractEntry index.js
+630 silly gunzTarPerm extractEntry .npmignore
+631 silly gunzTarPerm extractEntry README.md
+632 silly gunzTarPerm extractEntry .npmignore
+633 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+634 silly gunzTarPerm extractEntry README.md
+635 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+636 silly gunzTarPerm extractEntry LICENSE
+637 silly gunzTarPerm extractEntry index.js
+638 silly gunzTarPerm extractEntry package.json
+639 silly gunzTarPerm extractEntry README.md
+640 silly gunzTarPerm extractEntry LICENSE
+641 silly gunzTarPerm extractEntry docs.js
+642 silly gunzTarPerm extractEntry index.js
+643 silly gunzTarPerm extractEntry Makefile
+644 silly gunzTarPerm extractEntry test/examples.test.js
+645 silly gunzTarPerm extractEntry LICENSE
+646 silly gunzTarPerm extractEntry index.js
+647 silly gunzTarPerm extractEntry LICENSE
+648 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+649 silly gunzTarPerm extractEntry index.js
+650 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+651 silly gunzTarPerm extractEntry hooks.alt.js
+652 silly gunzTarPerm extractEntry LICENSE
+653 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+654 silly gunzTarPerm extractEntry bench.js
+655 silly gunzTarPerm modified mode [ 'bench.js', 438, 420 ]
+656 silly gunzTarPerm extractEntry LICENSE
+657 silly gunzTarPerm extractEntry LICENSE
+658 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+659 silly gunzTarPerm extractEntry .travis.yml
+660 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+661 silly gunzTarPerm extractEntry .gitmodules
+662 silly gunzTarPerm extractEntry .travis.yml
+663 silly gunzTarPerm extractEntry .travis.yml
+664 silly gunzTarPerm extractEntry History.md
+665 silly gunzTarPerm extractEntry test/index.html
+666 silly gunzTarPerm extractEntry test/test.js
+667 silly gunzTarPerm extractEntry .travis.yml
+668 silly gunzTarPerm extractEntry History.md
+669 silly gunzTarPerm extractEntry .travis.yml
+670 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+671 silly gunzTarPerm extractEntry History.md
+672 silly gunzTarPerm modified mode [ 'History.md', 438, 420 ]
+673 silly gunzTarPerm extractEntry hooks.js
+674 silly gunzTarPerm extractEntry test.js
+675 silly gunzTarPerm extractEntry index.js
+676 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+677 silly gunzTarPerm extractEntry .travis.yml
+678 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+679 silly gunzTarPerm extractEntry .travis.yml
+680 silly gunzTarPerm extractEntry History.md
+681 silly gunzTarPerm extractEntry History.md
+682 silly gunzTarPerm modified mode [ 'History.md', 438, 420 ]
+683 silly gunzTarPerm extractEntry lib/promise.js
+684 silly gunzTarPerm modified mode [ 'lib/promise.js', 438, 420 ]
+685 silly gunzTarPerm extractEntry Makefile
+686 silly gunzTarPerm extractEntry lib/index.js
+687 silly gunzTarPerm extractEntry test/support/jquery.js
+688 silly gunzTarPerm extractEntry Makefile
+689 silly gunzTarPerm extractEntry test/index.js
+690 silly gunzTarPerm extractEntry component.json
+691 silly gunzTarPerm modified mode [ 'component.json', 438, 420 ]
+692 silly gunzTarPerm extractEntry Makefile
+693 silly gunzTarPerm modified mode [ 'Makefile', 438, 420 ]
+694 silly gunzTarPerm extractEntry lib/index.js
+695 silly gunzTarPerm modified mode [ 'lib/index.js', 438, 420 ]
+696 silly gunzTarPerm extractEntry Makefile
+697 silly gunzTarPerm modified mode [ 'Makefile', 438, 420 ]
+698 silly gunzTarPerm extractEntry test/index.js
+699 silly gunzTarPerm modified mode [ 'test/index.js', 438, 420 ]
+700 silly gunzTarPerm extractEntry test/index.js
+701 silly gunzTarPerm extractEntry test/promise.domain.test.js
+702 silly gunzTarPerm modified mode [ 'test/promise.domain.test.js', 438, 420 ]
+703 silly gunzTarPerm extractEntry CONTRIBUTING.md
+704 silly gunzTarPerm extractEntry Makefile
+705 silly gunzTarPerm extractEntry History.md
+706 silly gunzTarPerm modified mode [ 'History.md', 438, 420 ]
+707 silly gunzTarPerm extractEntry test/index.js
+708 silly gunzTarPerm modified mode [ 'test/index.js', 438, 420 ]
+709 silly gunzTarPerm extractEntry lib/sliced.js
+710 silly gunzTarPerm modified mode [ 'lib/sliced.js', 438, 420 ]
+711 silly gunzTarPerm extractEntry test/promise.test.js
+712 silly gunzTarPerm modified mode [ 'test/promise.test.js', 438, 420 ]
+713 silly gunzTarPerm extractEntry test/promises.Aplus.js
+714 silly gunzTarPerm modified mode [ 'test/promises.Aplus.js', 438, 420 ]
+715 silly gunzTarPerm extractEntry Readme.md
+716 silly gunzTarPerm extractEntry lib/mongodb/admin.js
+717 silly gunzTarPerm extractEntry Makefile
+718 silly gunzTarPerm extractEntry lib/mongodb/scope.js
+719 silly gunzTarPerm extractEntry lib/mongodb/mongo_client.js
+720 silly gunzTarPerm extractEntry lib/mongodb/collection.js
+721 silly gunzTarPerm extractEntry lib/mongodb/command_cursor.js
+722 silly gunzTarPerm extractEntry lib/mongodb/index.js
+723 silly gunzTarPerm extractEntry lib/mongodb/db.js
+724 silly gunzTarPerm extractEntry Makefile
+725 silly gunzTarPerm extractEntry lib/env.js
+726 silly gunzTarPerm extractEntry lib/mongodb/aggregation_cursor.js
+727 silly lockFile 46be7abd-ngoose-node-modules-regexp-clone tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\regexp-clone
+728 silly lockFile 46be7abd-ngoose-node-modules-regexp-clone tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\regexp-clone
+729 silly gunzTarPerm extractEntry lib/mquery.js
+730 silly gunzTarPerm extractEntry lib/permissions.js
+731 silly lockFile cc5b6a02-e-regexp-clone-0-0-1-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\regexp-clone\0.0.1\package.tgz
+732 silly lockFile cc5b6a02-e-regexp-clone-0-0-1-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\regexp-clone\0.0.1\package.tgz
+733 info preinstall regexp-clone@0.0.1
+734 verbose readDependencies using package.json deps
+735 silly gunzTarPerm extractEntry lib/utils.js
+736 silly gunzTarPerm extractEntry lib/collection/collection.js
+737 verbose readDependencies using package.json deps
+738 silly resolved []
+739 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\regexp-clone
+740 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\regexp-clone
+741 verbose linkStuff [ false,
+741 verbose linkStuff   false,
+741 verbose linkStuff   false,
+741 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+742 info linkStuff regexp-clone@0.0.1
+743 verbose linkBins regexp-clone@0.0.1
+744 verbose linkMans regexp-clone@0.0.1
+745 verbose rebuildBundles regexp-clone@0.0.1
+746 info install regexp-clone@0.0.1
+747 info postinstall regexp-clone@0.0.1
+748 silly gunzTarPerm extractEntry lib/collection/index.js
+749 silly gunzTarPerm extractEntry lib/collection/node.js
+750 silly lockFile 80e12a71-les-mongoose-node-modules-sliced tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\sliced
+751 silly lockFile 80e12a71-les-mongoose-node-modules-sliced tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\sliced
+752 silly gunzTarPerm extractEntry test/env.js
+753 silly gunzTarPerm extractEntry test/index.js
+754 silly lockFile 1d042417-m-cache-sliced-0-0-5-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\sliced\0.0.5\package.tgz
+755 silly lockFile 1d042417-m-cache-sliced-0-0-5-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\sliced\0.0.5\package.tgz
+756 silly lockFile 287177cc-dules-mongoose-node-modules-muri tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\muri
+757 silly lockFile 287177cc-dules-mongoose-node-modules-muri tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\muri
+758 silly lockFile 7965f249-npm-cache-muri-0-3-1-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\muri\0.3.1\package.tgz
+759 silly lockFile 7965f249-npm-cache-muri-0-3-1-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\muri\0.3.1\package.tgz
+760 info preinstall sliced@0.0.5
+761 verbose readDependencies using package.json deps
+762 verbose readDependencies using package.json deps
+763 silly resolved []
+764 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\sliced
+765 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\sliced
+766 verbose linkStuff [ false,
+766 verbose linkStuff   false,
+766 verbose linkStuff   false,
+766 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+767 info linkStuff sliced@0.0.5
+768 verbose linkBins sliced@0.0.5
+769 verbose linkMans sliced@0.0.5
+770 verbose rebuildBundles sliced@0.0.5
+771 info preinstall muri@0.3.1
+772 info install sliced@0.0.5
+773 info postinstall sliced@0.0.5
+774 verbose readDependencies using package.json deps
+775 verbose readDependencies using package.json deps
+776 silly resolved []
+777 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\muri
+778 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\muri
+779 verbose linkStuff [ false,
+779 verbose linkStuff   false,
+779 verbose linkStuff   false,
+779 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+780 info linkStuff muri@0.3.1
+781 verbose linkBins muri@0.3.1
+782 verbose linkMans muri@0.3.1
+783 verbose rebuildBundles muri@0.3.1
+784 silly gunzTarPerm extractEntry test/utils.test.js
+785 silly gunzTarPerm extractEntry test/collection/browser.js
+786 info install muri@0.3.1
+787 info postinstall muri@0.3.1
+788 silly lockFile 0d3794f5-s-mongoose-node-modules-mpromise tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpromise
+789 silly lockFile 0d3794f5-s-mongoose-node-modules-mpromise tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpromise
+790 silly lockFile 6eaa0f6b-cache-mpromise-0-5-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mpromise\0.5.4\package.tgz
+791 silly lockFile 6eaa0f6b-cache-mpromise-0-5-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mpromise\0.5.4\package.tgz
+792 silly lockFile 09aadeda-ules-mongoose-node-modules-hooks tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\hooks
+793 silly lockFile 09aadeda-ules-mongoose-node-modules-hooks tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\hooks
+794 silly lockFile 66142873-pm-cache-hooks-0-3-2-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\hooks\0.3.2\package.tgz
+795 silly lockFile 66142873-pm-cache-hooks-0-3-2-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\hooks\0.3.2\package.tgz
+796 info preinstall mpromise@0.5.4
+797 verbose readDependencies using package.json deps
+798 verbose readDependencies using package.json deps
+799 silly resolved []
+800 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpromise
+801 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpromise
+802 verbose linkStuff [ false,
+802 verbose linkStuff   false,
+802 verbose linkStuff   false,
+802 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+803 info linkStuff mpromise@0.5.4
+804 verbose linkBins mpromise@0.5.4
+805 verbose linkMans mpromise@0.5.4
+806 verbose rebuildBundles mpromise@0.5.4
+807 info install mpromise@0.5.4
+808 info postinstall mpromise@0.5.4
+809 info preinstall hooks@0.3.2
+810 verbose readDependencies using package.json deps
+811 silly gunzTarPerm extractEntry test/collection/mongo.js
+812 silly gunzTarPerm extractEntry test/collection/node.js
+813 verbose readDependencies using package.json deps
+814 silly resolved []
+815 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\hooks
+816 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\hooks
+817 verbose linkStuff [ false,
+817 verbose linkStuff   false,
+817 verbose linkStuff   false,
+817 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+818 info linkStuff hooks@0.3.2
+819 verbose linkBins hooks@0.3.2
+820 verbose linkMans hooks@0.3.2
+821 verbose rebuildBundles hooks@0.3.2
+822 silly gunzTarPerm extractEntry lib/mongodb/cursorstream.js
+823 silly gunzTarPerm extractEntry lib/mongodb/utils.js
+824 info install hooks@0.3.2
+825 info postinstall hooks@0.3.2
+826 silly lockFile 3e81531d-ules-mongoose-node-modules-mpath tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpath
+827 silly lockFile 3e81531d-ules-mongoose-node-modules-mpath tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpath
+828 silly lockFile 210888d4-pm-cache-mpath-0-1-1-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mpath\0.1.1\package.tgz
+829 silly lockFile 210888d4-pm-cache-mpath-0-1-1-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mpath\0.1.1\package.tgz
+830 info preinstall mpath@0.1.1
+831 verbose readDependencies using package.json deps
+832 verbose readDependencies using package.json deps
+833 silly resolved []
+834 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpath
+835 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mpath
+836 verbose linkStuff [ false,
+836 verbose linkStuff   false,
+836 verbose linkStuff   false,
+836 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+837 info linkStuff mpath@0.1.1
+838 verbose linkBins mpath@0.1.1
+839 verbose linkMans mpath@0.1.1
+840 verbose rebuildBundles mpath@0.1.1
+841 info install mpath@0.1.1
+842 info postinstall mpath@0.1.1
+843 silly lockFile 3f19bb69-les-mongoose-node-modules-kareem tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\kareem
+844 silly lockFile 3f19bb69-les-mongoose-node-modules-kareem tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\kareem
+845 silly lockFile 41a0eaa1-m-cache-kareem-0-0-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\kareem\0.0.4\package.tgz
+846 silly lockFile 41a0eaa1-m-cache-kareem-0-0-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\kareem\0.0.4\package.tgz
+847 info preinstall kareem@0.0.4
+848 silly gunzTarPerm extractEntry lib/mongodb/cursor.js
+849 silly gunzTarPerm extractEntry lib/mongodb/connection/base.js
+850 verbose readDependencies using package.json deps
+851 verbose readDependencies using package.json deps
+852 silly resolved []
+853 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\kareem
+854 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\kareem
+855 verbose linkStuff [ false,
+855 verbose linkStuff   false,
+855 verbose linkStuff   false,
+855 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+856 info linkStuff kareem@0.0.4
+857 verbose linkBins kareem@0.0.4
+858 verbose linkMans kareem@0.0.4
+859 verbose rebuildBundles kareem@0.0.4
+860 info install kareem@0.0.4
+861 info postinstall kareem@0.0.4
+862 silly gunzTarPerm extractEntry lib/mongodb/connection/connection.js
+863 silly gunzTarPerm extractEntry lib/mongodb/connection/connection_pool.js
+864 silly gunzTarPerm extractEntry lib/mongodb/connection/connection_utils.js
+865 silly gunzTarPerm extractEntry lib/mongodb/connection/mongos.js
+866 silly lockFile af026354-ules-mongoose-node-modules-async tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\async
+867 silly lockFile af026354-ules-mongoose-node-modules-async tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\async
+868 silly lockFile 3025892e-pm-cache-async-0-9-0-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\async\0.9.0\package.tgz
+869 silly lockFile 3025892e-pm-cache-async-0-9-0-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\async\0.9.0\package.tgz
+870 info preinstall async@0.9.0
+871 verbose readDependencies using package.json deps
+872 verbose readDependencies using package.json deps
+873 silly resolved []
+874 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\async
+875 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\async
+876 verbose linkStuff [ false,
+876 verbose linkStuff   false,
+876 verbose linkStuff   false,
+876 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+877 info linkStuff async@0.9.0
+878 verbose linkBins async@0.9.0
+879 verbose linkMans async@0.9.0
+880 verbose rebuildBundles async@0.9.0
+881 info install async@0.9.0
+882 info postinstall async@0.9.0
+883 silly gunzTarPerm extractEntry lib/mongodb/connection/read_preference.js
+884 silly gunzTarPerm extractEntry lib/mongodb/connection/server.js
+885 silly gunzTarPerm extractEntry lib/mongodb/connection/server_capabilities.js
+886 silly gunzTarPerm extractEntry lib/mongodb/connection/url_parser.js
+887 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/ha.js
+888 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/options.js
+889 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/repl_set.js
+890 silly lockFile c8e4ef42-les-mongoose-node-modules-mquery tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery
+891 silly lockFile c8e4ef42-les-mongoose-node-modules-mquery tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery
+892 silly lockFile 9c8ae939-m-cache-mquery-1-0-0-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mquery\1.0.0\package.tgz
+893 silly lockFile 9c8ae939-m-cache-mquery-1-0-0-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mquery\1.0.0\package.tgz
+894 info preinstall mquery@1.0.0
+895 verbose readDependencies using package.json deps
+896 verbose readDependencies using package.json deps
+897 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/repl_set_state.js
+898 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/strategies/ping_strategy.js
+899 silly gunzTarPerm extractEntry lib/mongodb/connection/repl_set/strategies/statistics_strategy.js
+900 silly gunzTarPerm extractEntry lib/mongodb/gridfs/chunk.js
+901 silly lockFile 34842253-modules-mongoose-node-modules-ms tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\ms
+902 silly lockFile 34842253-modules-mongoose-node-modules-ms tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\ms
+903 silly lockFile 8f09dd48-g-npm-cache-ms-0-1-0-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\ms\0.1.0\package.tgz
+904 silly lockFile 8f09dd48-g-npm-cache-ms-0-1-0-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\ms\0.1.0\package.tgz
+905 verbose cache add [ 'debug@0.7.4', null ]
+906 verbose cache add name=undefined spec="debug@0.7.4" args=["debug@0.7.4",null]
+907 verbose parsed url { protocol: null,
+907 verbose parsed url   slashes: null,
+907 verbose parsed url   auth: null,
+907 verbose parsed url   host: null,
+907 verbose parsed url   port: null,
+907 verbose parsed url   hostname: null,
+907 verbose parsed url   hash: null,
+907 verbose parsed url   search: null,
+907 verbose parsed url   query: null,
+907 verbose parsed url   pathname: 'debug@0.7.4',
+907 verbose parsed url   path: 'debug@0.7.4',
+907 verbose parsed url   href: 'debug@0.7.4' }
+908 verbose cache add name="debug" spec="0.7.4" args=["debug","0.7.4"]
+909 verbose parsed url { protocol: null,
+909 verbose parsed url   slashes: null,
+909 verbose parsed url   auth: null,
+909 verbose parsed url   host: null,
+909 verbose parsed url   port: null,
+909 verbose parsed url   hostname: null,
+909 verbose parsed url   hash: null,
+909 verbose parsed url   search: null,
+909 verbose parsed url   query: null,
+909 verbose parsed url   pathname: '0.7.4',
+909 verbose parsed url   path: '0.7.4',
+909 verbose parsed url   href: '0.7.4' }
+910 verbose addNamed [ 'debug', '0.7.4' ]
+911 verbose addNamed [ '0.7.4', '0.7.4' ]
+912 silly lockFile 16160008-debug-0-7-4 debug@0.7.4
+913 verbose lock debug@0.7.4 C:\Users\Rock\AppData\Roaming\npm-cache\16160008-debug-0-7-4.lock
+914 silly gunzTarPerm extractEntry lib/mongodb/gridfs/grid.js
+915 silly gunzTarPerm extractEntry lib/mongodb/gridfs/gridstore.js
+916 info preinstall ms@0.1.0
+917 verbose url raw debug
+918 verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+919 verbose url resolved https://registry.npmjs.org/debug
+920 info trying registry request attempt 1 at 09:59:24
+921 verbose etag "ALFJOECWHISLZ4DH7SXTAXEIG"
+922 http GET https://registry.npmjs.org/debug
+923 verbose readDependencies using package.json deps
+924 verbose readDependencies using package.json deps
+925 silly resolved []
+926 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\ms
+927 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\ms
+928 verbose linkStuff [ false,
+928 verbose linkStuff   false,
+928 verbose linkStuff   false,
+928 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+929 info linkStuff ms@0.1.0
+930 verbose linkBins ms@0.1.0
+931 verbose linkMans ms@0.1.0
+932 verbose rebuildBundles ms@0.1.0
+933 info install ms@0.1.0
+934 info postinstall ms@0.1.0
+935 silly gunzTarPerm extractEntry lib/mongodb/gridfs/readstream.js
+936 silly gunzTarPerm extractEntry lib/mongodb/commands/base_command.js
+937 silly gunzTarPerm extractEntry lib/mongodb/commands/db_command.js
+938 silly gunzTarPerm extractEntry lib/mongodb/commands/delete_command.js
+939 silly gunzTarPerm extractEntry lib/mongodb/commands/get_more_command.js
+940 silly gunzTarPerm extractEntry lib/mongodb/commands/insert_command.js
+941 silly gunzTarPerm extractEntry lib/mongodb/commands/kill_cursor_command.js
+942 silly gunzTarPerm extractEntry lib/mongodb/commands/query_command.js
+943 silly gunzTarPerm extractEntry lib/mongodb/commands/update_command.js
+944 silly gunzTarPerm extractEntry lib/mongodb/collection/aggregation.js
+945 silly gunzTarPerm extractEntry lib/mongodb/collection/commands.js
+946 silly gunzTarPerm extractEntry lib/mongodb/collection/core.js
+947 silly gunzTarPerm extractEntry lib/mongodb/collection/geo.js
+948 silly gunzTarPerm extractEntry lib/mongodb/collection/index.js
+949 silly gunzTarPerm extractEntry lib/mongodb/collection/query.js
+950 silly gunzTarPerm extractEntry lib/mongodb/collection/shared.js
+951 silly gunzTarPerm extractEntry lib/mongodb/collection/batch/common.js
+952 silly gunzTarPerm extractEntry lib/mongodb/collection/batch/ordered.js
+953 silly gunzTarPerm extractEntry lib/mongodb/collection/batch/unordered.js
+954 silly gunzTarPerm extractEntry lib/mongodb/responses/mongo_reply.js
+955 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_cr.js
+956 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_gssapi.js
+957 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_plain.js
+958 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_scram.js
+959 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_sspi.js
+960 silly gunzTarPerm extractEntry lib/mongodb/auth/mongodb_x509.js
+961 silly lockFile 51d8faad-es-mongoose-node-modules-mongodb tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb
+962 silly lockFile 51d8faad-es-mongoose-node-modules-mongodb tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb
+963 http 304 https://registry.npmjs.org/debug
+964 silly registry.get cb [ 304,
+964 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:22 GMT',
+964 silly registry.get     server: 'Apache',
+964 silly registry.get     via: '1.1 varnish',
+964 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:04 GMT',
+964 silly registry.get     'cache-control': 'max-age=60',
+964 silly registry.get     etag: '"ALFJOECWHISLZ4DH7SXTAXEIG"',
+964 silly registry.get     age: '18',
+964 silly registry.get     'x-served-by': 'cache-ams4133-AMS',
+964 silly registry.get     'x-cache': 'HIT',
+964 silly registry.get     'x-cache-hits': '4',
+964 silly registry.get     'x-timer': 'S1429513162.229387,VS0,VE0',
+964 silly registry.get     vary: 'Accept',
+964 silly registry.get     'content-length': '0',
+964 silly registry.get     'keep-alive': 'timeout=10, max=50',
+964 silly registry.get     connection: 'Keep-Alive' } ]
+965 verbose etag debug from cache
+966 silly lockFile d5182150-cache-mongodb-1-4-12-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mongodb\1.4.12\package.tgz
+967 silly lockFile d5182150-cache-mongodb-1-4-12-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\mongodb\1.4.12\package.tgz
+968 info preinstall mongodb@1.4.12
+969 verbose readDependencies using package.json deps
+970 verbose readDependencies using package.json deps
+971 silly lockFile 16160008-debug-0-7-4 debug@0.7.4
+972 silly lockFile 16160008-debug-0-7-4 debug@0.7.4
+973 silly resolved [ { name: 'debug',
+973 silly resolved     version: '0.7.4',
+973 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/debug.git' },
+973 silly resolved     description: 'small debugging utility',
+973 silly resolved     keywords: [ 'debug', 'log', 'debugger' ],
+973 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+973 silly resolved     dependencies: {},
+973 silly resolved     devDependencies: { mocha: '*' },
+973 silly resolved     main: 'lib/debug.js',
+973 silly resolved     browser: './debug.js',
+973 silly resolved     engines: { node: '*' },
+973 silly resolved     files: [ 'lib/debug.js', 'debug.js', 'index.js' ],
+973 silly resolved     component: { scripts: [Object] },
+973 silly resolved     readme: '# debug\n\n  tiny node.js debugging utility modelled after node core\'s debugging technique.\n\n## Installation\n\n```\n$ npm install debug\n```\n\n## Usage\n\n With `debug` you simply invoke the exported function to generate your debug function, passing it a name which will determine if a noop function is returned, or a decorated `console.error`, so all of the `console` format string goodies you\'re used to work fine. A unique color is selected per-function for visibility.\n \nExample _app.js_:\n\n```js\nvar debug = require(\'debug\')(\'http\')\n  , http = require(\'http\')\n  , name = \'My App\';\n\n// fake app\n\ndebug(\'booting %s\', name);\n\nhttp.createServer(function(req, res){\n  debug(req.method + \' \' + req.url);\n  res.end(\'hello\\n\');\n}).listen(3000, function(){\n  debug(\'listening\');\n});\n\n// fake worker of some kind\n\nrequire(\'./worker\');\n```\n\nExample _worker.js_:\n\n```js\nvar debug = require(\'debug\')(\'worker\');\n\nsetInterval(function(){\n  debug(\'doing some work\');\n}, 1000);\n```\n\n The __DEBUG__ environment variable is then used to enable these based on space or comma-delimited names. Here are some examples:\n\n  ![debug http and worker](http://f.cl.ly/items/18471z1H402O24072r1J/Screenshot.png)\n\n  ![debug worker](http://f.cl.ly/items/1X413v1a3M0d3C2c1E0i/Screenshot.png)\n\n## Millisecond diff\n\n  When actively developing an application it can be useful to see when the time spent between one `debug()` call and the next. Suppose for example you invoke `debug()` before requesting a resource, and after as well, the "+NNNms" will show you how much time was spent between calls.\n\n  ![](http://f.cl.ly/items/2i3h1d3t121M2Z1A3Q0N/Screenshot.png)\n\n  When stderr is not a TTY, `Date#toUTCString()` is used, making it more useful for logging the debug information as shown below:\n  _(NOTE: Debug now uses stderr instead of stdout, so the correct shell command for this example is actually `DEBUG=* node example/worker 2> out &`)_\n  \n  ![](http://f.cl.ly/items/112H3i0e0o0P0a2Q2r11/Screenshot.png)\n  \n## Conventions\n\n If you\'re using this in one or more of your libraries, you _should_ use the name of your library so that developers may toggle debugging as desired without guessing names. If you have more than one debuggers you _should_ prefix them with your library name and use ":" to separate features. For example "bodyParser" from Connect would then be "connect:bodyParser". \n\n## Wildcards\n\n  The "*" character may be used as a wildcard. Suppose for example your library has debuggers named "connect:bodyParser", "connect:compress", "connect:session", instead of listing all three with `DEBUG=connect:bodyParser,connect.compress,connect:session`, you may simply do `DEBUG=connect:*`, or to run everything using this module simply use `DEBUG=*`.\n\n  You can also exclude specific debuggers by prefixing them with a "-" character.  For example, `DEBUG=* -connect:*` would include all debuggers except those starting with "connect:".\n\n## Browser support\n\n Debug works in the browser as well, currently persisted by `localStorage`. For example if you have `worker:a` and `worker:b` as shown below, and wish to debug both type `debug.enable(\'worker:*\')` in the console and refresh the page, this will remain until you disable with `debug.disable()`. \n\n```js\na = debug(\'worker:a\');\nb = debug(\'worker:b\');\n\nsetInterval(function(){\n  a(\'doing some work\');\n}, 1000);\n\nsetInterval(function(){\n  a(\'doing some work\');\n}, 1200);\n```\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+973 silly resolved     readmeFilename: 'Readme.md',
+973 silly resolved     bugs: { url: 'https://github.com/visionmedia/debug/issues' },
+973 silly resolved     homepage: 'https://github.com/visionmedia/debug',
+973 silly resolved     _id: 'debug@0.7.4',
+973 silly resolved     _shasum: '06e1ea8082c2cb14e39806e22e2f6f757f92af39',
+973 silly resolved     _from: 'debug@0.7.4',
+973 silly resolved     _resolved: 'https://registry.npmjs.org/debug/-/debug-0.7.4.tgz' } ]
+974 info install debug@0.7.4 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery
+975 info installOne debug@0.7.4
+976 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery\node_modules\debug unbuild
+977 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\debug\0.7.4\package.tgz
+978 silly lockFile 325f2522-odules-mquery-node-modules-debug tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery\node_modules\debug
+979 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery\node_modules\debug C:\Users\Rock\AppData\Roaming\npm-cache\325f2522-odules-mquery-node-modules-debug.lock
+980 silly lockFile 7c6eb6ac-pm-cache-debug-0-7-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\debug\0.7.4\package.tgz
+981 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\debug\0.7.4\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\7c6eb6ac-pm-cache-debug-0-7-4-package-tgz.lock
+982 verbose cache add [ 'bson@~0.2', null ]
+983 verbose cache add name=undefined spec="bson@~0.2" args=["bson@~0.2",null]
+984 verbose parsed url { protocol: null,
+984 verbose parsed url   slashes: null,
+984 verbose parsed url   auth: null,
+984 verbose parsed url   host: null,
+984 verbose parsed url   port: null,
+984 verbose parsed url   hostname: null,
+984 verbose parsed url   hash: null,
+984 verbose parsed url   search: null,
+984 verbose parsed url   query: null,
+984 verbose parsed url   pathname: 'bson@~0.2',
+984 verbose parsed url   path: 'bson@~0.2',
+984 verbose parsed url   href: 'bson@~0.2' }
+985 verbose cache add [ 'kerberos@0.0.4', null ]
+986 verbose cache add name=undefined spec="kerberos@0.0.4" args=["kerberos@0.0.4",null]
+987 verbose parsed url { protocol: null,
+987 verbose parsed url   slashes: null,
+987 verbose parsed url   auth: null,
+987 verbose parsed url   host: null,
+987 verbose parsed url   port: null,
+987 verbose parsed url   hostname: null,
+987 verbose parsed url   hash: null,
+987 verbose parsed url   search: null,
+987 verbose parsed url   query: null,
+987 verbose parsed url   pathname: 'kerberos@0.0.4',
+987 verbose parsed url   path: 'kerberos@0.0.4',
+987 verbose parsed url   href: 'kerberos@0.0.4' }
+988 verbose cache add [ 'readable-stream@latest', null ]
+989 verbose cache add name=undefined spec="readable-stream@latest" args=["readable-stream@latest",null]
+990 verbose parsed url { protocol: null,
+990 verbose parsed url   slashes: null,
+990 verbose parsed url   auth: null,
+990 verbose parsed url   host: null,
+990 verbose parsed url   port: null,
+990 verbose parsed url   hostname: null,
+990 verbose parsed url   hash: null,
+990 verbose parsed url   search: null,
+990 verbose parsed url   query: null,
+990 verbose parsed url   pathname: 'readable-stream@latest',
+990 verbose parsed url   path: 'readable-stream@latest',
+990 verbose parsed url   href: 'readable-stream@latest' }
+991 verbose cache add name="bson" spec="~0.2" args=["bson","~0.2"]
+992 verbose parsed url { protocol: null,
+992 verbose parsed url   slashes: null,
+992 verbose parsed url   auth: null,
+992 verbose parsed url   host: null,
+992 verbose parsed url   port: null,
+992 verbose parsed url   hostname: null,
+992 verbose parsed url   hash: null,
+992 verbose parsed url   search: null,
+992 verbose parsed url   query: null,
+992 verbose parsed url   pathname: '~0.2',
+992 verbose parsed url   path: '~0.2',
+992 verbose parsed url   href: '~0.2' }
+993 verbose addNamed [ 'bson', '~0.2' ]
+994 verbose addNamed [ null, '>=0.2.0-0 <0.3.0-0' ]
+995 silly lockFile ddac0603-bson-0-2 bson@~0.2
+996 verbose lock bson@~0.2 C:\Users\Rock\AppData\Roaming\npm-cache\ddac0603-bson-0-2.lock
+997 verbose cache add name="kerberos" spec="0.0.4" args=["kerberos","0.0.4"]
+998 verbose parsed url { protocol: null,
+998 verbose parsed url   slashes: null,
+998 verbose parsed url   auth: null,
+998 verbose parsed url   host: null,
+998 verbose parsed url   port: null,
+998 verbose parsed url   hostname: null,
+998 verbose parsed url   hash: null,
+998 verbose parsed url   search: null,
+998 verbose parsed url   query: null,
+998 verbose parsed url   pathname: '0.0.4',
+998 verbose parsed url   path: '0.0.4',
+998 verbose parsed url   href: '0.0.4' }
+999 verbose addNamed [ 'kerberos', '0.0.4' ]
+1000 verbose addNamed [ '0.0.4', '0.0.4' ]
+1001 silly lockFile 24e3a7af-kerberos-0-0-4 kerberos@0.0.4
+1002 verbose lock kerberos@0.0.4 C:\Users\Rock\AppData\Roaming\npm-cache\24e3a7af-kerberos-0-0-4.lock
+1003 verbose cache add name="readable-stream" spec="latest" args=["readable-stream","latest"]
+1004 verbose parsed url { protocol: null,
+1004 verbose parsed url   slashes: null,
+1004 verbose parsed url   auth: null,
+1004 verbose parsed url   host: null,
+1004 verbose parsed url   port: null,
+1004 verbose parsed url   hostname: null,
+1004 verbose parsed url   hash: null,
+1004 verbose parsed url   search: null,
+1004 verbose parsed url   query: null,
+1004 verbose parsed url   pathname: 'latest',
+1004 verbose parsed url   path: 'latest',
+1004 verbose parsed url   href: 'latest' }
+1005 verbose addNamed [ 'readable-stream', 'latest' ]
+1006 verbose addNamed [ null, null ]
+1007 silly lockFile 81e39f72-readable-stream-latest readable-stream@latest
+1008 verbose lock readable-stream@latest C:\Users\Rock\AppData\Roaming\npm-cache\81e39f72-readable-stream-latest.lock
+1009 silly gunzTarPerm modes [ '755', '644' ]
+1010 silly addNameRange { name: 'bson', range: '>=0.2.0-0 <0.3.0-0', hasData: false }
+1011 info addNameTag [ 'readable-stream', 'latest' ]
+1012 verbose url raw kerberos
+1013 verbose url resolving [ 'https://registry.npmjs.org/', './kerberos' ]
+1014 verbose url resolved https://registry.npmjs.org/kerberos
+1015 info trying registry request attempt 1 at 09:59:24
+1016 verbose etag "85DKBYL3BJ1TW6AOVQNXC10U9"
+1017 http GET https://registry.npmjs.org/kerberos
+1018 verbose url raw bson
+1019 verbose url resolving [ 'https://registry.npmjs.org/', './bson' ]
+1020 verbose url resolved https://registry.npmjs.org/bson
+1021 info trying registry request attempt 1 at 09:59:24
+1022 verbose etag "6S8QZA4Y28JAX6XP6DH23WJW8"
+1023 http GET https://registry.npmjs.org/bson
+1024 verbose url raw readable-stream
+1025 verbose url resolving [ 'https://registry.npmjs.org/', './readable-stream' ]
+1026 verbose url resolved https://registry.npmjs.org/readable-stream
+1027 info trying registry request attempt 1 at 09:59:24
+1028 verbose etag "32FILY7NIYUJ856MT6RLM79TM"
+1029 http GET https://registry.npmjs.org/readable-stream
+1030 silly gunzTarPerm extractEntry package.json
+1031 silly gunzTarPerm extractEntry debug.js
+1032 silly gunzTarPerm extractEntry index.js
+1033 silly gunzTarPerm extractEntry Readme.md
+1034 silly gunzTarPerm extractEntry lib/debug.js
+1035 silly lockFile 325f2522-odules-mquery-node-modules-debug tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery\node_modules\debug
+1036 silly lockFile 325f2522-odules-mquery-node-modules-debug tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery\node_modules\debug
+1037 silly lockFile 7c6eb6ac-pm-cache-debug-0-7-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\debug\0.7.4\package.tgz
+1038 silly lockFile 7c6eb6ac-pm-cache-debug-0-7-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\debug\0.7.4\package.tgz
+1039 info preinstall debug@0.7.4
+1040 verbose readDependencies using package.json deps
+1041 verbose readDependencies using package.json deps
+1042 silly resolved []
+1043 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery\node_modules\debug
+1044 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery\node_modules\debug
+1045 verbose linkStuff [ false,
+1045 verbose linkStuff   false,
+1045 verbose linkStuff   false,
+1045 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules\\mquery\\node_modules' ]
+1046 info linkStuff debug@0.7.4
+1047 verbose linkBins debug@0.7.4
+1048 verbose linkMans debug@0.7.4
+1049 verbose rebuildBundles debug@0.7.4
+1050 info install debug@0.7.4
+1051 info postinstall debug@0.7.4
+1052 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery
+1053 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mquery
+1054 verbose linkStuff [ false,
+1054 verbose linkStuff   false,
+1054 verbose linkStuff   false,
+1054 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules' ]
+1055 info linkStuff mquery@1.0.0
+1056 verbose linkBins mquery@1.0.0
+1057 verbose linkMans mquery@1.0.0
+1058 verbose rebuildBundles mquery@1.0.0
+1059 verbose rebuildBundles [ 'debug' ]
+1060 info install mquery@1.0.0
+1061 info postinstall mquery@1.0.0
+1062 http 304 https://registry.npmjs.org/bson
+1063 silly registry.get cb [ 304,
+1063 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:22 GMT',
+1063 silly registry.get     server: 'Apache',
+1063 silly registry.get     via: '1.1 varnish',
+1063 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:22 GMT',
+1063 silly registry.get     'cache-control': 'max-age=60',
+1063 silly registry.get     etag: '"6S8QZA4Y28JAX6XP6DH23WJW8"',
+1063 silly registry.get     age: '9',
+1063 silly registry.get     'x-served-by': 'cache-ams4140-AMS',
+1063 silly registry.get     'x-cache': 'HIT',
+1063 silly registry.get     'x-cache-hits': '1',
+1063 silly registry.get     'x-timer': 'S1429513162.539966,VS0,VE0',
+1063 silly registry.get     vary: 'Accept',
+1063 silly registry.get     'content-length': '0',
+1063 silly registry.get     'keep-alive': 'timeout=10, max=50',
+1063 silly registry.get     connection: 'Keep-Alive' } ]
+1064 verbose etag bson from cache
+1065 http 304 https://registry.npmjs.org/kerberos
+1066 silly registry.get cb [ 304,
+1066 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:22 GMT',
+1066 silly registry.get     server: 'Apache',
+1066 silly registry.get     via: '1.1 varnish',
+1066 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:22 GMT',
+1066 silly registry.get     'cache-control': 'max-age=60',
+1066 silly registry.get     etag: '"85DKBYL3BJ1TW6AOVQNXC10U9"',
+1066 silly registry.get     age: '58',
+1066 silly registry.get     'x-served-by': 'cache-ams4140-AMS',
+1066 silly registry.get     'x-cache': 'HIT',
+1066 silly registry.get     'x-cache-hits': '1',
+1066 silly registry.get     'x-timer': 'S1429513162.540152,VS0,VE0',
+1066 silly registry.get     vary: 'Accept',
+1066 silly registry.get     'content-length': '0',
+1066 silly registry.get     'keep-alive': 'timeout=10, max=50',
+1066 silly registry.get     connection: 'Keep-Alive' } ]
+1067 verbose etag kerberos from cache
+1068 http 304 https://registry.npmjs.org/readable-stream
+1069 silly registry.get cb [ 304,
+1069 silly registry.get   { date: 'Mon, 20 Apr 2015 06:59:22 GMT',
+1069 silly registry.get     server: 'Apache',
+1069 silly registry.get     via: '1.1 varnish',
+1069 silly registry.get     'last-modified': 'Mon, 20 Apr 2015 06:59:02 GMT',
+1069 silly registry.get     'cache-control': 'max-age=60',
+1069 silly registry.get     etag: '"32FILY7NIYUJ856MT6RLM79TM"',
+1069 silly registry.get     age: '41',
+1069 silly registry.get     'x-served-by': 'cache-ams4138-AMS',
+1069 silly registry.get     'x-cache': 'HIT',
+1069 silly registry.get     'x-cache-hits': '2',
+1069 silly registry.get     'x-timer': 'S1429513162.542136,VS0,VE0',
+1069 silly registry.get     vary: 'Accept',
+1069 silly registry.get     'content-length': '0',
+1069 silly registry.get     'keep-alive': 'timeout=10, max=50',
+1069 silly registry.get     connection: 'Keep-Alive' } ]
+1070 verbose etag readable-stream from cache
+1071 verbose addNamed [ 'readable-stream', '1.0.33' ]
+1072 verbose addNamed [ '1.0.33', '1.0.33' ]
+1073 silly lockFile f026aa23-readable-stream-1-0-33 readable-stream@1.0.33
+1074 verbose lock readable-stream@1.0.33 C:\Users\Rock\AppData\Roaming\npm-cache\f026aa23-readable-stream-1-0-33.lock
+1075 silly lockFile 24e3a7af-kerberos-0-0-4 kerberos@0.0.4
+1076 silly lockFile 24e3a7af-kerberos-0-0-4 kerberos@0.0.4
+1077 silly lockFile f026aa23-readable-stream-1-0-33 readable-stream@1.0.33
+1078 silly lockFile f026aa23-readable-stream-1-0-33 readable-stream@1.0.33
+1079 silly lockFile 81e39f72-readable-stream-latest readable-stream@latest
+1080 silly lockFile 81e39f72-readable-stream-latest readable-stream@latest
+1081 silly addNameRange number 2 { name: 'bson', range: '>=0.2.0-0 <0.3.0-0', hasData: true }
+1082 silly addNameRange versions [ 'bson',
+1082 silly addNameRange   [ '0.0.1',
+1082 silly addNameRange     '0.0.2',
+1082 silly addNameRange     '0.0.3',
+1082 silly addNameRange     '0.0.4',
+1082 silly addNameRange     '0.0.5',
+1082 silly addNameRange     '0.0.6',
+1082 silly addNameRange     '0.0.7',
+1082 silly addNameRange     '0.0.8',
+1082 silly addNameRange     '0.0.9',
+1082 silly addNameRange     '0.1.0',
+1082 silly addNameRange     '0.1.1',
+1082 silly addNameRange     '0.1.3',
+1082 silly addNameRange     '0.1.4',
+1082 silly addNameRange     '0.1.5',
+1082 silly addNameRange     '0.1.6',
+1082 silly addNameRange     '0.1.7',
+1082 silly addNameRange     '0.1.8',
+1082 silly addNameRange     '0.1.9',
+1082 silly addNameRange     '0.2.0',
+1082 silly addNameRange     '0.2.1',
+1082 silly addNameRange     '0.2.2',
+1082 silly addNameRange     '0.2.3',
+1082 silly addNameRange     '0.2.4',
+1082 silly addNameRange     '0.2.5',
+1082 silly addNameRange     '0.2.6',
+1082 silly addNameRange     '0.2.7',
+1082 silly addNameRange     '0.2.8',
+1082 silly addNameRange     '0.2.9',
+1082 silly addNameRange     '0.2.10',
+1082 silly addNameRange     '0.2.11',
+1082 silly addNameRange     '0.2.12',
+1082 silly addNameRange     '0.2.13',
+1082 silly addNameRange     '0.2.14',
+1082 silly addNameRange     '0.2.15',
+1082 silly addNameRange     '0.2.16',
+1082 silly addNameRange     '0.2.17',
+1082 silly addNameRange     '0.2.18',
+1082 silly addNameRange     '0.2.19',
+1082 silly addNameRange     '0.2.20',
+1082 silly addNameRange     '0.2.21',
+1082 silly addNameRange     '0.3.0',
+1082 silly addNameRange     '0.3.1' ] ]
+1083 verbose addNamed [ 'bson', '0.2.21' ]
+1084 verbose addNamed [ '0.2.21', '0.2.21' ]
+1085 silly lockFile 675053f8-bson-0-2-21 bson@0.2.21
+1086 verbose lock bson@0.2.21 C:\Users\Rock\AppData\Roaming\npm-cache\675053f8-bson-0-2-21.lock
+1087 silly lockFile 675053f8-bson-0-2-21 bson@0.2.21
+1088 silly lockFile 675053f8-bson-0-2-21 bson@0.2.21
+1089 silly lockFile ddac0603-bson-0-2 bson@~0.2
+1090 silly lockFile ddac0603-bson-0-2 bson@~0.2
+1091 silly resolved [ { name: 'kerberos',
+1091 silly resolved     version: '0.0.4',
+1091 silly resolved     description: 'Kerberos library for Node.js',
+1091 silly resolved     main: 'index.js',
+1091 silly resolved     repository: { type: 'git', url: 'https://github.com/christkv/kerberos.git' },
+1091 silly resolved     keywords: [ 'kerberos', 'security', 'authentication' ],
+1091 silly resolved     devDependencies: { nodeunit: 'latest' },
+1091 silly resolved     scripts:
+1091 silly resolved      { install: '(node-gyp rebuild 2> builderror.log) || (exit 0)',
+1091 silly resolved        test: 'nodeunit ./test' },
+1091 silly resolved     author: { name: 'Christian Amor Kvalheim' },
+1091 silly resolved     license: 'Apache 2.0',
+1091 silly resolved     gitHead: 'bb01d4fe322e022999aca19da564e7d9db59a8ed',
+1091 silly resolved     bugs: { url: 'https://github.com/christkv/kerberos/issues' },
+1091 silly resolved     homepage: 'https://github.com/christkv/kerberos',
+1091 silly resolved     _id: 'kerberos@0.0.4',
+1091 silly resolved     dist:
+1091 silly resolved      { shasum: '11836638f729a2f6c5bae056a7d7a15898c9ba7c',
+1091 silly resolved        tarball: 'http://registry.npmjs.org/kerberos/-/kerberos-0.0.4.tgz' },
+1091 silly resolved     _from: 'kerberos@0.0.4',
+1091 silly resolved     _npmVersion: '1.4.3',
+1091 silly resolved     _npmUser: { name: 'christkv', email: 'christkv@gmail.com' },
+1091 silly resolved     maintainers: [ [Object] ],
+1091 silly resolved     directories: {},
+1091 silly resolved     _shasum: '11836638f729a2f6c5bae056a7d7a15898c9ba7c',
+1091 silly resolved     _resolved: 'https://registry.npmjs.org/kerberos/-/kerberos-0.0.4.tgz',
+1091 silly resolved     readme: 'ERROR: No README data found!' },
+1091 silly resolved   { name: 'readable-stream',
+1091 silly resolved     version: '1.0.33',
+1091 silly resolved     description: 'Streams2, a user-land copy of the stream library from Node.js v0.10.x',
+1091 silly resolved     main: 'readable.js',
+1091 silly resolved     dependencies:
+1091 silly resolved      { 'core-util-is': '~1.0.0',
+1091 silly resolved        isarray: '0.0.1',
+1091 silly resolved        string_decoder: '~0.10.x',
+1091 silly resolved        inherits: '~2.0.1' },
+1091 silly resolved     devDependencies: { tap: '~0.2.6' },
+1091 silly resolved     scripts: { test: 'tap test/simple/*.js' },
+1091 silly resolved     repository: { type: 'git', url: 'git://github.com/isaacs/readable-stream' },
+1091 silly resolved     keywords: [ 'readable', 'stream', 'pipe' ],
+1091 silly resolved     browser: { util: false },
+1091 silly resolved     author:
+1091 silly resolved      { name: 'Isaac Z. Schlueter',
+1091 silly resolved        email: 'i@izs.me',
+1091 silly resolved        url: 'http://blog.izs.me/' },
+1091 silly resolved     license: 'MIT',
+1091 silly resolved     gitHead: '0bf97a117c5646556548966409ebc57a6dda2638',
+1091 silly resolved     bugs: { url: 'https://github.com/isaacs/readable-stream/issues' },
+1091 silly resolved     homepage: 'https://github.com/isaacs/readable-stream',
+1091 silly resolved     _id: 'readable-stream@1.0.33',
+1091 silly resolved     _shasum: '3a360dd66c1b1d7fd4705389860eda1d0f61126c',
+1091 silly resolved     _from: 'readable-stream@latest',
+1091 silly resolved     _npmVersion: '1.4.28',
+1091 silly resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+1091 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+1091 silly resolved     dist:
+1091 silly resolved      { shasum: '3a360dd66c1b1d7fd4705389860eda1d0f61126c',
+1091 silly resolved        tarball: 'http://registry.npmjs.org/readable-stream/-/readable-stream-1.0.33.tgz' },
+1091 silly resolved     directories: {},
+1091 silly resolved     _resolved: 'https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.33.tgz',
+1091 silly resolved     readme: 'ERROR: No README data found!' },
+1091 silly resolved   { name: 'bson',
+1091 silly resolved     description: 'A bson parser for node.js and the browser',
+1091 silly resolved     keywords: [ 'mongodb', 'bson', 'parser' ],
+1091 silly resolved     version: '0.2.21',
+1091 silly resolved     author: { name: 'Christian Amor Kvalheim', email: 'christkv@gmail.com' },
+1091 silly resolved     contributors: [],
+1091 silly resolved     repository: { type: 'git', url: 'git://github.com/mongodb/js-bson.git' },
+1091 silly resolved     bugs: { url: 'https://github.com/mongodb/js-bson/issues' },
+1091 silly resolved     dependencies: { nan: '1.7.0' },
+1091 silly resolved     devDependencies: { nodeunit: '0.9.0', gleak: '0.2.3', one: '2.X.X' },
+1091 silly resolved     config: { native: false },
+1091 silly resolved     main: './lib/bson/index',
+1091 silly resolved     directories: { lib: './lib/bson' },
+1091 silly resolved     engines: { node: '>=0.6.19' },
+1091 silly resolved     scripts:
+1091 silly resolved      { install: '(node-gyp rebuild 2> builderror.log) || (exit 0)',
+1091 silly resolved        test: 'nodeunit ./test/node && TEST_NATIVE=TRUE nodeunit ./test/node' },
+1091 silly resolved     browser: 'lib/bson/bson.js',
+1091 silly resolved     licenses: [ [Object] ],
+1091 silly resolved     gitHead: 'a4b8ff14e3dcc92d144817a806f4c5ba536a7f2e',
+1091 silly resolved     homepage: 'https://github.com/mongodb/js-bson',
+1091 silly resolved     _id: 'bson@0.2.21',
+1091 silly resolved     _shasum: '3755a5de71ac43f0e9a85f699c84d1ab73b0fcb3',
+1091 silly resolved     _from: 'bson@~0.2',
+1091 silly resolved     _npmVersion: '2.7.1',
+1091 silly resolved     _nodeVersion: '1.6.1',
+1091 silly resolved     _npmUser: { name: 'christkv', email: 'christkv@gmail.com' },
+1091 silly resolved     maintainers: [ [Object], [Object] ],
+1091 silly resolved     dist:
+1091 silly resolved      { shasum: '3755a5de71ac43f0e9a85f699c84d1ab73b0fcb3',
+1091 silly resolved        tarball: 'http://registry.npmjs.org/bson/-/bson-0.2.21.tgz' },
+1091 silly resolved     _resolved: 'https://registry.npmjs.org/bson/-/bson-0.2.21.tgz',
+1091 silly resolved     readme: 'ERROR: No README data found!' } ]
+1092 info install kerberos@0.0.4 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb
+1093 info install readable-stream@1.0.33 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb
+1094 info install bson@0.2.21 into C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb
+1095 info installOne kerberos@0.0.4
+1096 info installOne readable-stream@1.0.33
+1097 info installOne bson@0.2.21
+1098 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos unbuild
+1099 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream unbuild
+1100 info C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\bson unbuild
+1101 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\kerberos\0.0.4\package.tgz
+1102 silly lockFile d5a4f1a5-es-mongodb-node-modules-kerberos tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos
+1103 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos C:\Users\Rock\AppData\Roaming\npm-cache\d5a4f1a5-es-mongodb-node-modules-kerberos.lock
+1104 silly lockFile c3c52e89-cache-kerberos-0-0-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\kerberos\0.0.4\package.tgz
+1105 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\kerberos\0.0.4\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\c3c52e89-cache-kerberos-0-0-4-package-tgz.lock
+1106 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\readable-stream\1.0.33\package.tgz
+1107 silly lockFile eedf605e-odb-node-modules-readable-stream tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream
+1108 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream C:\Users\Rock\AppData\Roaming\npm-cache\eedf605e-odb-node-modules-readable-stream.lock
+1109 silly lockFile cf7e8a0e-adable-stream-1-0-33-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\readable-stream\1.0.33\package.tgz
+1110 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\readable-stream\1.0.33\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\cf7e8a0e-adable-stream-1-0-33-package-tgz.lock
+1111 verbose tar unpack C:\Users\Rock\AppData\Roaming\npm-cache\bson\0.2.21\package.tgz
+1112 silly lockFile f58842b9-odules-mongodb-node-modules-bson tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\bson
+1113 verbose lock tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\bson C:\Users\Rock\AppData\Roaming\npm-cache\f58842b9-odules-mongodb-node-modules-bson.lock
+1114 silly lockFile 639afd0c-pm-cache-bson-0-2-21-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\bson\0.2.21\package.tgz
+1115 verbose lock tar://C:\Users\Rock\AppData\Roaming\npm-cache\bson\0.2.21\package.tgz C:\Users\Rock\AppData\Roaming\npm-cache\639afd0c-pm-cache-bson-0-2-21-package-tgz.lock
+1116 silly gunzTarPerm modes [ '755', '644' ]
+1117 silly gunzTarPerm modes [ '755', '644' ]
+1118 silly gunzTarPerm modes [ '755', '644' ]
+1119 silly gunzTarPerm extractEntry package.json
+1120 silly gunzTarPerm extractEntry package.json
+1121 silly gunzTarPerm extractEntry package.json
+1122 silly gunzTarPerm extractEntry README.md
+1123 silly gunzTarPerm extractEntry LICENSE
+1124 silly gunzTarPerm extractEntry .npmignore
+1125 silly gunzTarPerm extractEntry README.md
+1126 silly gunzTarPerm extractEntry README.md
+1127 silly gunzTarPerm extractEntry LICENSE
+1128 silly gunzTarPerm extractEntry index.js
+1129 silly gunzTarPerm extractEntry binding.gyp
+1130 silly gunzTarPerm extractEntry LICENSE
+1131 silly gunzTarPerm extractEntry duplex.js
+1132 silly gunzTarPerm extractEntry build_browser.js
+1133 silly gunzTarPerm extractEntry lib/kerberos.js
+1134 silly gunzTarPerm extractEntry writable.js
+1135 silly gunzTarPerm extractEntry passthrough.js
+1136 silly gunzTarPerm extractEntry browser_build/package.json
+1137 silly gunzTarPerm extractEntry browser_build/bson.js
+1138 silly gunzTarPerm extractEntry readable.js
+1139 silly gunzTarPerm extractEntry transform.js
+1140 silly gunzTarPerm extractEntry lib/sspi.js
+1141 silly gunzTarPerm extractEntry lib/kerberos_context.h
+1142 silly gunzTarPerm extractEntry .travis.yml
+1143 silly gunzTarPerm extractEntry binding.gyp
+1144 silly gunzTarPerm extractEntry lib/_stream_duplex.js
+1145 silly gunzTarPerm extractEntry lib/_stream_passthrough.js
+1146 silly gunzTarPerm extractEntry lib/kerberos.cc
+1147 silly gunzTarPerm extractEntry lib/kerberos.h
+1148 silly gunzTarPerm extractEntry lib/_stream_readable.js
+1149 silly gunzTarPerm extractEntry HISTORY
+1150 silly gunzTarPerm extractEntry build/Makefile
+1151 silly gunzTarPerm extractEntry lib/_stream_transform.js
+1152 silly gunzTarPerm extractEntry lib/_stream_writable.js
+1153 silly gunzTarPerm extractEntry build/Release/.deps/Release/bson.node.d
+1154 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/bson/ext/bson.o.d
+1155 silly gunzTarPerm extractEntry lib/auth_processes/mongodb.js
+1156 silly gunzTarPerm extractEntry lib/kerberos_context.cc
+1157 silly gunzTarPerm extractEntry lib/base64.c
+1158 silly gunzTarPerm extractEntry lib/kerberosgss.c
+1159 silly gunzTarPerm extractEntry lib/kerberosgss.h
+1160 silly gunzTarPerm extractEntry lib/base64.h
+1161 silly gunzTarPerm extractEntry lib/win32/base64.c
+1162 silly gunzTarPerm extractEntry lib/win32/base64.h
+1163 silly gunzTarPerm extractEntry lib/win32/kerberos.cc
+1164 silly gunzTarPerm extractEntry lib/win32/kerberos.h
+1165 silly gunzTarPerm extractEntry lib/win32/kerberos_sspi.c
+1166 silly gunzTarPerm extractEntry lib/win32/kerberos_sspi.h
+1167 silly gunzTarPerm extractEntry lib/win32/worker.cc
+1168 silly gunzTarPerm extractEntry lib/win32/worker.h
+1169 silly gunzTarPerm extractEntry lib/win32/wrappers/security_credentials.js
+1170 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer.js
+1171 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer_descriptor.js
+1172 silly gunzTarPerm extractEntry lib/win32/wrappers/security_context.js
+1173 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer_descriptor.h
+1174 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer.cc
+1175 silly lockFile eedf605e-odb-node-modules-readable-stream tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream
+1176 silly lockFile eedf605e-odb-node-modules-readable-stream tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream
+1177 silly lockFile cf7e8a0e-adable-stream-1-0-33-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\readable-stream\1.0.33\package.tgz
+1178 silly lockFile cf7e8a0e-adable-stream-1-0-33-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\readable-stream\1.0.33\package.tgz
+1179 info preinstall readable-stream@1.0.33
+1180 verbose readDependencies using package.json deps
+1181 verbose readDependencies using package.json deps
+1182 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer.h
+1183 silly gunzTarPerm extractEntry lib/win32/wrappers/security_context.h
+1184 silly gunzTarPerm extractEntry build/Release/bson.node
+1185 silly gunzTarPerm extractEntry build/Release/linker.lock
+1186 silly gunzTarPerm extractEntry build/Release/obj.target/bson/ext/bson.o
+1187 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer_descriptor.cc
+1188 silly gunzTarPerm extractEntry lib/win32/wrappers/security_credentials.cc
+1189 verbose cache add [ 'core-util-is@~1.0.0', null ]
+1190 verbose cache add name=undefined spec="core-util-is@~1.0.0" args=["core-util-is@~1.0.0",null]
+1191 verbose parsed url { protocol: null,
+1191 verbose parsed url   slashes: null,
+1191 verbose parsed url   auth: null,
+1191 verbose parsed url   host: null,
+1191 verbose parsed url   port: null,
+1191 verbose parsed url   hostname: null,
+1191 verbose parsed url   hash: null,
+1191 verbose parsed url   search: null,
+1191 verbose parsed url   query: null,
+1191 verbose parsed url   pathname: 'core-util-is@~1.0.0',
+1191 verbose parsed url   path: 'core-util-is@~1.0.0',
+1191 verbose parsed url   href: 'core-util-is@~1.0.0' }
+1192 verbose cache add [ 'isarray@0.0.1', null ]
+1193 verbose cache add name=undefined spec="isarray@0.0.1" args=["isarray@0.0.1",null]
+1194 verbose parsed url { protocol: null,
+1194 verbose parsed url   slashes: null,
+1194 verbose parsed url   auth: null,
+1194 verbose parsed url   host: null,
+1194 verbose parsed url   port: null,
+1194 verbose parsed url   hostname: null,
+1194 verbose parsed url   hash: null,
+1194 verbose parsed url   search: null,
+1194 verbose parsed url   query: null,
+1194 verbose parsed url   pathname: 'isarray@0.0.1',
+1194 verbose parsed url   path: 'isarray@0.0.1',
+1194 verbose parsed url   href: 'isarray@0.0.1' }
+1195 verbose cache add [ 'string_decoder@~0.10.x', null ]
+1196 verbose cache add name=undefined spec="string_decoder@~0.10.x" args=["string_decoder@~0.10.x",null]
+1197 verbose parsed url { protocol: null,
+1197 verbose parsed url   slashes: null,
+1197 verbose parsed url   auth: null,
+1197 verbose parsed url   host: null,
+1197 verbose parsed url   port: null,
+1197 verbose parsed url   hostname: null,
+1197 verbose parsed url   hash: null,
+1197 verbose parsed url   search: null,
+1197 verbose parsed url   query: null,
+1197 verbose parsed url   pathname: 'string_decoder@~0.10.x',
+1197 verbose parsed url   path: 'string_decoder@~0.10.x',
+1197 verbose parsed url   href: 'string_decoder@~0.10.x' }
+1198 verbose cache add [ 'inherits@~2.0.1', null ]
+1199 verbose cache add name=undefined spec="inherits@~2.0.1" args=["inherits@~2.0.1",null]
+1200 verbose parsed url { protocol: null,
+1200 verbose parsed url   slashes: null,
+1200 verbose parsed url   auth: null,
+1200 verbose parsed url   host: null,
+1200 verbose parsed url   port: null,
+1200 verbose parsed url   hostname: null,
+1200 verbose parsed url   hash: null,
+1200 verbose parsed url   search: null,
+1200 verbose parsed url   query: null,
+1200 verbose parsed url   pathname: 'inherits@~2.0.1',
+1200 verbose parsed url   path: 'inherits@~2.0.1',
+1200 verbose parsed url   href: 'inherits@~2.0.1' }
+1201 verbose cache add name="core-util-is" spec="~1.0.0" args=["core-util-is","~1.0.0"]
+1202 verbose parsed url { protocol: null,
+1202 verbose parsed url   slashes: null,
+1202 verbose parsed url   auth: null,
+1202 verbose parsed url   host: null,
+1202 verbose parsed url   port: null,
+1202 verbose parsed url   hostname: null,
+1202 verbose parsed url   hash: null,
+1202 verbose parsed url   search: null,
+1202 verbose parsed url   query: null,
+1202 verbose parsed url   pathname: '~1.0.0',
+1202 verbose parsed url   path: '~1.0.0',
+1202 verbose parsed url   href: '~1.0.0' }
+1203 verbose addNamed [ 'core-util-is', '~1.0.0' ]
+1204 verbose addNamed [ null, '>=1.0.0-0 <1.1.0-0' ]
+1205 silly lockFile 577b60c4-core-util-is-1-0-0 core-util-is@~1.0.0
+1206 verbose lock core-util-is@~1.0.0 C:\Users\Rock\AppData\Roaming\npm-cache\577b60c4-core-util-is-1-0-0.lock
+1207 verbose cache add name="isarray" spec="0.0.1" args=["isarray","0.0.1"]
+1208 verbose parsed url { protocol: null,
+1208 verbose parsed url   slashes: null,
+1208 verbose parsed url   auth: null,
+1208 verbose parsed url   host: null,
+1208 verbose parsed url   port: null,
+1208 verbose parsed url   hostname: null,
+1208 verbose parsed url   hash: null,
+1208 verbose parsed url   search: null,
+1208 verbose parsed url   query: null,
+1208 verbose parsed url   pathname: '0.0.1',
+1208 verbose parsed url   path: '0.0.1',
+1208 verbose parsed url   href: '0.0.1' }
+1209 verbose addNamed [ 'isarray', '0.0.1' ]
+1210 verbose addNamed [ '0.0.1', '0.0.1' ]
+1211 silly lockFile 9efe11b1-isarray-0-0-1 isarray@0.0.1
+1212 verbose lock isarray@0.0.1 C:\Users\Rock\AppData\Roaming\npm-cache\9efe11b1-isarray-0-0-1.lock
+1213 verbose cache add name="string_decoder" spec="~0.10.x" args=["string_decoder","~0.10.x"]
+1214 verbose parsed url { protocol: null,
+1214 verbose parsed url   slashes: null,
+1214 verbose parsed url   auth: null,
+1214 verbose parsed url   host: null,
+1214 verbose parsed url   port: null,
+1214 verbose parsed url   hostname: null,
+1214 verbose parsed url   hash: null,
+1214 verbose parsed url   search: null,
+1214 verbose parsed url   query: null,
+1214 verbose parsed url   pathname: '~0.10.x',
+1214 verbose parsed url   path: '~0.10.x',
+1214 verbose parsed url   href: '~0.10.x' }
+1215 verbose addNamed [ 'string_decoder', '~0.10.x' ]
+1216 verbose addNamed [ null, '>=0.10.0-0 <0.11.0-0' ]
+1217 silly lockFile 8f75c97d-string-decoder-0-10-x string_decoder@~0.10.x
+1218 verbose lock string_decoder@~0.10.x C:\Users\Rock\AppData\Roaming\npm-cache\8f75c97d-string-decoder-0-10-x.lock
+1219 verbose cache add name="inherits" spec="~2.0.1" args=["inherits","~2.0.1"]
+1220 verbose parsed url { protocol: null,
+1220 verbose parsed url   slashes: null,
+1220 verbose parsed url   auth: null,
+1220 verbose parsed url   host: null,
+1220 verbose parsed url   port: null,
+1220 verbose parsed url   hostname: null,
+1220 verbose parsed url   hash: null,
+1220 verbose parsed url   search: null,
+1220 verbose parsed url   query: null,
+1220 verbose parsed url   pathname: '~2.0.1',
+1220 verbose parsed url   path: '~2.0.1',
+1220 verbose parsed url   href: '~2.0.1' }
+1221 verbose addNamed [ 'inherits', '~2.0.1' ]
+1222 verbose addNamed [ null, '>=2.0.1-0 <2.1.0-0' ]
+1223 silly lockFile 098ef39f-inherits-2-0-1 inherits@~2.0.1
+1224 verbose lock inherits@~2.0.1 C:\Users\Rock\AppData\Roaming\npm-cache\098ef39f-inherits-2-0-1.lock
+1225 silly addNameRange { name: 'core-util-is',
+1225 silly addNameRange   range: '>=1.0.0-0 <1.1.0-0',
+1225 silly addNameRange   hasData: false }
+1226 silly addNameRange { name: 'string_decoder',
+1226 silly addNameRange   range: '>=0.10.0-0 <0.11.0-0',
+1226 silly addNameRange   hasData: false }
+1227 silly addNameRange { name: 'inherits', range: '>=2.0.1-0 <2.1.0-0', hasData: false }
+1228 verbose url raw core-util-is
+1229 verbose url resolving [ 'https://registry.npmjs.org/', './core-util-is' ]
+1230 verbose url resolved https://registry.npmjs.org/core-util-is
+1231 info trying registry request attempt 1 at 09:59:25
+1232 verbose etag "8N932ER6J79FE9PNV7H41QYLJ"
+1233 http GET https://registry.npmjs.org/core-util-is
+1234 verbose url raw isarray
+1235 verbose url resolving [ 'https://registry.npmjs.org/', './isarray' ]
+1236 verbose url resolved https://registry.npmjs.org/isarray
+1237 info trying registry request attempt 1 at 09:59:25
+1238 verbose etag "79XQA3ZXVF5QN0X2VYCD81HMN"
+1239 http GET https://registry.npmjs.org/isarray
+1240 verbose url raw string_decoder
+1241 verbose url resolving [ 'https://registry.npmjs.org/', './string_decoder' ]
+1242 verbose url resolved https://registry.npmjs.org/string_decoder
+1243 info trying registry request attempt 1 at 09:59:25
+1244 verbose etag "89NG6AVWTXZBFGLGXXUONULF1"
+1245 http GET https://registry.npmjs.org/string_decoder
+1246 verbose url raw inherits
+1247 verbose url resolving [ 'https://registry.npmjs.org/', './inherits' ]
+1248 verbose url resolved https://registry.npmjs.org/inherits
+1249 info trying registry request attempt 1 at 09:59:25
+1250 verbose etag "2JQ9T5BW10349CYNB2L6ASWW6"
+1251 http GET https://registry.npmjs.org/inherits
+1252 silly gunzTarPerm extractEntry build/binding.Makefile
+1253 silly gunzTarPerm extractEntry lib/win32/wrappers/security_credentials.h
+1254 silly gunzTarPerm extractEntry lib/win32/wrappers/security_context.cc
+1255 silly gunzTarPerm extractEntry build/bson.target.mk
+1256 silly gunzTarPerm extractEntry build/config.gypi
+1257 silly gunzTarPerm extractEntry lib/worker.cc
+1258 silly gunzTarPerm extractEntry lib/worker.h
+1259 silly gunzTarPerm extractEntry test/kerberos_tests.js
+1260 silly gunzTarPerm extractEntry test/kerberos_win32_test.js
+1261 silly gunzTarPerm extractEntry test/win32/security_buffer_descriptor_tests.js
+1262 silly gunzTarPerm extractEntry test/win32/security_buffer_tests.js
+1263 silly gunzTarPerm extractEntry test/win32/security_credentials_tests.js
+1264 silly gunzTarPerm extractEntry build/gyp-mac-tool
+1265 silly gunzTarPerm extractEntry builderror.log
+1266 silly gunzTarPerm extractEntry ext/index.js
+1267 silly gunzTarPerm extractEntry ext/Makefile
+1268 silly gunzTarPerm extractEntry ext/bson.cc
+1269 silly gunzTarPerm extractEntry ext/bson.h
+1270 silly gunzTarPerm extractEntry ext/win32/ia32/bson.node
+1271 silly gunzTarPerm extractEntry ext/win32/x64/bson.node
+1272 silly gunzTarPerm extractEntry ext/wscript
+1273 silly lockFile d5a4f1a5-es-mongodb-node-modules-kerberos tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos
+1274 silly lockFile d5a4f1a5-es-mongodb-node-modules-kerberos tar://C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos
+1275 silly lockFile c3c52e89-cache-kerberos-0-0-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\kerberos\0.0.4\package.tgz
+1276 silly lockFile c3c52e89-cache-kerberos-0-0-4-package-tgz tar://C:\Users\Rock\AppData\Roaming\npm-cache\kerberos\0.0.4\package.tgz
+1277 info preinstall kerberos@0.0.4
+1278 verbose readDependencies using package.json deps
+1279 verbose readDependencies using package.json deps
+1280 silly resolved []
+1281 verbose about to build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos
+1282 info build C:\Users\Rock\Documents\GitHub\FremilyProject\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos
+1283 verbose linkStuff [ false,
+1283 verbose linkStuff   false,
+1283 verbose linkStuff   false,
+1283 verbose linkStuff   'C:\\Users\\Rock\\Documents\\GitHub\\FremilyProject\\node_modules\\mongoose\\node_modules\\mongodb\\node_modules' ]
+1284 info linkStuff kerberos@0.0.4
+1285 verbose linkBins kerberos@0.0.4
+1286 verbose linkMans kerberos@0.0.4
+1287 verbose rebuildBundles kerberos@0.0.4
+1288 info install kerberos@0.0.4
+1289 verbose unsafe-perm in lifecycle true
+1290 error Error: spawn ENOENT
+1290 error     at errnoException (child_process.js:1000:11)
+1290 error     at Process.ChildProcess._handle.onexit (child_process.js:791:34)
+1291 error If you need help, you may report this *entire* log,
+1291 error including the npm and node versions, at:
+1291 error     <http://github.com/npm/npm/issues>
+1292 error System Windows_NT 6.2.9200
+1293 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "mongoose" "--save"
+1294 error cwd C:\Users\Rock\Documents\GitHub\FremilyProject
+1295 error node -v v0.10.29
+1296 error npm -v 1.4.14
+1297 error syscall spawn
+1298 error code ENOENT
+1299 error errno ENOENT
+1300 verbose exit [ 1, true ]

@@ -25,17 +25,6 @@ exports.getFile = function(req , res , filePath){
 			if (isExsist)
 			{
 				fs.readFile(filePath , function (err , file){
-					/*if(contentType == 'text/html')
-					{
-						res.writeHead(301 , {'Content-Type' : contentType});
-						res.location(filePath);
-						res.end(file);
-					}
-					else
-					{
-						res.writeHead(200 , {'Content-Type' : contentType});
-						res.end(file);						
-					}*/
 					res.writeHead(200 , {'Content-Type' : contentType});
 					res.end(file);	
 
@@ -43,7 +32,6 @@ exports.getFile = function(req , res , filePath){
 			}
 			else
 			{
-				console.log("not found " + req.url);
 				res.writeHead(404);
 				res.end();
 			}

@@ -1,6 +1,7 @@
 exports.UserLogin = {
 	email : String ,
-	password : String
+	password : String,
+	familyId : String
 };
 
 exports.PersonObj = {

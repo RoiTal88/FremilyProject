@@ -1,42 +1,48 @@
 var express = require("express");
 var app = express();
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
 var http = require('http');
-var queries = require('./databaseQueries.js');
-var files = require('./siteFiles');
+var queries = require('./mongodb/databaseQueries.js');
+var files = require('./serverjs/siteFiles');
 var bodyParser = require('body-parser');
 var multer = require('multer');
-var mainFunctions = require("./mainJsFunctions");
+var mainFunctions = require("./serverjs/mainJsFunctions");
 
 
 //======================Application MiddelWare=======================================================
-app.use(function(req, res , next){
-    bodyParser.json();
-    next();
-});
+app.use(logger('dev'));
+app.use(cookieParser());
+app.use(bodyParser.json());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+app.use(function (req, res, next) {
+  res.header("X-powered-by", "RoiTal");
+  next();
+});
 app.use(multer({dest: './upload' , inMemory : true}));
-
-
 //===================================================================================================
 
 //get requests
 app.get('/getAllUsers' , queries.getAllUsers );
 app.get('/' , function(req,res){
-	console.log("main page loading");
 	files.getFile(req,res,'public/index.html');
 });
 app.get('/signup' , function(req,res){
-	console.log('loading sign up page');
 	files.getFile(req,res,'public/signUpPage.html');
 });
+app.get('/user/:id', );
+app.get('verifiyNewUser')
+
+
+//======================For Files======================
 app.get('*', function(req,res){
-	console.log("file " + "public"+req.url/*req.url.slice(1 , req.url.length)*/);
-	files.getFile(req,res, "public"+req.url/*.slice(1 , req.url.length)*/);
+	files.getFile(req,res, __dirname+req.url);
 });
+
 
 
 //post requests
