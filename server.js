@@ -34,8 +34,8 @@ app.get('/' , function(req,res){
 app.get('/signup' , function(req,res){
 	files.getFile(req,res,'public/signUpPage.html');
 });
-app.get('/user/:id', );
-app.get('verifiyNewUser')
+//app.get('/user/:id', );
+//app.get('verifiyNewUser')
 
 
 //======================For Files======================
