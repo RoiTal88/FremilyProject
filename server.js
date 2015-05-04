@@ -34,6 +34,7 @@ app.use(multer({dest: './upload' , inMemory : true}));
 app.get('/' , function(req,res){
 	files.getFile(req,res,'public/index.html');
 });
+app.get('/GetUserInfo/:_id', queries.GetFamilyInfo);
 app.get('/signup' , function(req,res){
 	files.getFile(req,res,'/public/signUpPage.html');
 });
@@ -52,14 +53,15 @@ app.get('*', function(req,res){
 app.post('/login', queries.userLogin);
 //app.post('/nLogin' , queries.newUserLogin);
 app.post('/Update', update.UpdateMethod);
+app.post('/UpdatePP/:_id' , update.UpdateProfilePicture);
 app.post('/Create', create.CreateMethod);
 app.post('/familyInfo', queries.GetFamilyInfo);
 //======================================================
 
 var server = http.createServer(app);
 
-server.listen(80,function(){
-	console.log("Fremily server is listining on port 80 \n");
+server.listen(3000,function(){
+	console.log("Fremily server is listining on port 3000 \n");
 });
 /*app.listen(3000, 'localhost',function(){
 	console.log("Fremily server is listining on port 3000 \n");

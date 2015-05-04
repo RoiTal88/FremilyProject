@@ -1,5 +1,6 @@
 var mainFunctions = require("../serverjs/MainJsFunctionsModule");
 var dataBase = require('../mongodb/DatabaseModule.js');
+var fs = require('fs');
 exports.UpdateMethod = function(req, res){
 	switch (req.body.UpdateType)
 	{
@@ -24,16 +25,18 @@ UpdateFamilyInfo = function(req, res)
 
 
 
-UpdateProfilePicture = function(req , res ){
-	var uploaderID = req.cookies._id;
-	var picture = req.files.profilePicture;
+exports.UpdateProfilePicture = function(req , res ){
+	var uploaderID = req.params._id;
+	console.log(uploaderID);
+	var picture = req.files.profilePic;
+	console.log(picture);
 
-	var path = 'users/'+uploaderID+'/profilePic/'+picture.name;
+	var path = '/users/'+uploaderID+'/profilePic/'+picture.name;
 	
 	dataBase.updatePPicture(uploaderID , picture.name , picture.originalname , path,function(value){
 		switch(value){
 			case 1000:
-				fs.writeFile(path, picture.buffer, function(){});
+				fs.writeFile('public/'+path, picture.buffer, function(){});
 			    res.statusCode = 200;
         		res.setHeader('Content-Type', 'application/json');
 				res.end();

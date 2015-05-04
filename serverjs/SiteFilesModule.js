@@ -52,8 +52,8 @@ exports.getFile = function(req , res , filePath){
 	};
 
 exports.setFamilyNewDirectory = function(familyId){
-	fs.mkdir('users/'+familyId);
-	fs.mkdir('users/'+familyId+'/profilePic');
-	fs.mkdir('users/'+familyId+'/createdEventsPic');
+	fs.mkdir('public/users/'+familyId);
+	fs.mkdir('public/users/'+familyId+'/profilePic');
+	fs.mkdir('public/users/'+familyId+'/createdEventsPic');
 };
 

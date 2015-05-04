@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var siteFiles = require('../serverjs/SiteFilesModule.js');
 var mainFunctions = require('../serverjs/MainJsFunctionsModule.js');
 
-mongoose.connect('mongodb://localhost/FremilyDataBase');
+mongoose.connect('mongodb://localhost/DataBase');
 
 
 
@@ -35,6 +35,7 @@ exports.SignUpNewFamily = function(req,res){
 /*	console.log("signing up new family");
 	console.log(req.body);*/
     //check password validity
+    console.log(req.body);
     req.body.email = req.body.email.toLowerCase();
     if(mainFunctions.checkPasswordsValidity(req.body.password1 , req.body.password2) == false)
     {
@@ -66,32 +67,36 @@ exports.SignUpNewFamily = function(req,res){
 		//everything is cool :] signing up family
 		
 
-		var newFamily = new familyModel({
-			familyName : req.body.familyname,
-			email : req.body.email,
-			password : req.body.password1,
-			address : req.body.adsress,
-			numberOfChildren : req.body.numberOfChildren,
-			//children : req.body.children,
-			activated :1 //change it afterwards to mail athentication
-		});
+		var newFamily = new familyModel({});
+		newFamily.familyName = req.body.familyName;
+		newFamily.email = req.body.email;
+		newFamily.password = req.body.password1;
+		newFamily.district = req.body.district;
+		newFamily.address = req.body.address;
+		newFamily.numberOfChildren = req.body.numberOfChildren;
+		newFamily.activated = 1;
 		//set the parents
 		
 		for (var i = 0 ;  i < 2 ; i++)
 		{
-			newFamily.parents[i] = objects.PersonObj;
-			newFamily.parents[i].nameOfPerson = req.body.parents[i].nameOfPerson;
-			newFamily.parents[i].dateOfBirth = req.body.parents[i].dateOfBirth;
-			newFamily.parents[i].gender = req.body.parents[i].gender;
+			if(req.body.parents[i] == null)
+				break;
+			newFamily.parents[i] = new objects.PersonObj(
+				req.body.parents[i].nameOfPerson,
+				req.body.parents[i].dateOfBirth,
+				req.body.parents[i].gender
+				);
+
 		}
 
 		//set the children of the family
-		for(var i = 0 ; i < newFamily.numberOfChildren ; i++)
+		for(var i = 0 ; i < req.body.numberOfChildren ; i++)
 		{
-			newFamily.children[i] = objects.PersonObj;
-			newFamily.children[i].nameOfPerson = req.body.children[i].nameOfPerson;
-			newFamily.children[i].dateOfBirth = req.body.children[i].dateOfBirth;
-			newFamily.children[i].gender = req.body.children[i].gender;
+			newFamily.children[i] = new objects.PersonObj(
+				req.body.children[i].nameOfPerson,
+				req.body.children[i].dateOfBirth,
+				req.body.children[i].gender
+				);
 		}
 		newFamily.save();
 		//creating new log in the log in collection for future logins
@@ -103,6 +108,8 @@ exports.SignUpNewFamily = function(req,res){
 
 		//setting family directory for files and pictures
 		siteFiles.setFamilyNewDirectory(newFamily._id);
+		console.log(newFamily._id.toString());
+		res.cookie('_id',newFamily._id.toString(),{maxAge : 1000*60*10});
 		res.send(JSON.stringify({ id : newFamily._id}));
 	});
 };
@@ -113,8 +120,8 @@ exports.userLogin = function(req , res){
 		if(doc)
 		{
 			res.setHeader('Content-Type', 'application/json');
-			res.cookie('id',doc._id,{maxAge : 1000*60*10}); //10 minuts cookie
-			res.send( JSON.stringify({ id : doc._id}));
+			res.cookie('id',doc.familyId,{maxAge : 1000*60*10}); //10 minuts cookie
+			res.send( JSON.stringify({ id : doc.familyId}));
 		}
 		else
 		{
@@ -201,24 +208,28 @@ exports.createNewEvent = function(req, res){
 
 exports.GetFamilyInfo = function(req, res){
 	familyModel.findOne({
-							email : req.body.email
+							_id : req.params._id
 						}, 
-						[
+/*						[
 							'familyName', 'parents' ,'address', 'email',
-							'numberOfChildren', 'children', 'profilePictureURL'
-						], 
+							'numberOfChildren', 'children', 'profilePictureURL', 'district'
+						],*/
 						function(error, data){
 							if(data)
 							{
-								res.setHeader({'Content-Type' : 'application/json'});
-								res.statusCode(200);
-								res.send(JSON.stringify(data));
+								console.log(data);
+								res.setHeader('Content-Type' , 'application/json');
+								res.statusCode=200;
+								res.end(JSON.stringify(data));
 							}
 							else
 							{
-								res.statusCode(404).end();
+								res.statusCode =404;
+								res.end();
 							}
 						});
+	var querie = familyModel.findOne();
+
 }
 
 exports.UpdateFamily = function(req, res){

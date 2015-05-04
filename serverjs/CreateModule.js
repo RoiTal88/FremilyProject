@@ -6,6 +6,7 @@ exports.CreateMethod = function(req, res)
 	switch (req.body.CreateType)
 	{
 		case 'Family':
+			console.log("new family");
 			CreateNewFemily(req, res);
 		break;
 

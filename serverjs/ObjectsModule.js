@@ -4,10 +4,10 @@ exports.UserLogin = {
 	familyId : String
 };
 
-exports.PersonObj = {
-	nameOfPerson : String,
-	dateOfBirth : Date,
-	gender : String
+exports.PersonObj = function(name, date, gender){
+	this.nameOfPerson = name;
+	this.dateOfBirth = date;
+	this.gender = gender;
 };
 
 exports.PPicture = {
@@ -24,7 +24,9 @@ exports.FamilyObject = {
 	parents : [] ,
 	password1 :String,
 	password2 :String,
+	password : String,
 	address : String,
+	district : String,
 	email : String,
 	numberOfChildren : Number ,
 	children : [] ,
