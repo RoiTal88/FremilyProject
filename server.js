@@ -3,11 +3,14 @@ var app = express();
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var http = require('http');
-var queries = require('./mongodb/databaseQueries.js');
-var files = require('./serverjs/siteFiles');
 var bodyParser = require('body-parser');
 var multer = require('multer');
-var mainFunctions = require("./serverjs/mainJsFunctions");
+
+var mainFunctions = require("./serverjs/MainJsFunctionsModule");
+var create = require('./serverjs/CreateModule.js');
+var update = require('./serverjs/UpdateModule.js');
+var queries = require('./mongodb/DatabaseModule.js');
+var files = require('./serverjs/SiteFilesModule.js');
 
 
 //======================Application MiddelWare=======================================================
@@ -27,29 +30,31 @@ app.use(multer({dest: './upload' , inMemory : true}));
 //===================================================================================================
 
 //get requests
-app.get('/getAllUsers' , queries.getAllUsers );
+//app.get('/getAllUsers' , queries.getAllUsers );
 app.get('/' , function(req,res){
 	files.getFile(req,res,'public/index.html');
 });
 app.get('/signup' , function(req,res){
-	files.getFile(req,res,'public/signUpPage.html');
+	files.getFile(req,res,'/public/signUpPage.html');
 });
-//app.get('/user/:id', );
-//app.get('verifiyNewUser')
+
+
 
 
 //======================For Files======================
 app.get('*', function(req,res){
-	files.getFile(req,res, __dirname+req.url);
+	files.getFile(req,res, "./public"+req.url);
 });
+//======================================================
 
 
-
-//post requests
+//======================Post_Requests===================
 app.post('/login', queries.userLogin);
-app.post('/nLogin' , queries.newUserLogin);
-app.post('/signUpNewFamily' , queries.signUpNewFamily);
-app.post('/profilePicture/:id', mainFunctions.ProfilePicture);
+//app.post('/nLogin' , queries.newUserLogin);
+app.post('/Update', update.UpdateMethod);
+app.post('/Create', create.CreateMethod);
+app.post('/familyInfo', queries.GetFamilyInfo);
+//======================================================
 
 var server = http.createServer(app);
 

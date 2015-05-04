@@ -367,8 +367,8 @@ function loginUser(){
         type : 'POST',
         contentType : "application/json",
         data : JSON.stringify(roi),
-        success : function(){console.log("OKKKK");},
-        error : function(){console.log("NOOOOOO");}
+        success : function(){});},
+        error : function(){});}
     });   
 }
 

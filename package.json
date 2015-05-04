@@ -4,11 +4,15 @@
   "description": "FremilyMainServer",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.12.3",
     "cookie-parser": "^1.3.4",
     "express": "^4.12.1",
-    "mongoose": "^3.8.24",
+    "fs": "0.0.2",
+    "http": "0.0.0",
+    "mongoose": "^3.9.7",
     "morgan": "^1.5.2",
     "multer": "^0.1.8",
+    "string": "^3.1.1",
     "underscore": "^1.8.3"
   },
   "author": "Roi Tal - The Creator"
