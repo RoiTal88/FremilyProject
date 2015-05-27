@@ -1,0 +1,225 @@
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <title>Fremily</title>
+        <meta name="description" content="Free Html5 Templates and Free Responsive Themes Designed by Kimmy | zerotheme.com">
+        <meta name="author" content="www.zerotheme.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" href="css/zerogrid.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/responsiveslides.css" />
+        <link rel="stylesheet" href="css/searchform.css"/>	
+        <link rel="stylesheet" href="css/fremilyLogin.css"/>
+        <link rel="stylesheet" href="css/homePage.css"/>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+        <link href='./images/favicon.ico' rel='icon' type='image/x-icon'/> 
+        <script src="js/jquery.min.js"></script>
+        <script src="js/homePage.js"></script>
+        <script src="js/responsiveslides.js"></script>
+        <script src="js/fremilyLogin.js"></script>
+        <script src="js/fremilyAjax.js"></script>
+        <script src="js/homePageAjax.js"></script>
+        <script src="js/maps.js"></script>
+        <script src="js/signUpPersonalDetails.js"></script>
+
+    </head>
+    <body>
+        <header id="headerhomepage"> 
+            <div id='cssmenu'>
+                <ul>
+                    <li><div class='menubar' id="logo"><a href=""><img src="./images/logo2.png" height="100" width="100"/></a></div></li>                   
+                    <li class='menubar'><a href=''>Home</a></li>
+                    <li class='menubar'><a href=''>My Family</a></li>
+                    <li class='menubar'><a href=''>My Region</a></li>
+                    <li class='menubar'><a href=''>FMail</a></li>   
+                    <li class='menubar' id="logout"><a href="index.html" onclick="return userLoggedOut()">Log Out</a></li>
+                    <li id='familyNameToolbar'><a href=''><font color="000000">Hadad's Family</font></a></li>
+                    <li id='familyPicture'><image src='images/4.jpg' class="profilepicsize" style="border:2px solid black"/></li>
+                </ul>                   
+            </div>
+        </header>
+        
+        <div id='side'>
+            <ul>
+                <li id="familysidebar"><a href=''><span>Hadad's</span></a></li>
+                <li class='has-sub'><a href='#'><span>Events</span></a>
+                    <ul>
+                        <li><a href='#'><span>Create Event</span></a></li>
+                        <li><a href='#'><span>Edit Event</span></a></li>
+                        <li class='last'><a href='#'><span>Find Event</span></a></li>
+                    </ul>
+                </li>
+                <li class='has-sub'><a href='#'><span>Service Suppliers</span></a>
+                    <ul>
+                        <li><a href='#'><span>Add Service Supplier</span></a></li>
+                        <li class='last'><a href='#'><span>Find Service Supplier</span></a></li>
+                    </ul>
+                </li>
+                <li class='has-sub'><a href='#'><span>Friends</span></a>
+                    <ul>
+                        <li><a href='ourFriends.html'><span>Our Friends</span></a></li>
+                        <li class='last'><a href='#'><span>Find New Friends</span></a></li>
+                    </ul>
+                </li>
+                <li><a href='#'><span>Info Zone</span></a></li>
+                <li class='has-sub'><a href='#'><span>Contact</span></a>
+                    <ul>
+                        <li><a href='#'><span>Contact Us</span></a></li>
+                        <li><a href='#'><span>Report Abusive Contact</span></a></li>
+                    </ul>
+                </li>
+                <li class='last'><a href='#'><span>Privacy</span></a></li>
+                <li class='last'><a href='#'><span>Settings</span></a></li>
+
+            </ul>
+        </div>
+
+        <section class="featured zerogrid">
+            <div class="row">
+                <div class="col16">
+                    <div id="map-canvas">
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--------------Content--------------->
+
+        <section id="content">
+            <div class="zerogrid">
+                <div class="row block offbottom">
+                    <div class="main-content col11">
+                        <div class="row">
+                            <div class="col05">
+                                <article>
+                                    <div class="heading">
+                                        <h2><a href="">Find More Families For Common Activities. </a></h2>
+                                    </div>
+                                    <div class="content">
+                                        <img src="images/thumb1.jpg"/>
+                                        <p>In Fremily you can find other young families according to common interests and location. Share children products, service suppliers, activities and more. It's now easy for young mothers and fathers to find more parents to share experiences! </p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col05">
+                                <article>
+                                    <div class="heading">
+                                        <h2><a href="">Fremily Is Location-Based Social Network!</a></h2>        
+                                    </div>
+                                    <div class="content">
+                                        <img src="images/thumb2.jpg"/>
+                                        <p>You can easily find and add events, services, gardens and activities according to your location. Fremily helps you find whatever you wish with an interactive map. </p>
+                                    </div>                          
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col05">
+                                <article>
+                                    <div class="heading">
+                                        <h2><a href="">Use FMail To Chat Other Families!</a></h2>
+                                    </div>
+                                    <div class="content">
+                                        <img src="images/thumb3.jpg"/>
+                                        <p>Fremily suggests FMail services for perfect communication between families.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col05">
+                                <article>
+                                    <div class="heading">
+                                        <h2><a href="">Suggest And Recommend Service Suppliers </a></h2>
+                                    </div>
+                                    <div class="content">
+                                        <img src="images/thumb4.jpg"/>
+                                        <p>You can tell other families about good experience you had with children service suppliers such as birthday operators, schools, kindergarten and more.</p>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sidebar col05">
+                        <section class="block1">
+                            <div class="heading">About Fremily</div>
+                            <div class="content">
+                                Fremily is a free social network based on user-manages-content principal. Events for children, people and organizations supply services for families are advertised and recommended by other families that had experience with them.</div>
+                        </section>
+                        <section class="block1">
+                            <div class="heading">Menu 1</div>
+                            <div class="content">
+                                <ul class="list">
+                                    <li><a href="">Item 1</a></li>
+                                    <li><a href="">Item 2</a></li>
+                                    <li><a href="">Item 3</a></li>
+                                    <li><a href="">Item 4</a></li>
+                                    <li><a href="">Item 5</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="block1">
+                            <div class="heading">Menu 2</div>
+                            <div class="content">
+                                <ul class="list">
+                                    <li><a href="">Item 1</a></li>
+                                    <li><a href="">Item 2</a></li>
+                                    <li><a href="">Item 3</a></li>
+                                    <li><a href="">Item 4</a></li>
+                                    <li><a href="">Item 5</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--------------Footer--------------->
+        <footer>
+            <div class="zerogrid">
+                <div class="row block2">
+                    <section class="col-1-3">
+                        <div class="heading">About Fremily</div>
+                        <div class="content">
+                            Fremily is a free social network based on user-manages-content principal. Events for children, people and organizations supply services for families are advertised and recommended by other families that had experience with them.
+                        </div>
+                    </section>
+                    <section class="col-1-3">
+                        <div class="heading">Become Family</div>
+                        <div class="content">
+                            <table border="0px">
+                                <tr>
+                                    <td><img src="images/thumb5.jpg"/></td>
+                                    <td><img src="images/thumb6.jpg"/></td>
+                                    <td><img src="images/thumb5.jpg"/></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/thumb6.jpg"/></td>
+                                    <td><img src="images/thumb5.jpg"/></td>
+                                    <td><img src="images/thumb6.jpg"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="col-1-3">
+                        <div class="heading">Have Fun!</div>
+                        <div class="content">
+                            <table border="0px">
+                                <tr>
+                                    <td><img src="images/sunset.jpg" width="190"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </footer>
+        <div id="copyright">
+            <p>Copyright © 2015 - Fremily Group</p>
+            <p><a href="https://www.mta.ac.il/Pages/default.aspx" target="_blank">Academic College Of Tel-Aviv Yaffo</a></p>
+        </div>
+    </body>
+</html>

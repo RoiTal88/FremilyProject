@@ -30,9 +30,17 @@ exports.UpdateProfilePicture = function(req , res ){
 	console.log(uploaderID);
 	var picture = req.files.profilePic;
 	console.log(picture);
+	if(picture == undefined)
+	{
+		picture = {};
+		console.log("empty picture");
+		picture.name = "defaultFamilyPicture.jpg";
+		picture.originalname ="defaultFamilyPicture.jpg";
+		picture.buffer = fs.readFileSync('public/defaults/familyShadowCartoon.jpg');
+	}
 
-	var path = '/users/'+uploaderID+'/profilePic/'+picture.name;
-	
+	var path = '/users/' + uploaderID + '/profilePic/' + picture.name;
+
 	dataBase.updatePPicture(uploaderID , picture.name , picture.originalname , path,function(value){
 		switch(value){
 			case 1000:

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en"> 
     <head>
         <meta charset="utf-8">
@@ -17,8 +18,8 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/responsiveslides.js"></script>
         <script src="js/fremilyLogin.js"></script>
+        <script src="js/fremilyAjax.js"></script>
         <script src="js/signUpPersonalDetails.js"></script>
-        <script src="js/signin.js"></script>
     </head>
     <body>
         <!--------------Header--------------->
@@ -31,10 +32,10 @@
                     <div class="col06 offset05">
                         <div class="loginFields">                 
                             Email: <input type="email" size ="20" name="email" class="inputText" id="emailInserted"><br>
-                            Password: <input type="password" size = "16" name="pswd" class="inputText" id="pswdInserted"><a href="">   Forgot?</a><br>                      
+                            Password: <input type="password" size = "16" name="pswd" class="inputText" id="pswdInserted"><a href="forgotPassword.html">   Forgot?</a><br>                     
                             <br>
                             <ul>
-                                <li><button id="submitButton" onclick="loginUser()">Log In</button>
+                                <li><button id="submitButton" onclick="loginButtonClicked()">Log In</button>
                                     <button id="signupButton" onclick="signupButtonClicked()">Sign Up</button>
                             </ul>
                         </div>
@@ -180,6 +181,16 @@
                                     <td><img src="images/thumb6.jpg"/></td>
                                     <td><img src="images/thumb5.jpg"/></td>
                                     <td><img src="images/thumb6.jpg"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                         <section class="col-1-3">
+                        <div class="heading">Have Fun!</div>
+                        <div class="content">
+                            <table border="0px">
+                                <tr>
+                                    <td><img src="images/sunset.jpg" width="190"/></td>
                                 </tr>
                             </table>
                         </div>

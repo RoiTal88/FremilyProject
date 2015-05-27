@@ -47,6 +47,7 @@
     .zerogrid .col-2-3                  { width: 620px; }
 
     /* Offsets */
+    .zerogrid .offset00                   { margin-left: 40px;  }
     .zerogrid .offset01                   { margin-left: 60px;  }
     .zerogrid .offset02                   { margin-left: 120px; }
     .zerogrid .offset03                   { margin-left: 180px; }

@@ -11,7 +11,12 @@ exports.CreateMethod = function(req, res)
 		break;
 
 		case 'Event':
+			console.log("Creating New Events - createModule");
 			CreateNewEvent(req,res);
+		break;
+
+		case 'ServiceSupplier':
+			CreateNewServiceSupplier(req, res);
 		break;
 	}
 
@@ -27,6 +32,11 @@ CreateNewFemily = function(req, res)
 
 CreateNewEvent = function(req, res)
 {
+	Queries.CreateNewEvent(req, res);
+}
+
+CreateNewServiceSupplier = function(req, res)
+{
 
 }
 
@@ -39,7 +49,6 @@ CheckFemilyRequestValidity = function(req, res)
 		res.statusCode(406);
 		res.end(JSON.stringify({error : 2003 , msg : 'user must logout first'}));
 	}
-	
 }
 
 CheckEventRequestValidity = function(req, res)

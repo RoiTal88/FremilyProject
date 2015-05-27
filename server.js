@@ -38,7 +38,7 @@ app.get('/GetUserInfo/:_id', queries.GetFamilyInfo);
 app.get('/signup' , function(req,res){
 	files.getFile(req,res,'/public/signUpPage.html');
 });
-
+app.get('/getUserFriends/:_id', queries.getUserFriendsById );
 
 
 
@@ -56,6 +56,7 @@ app.post('/Update', update.UpdateMethod);
 app.post('/UpdatePP/:_id' , update.UpdateProfilePicture);
 app.post('/Create', create.CreateMethod);
 app.post('/familyInfo', queries.GetFamilyInfo);
+app.post('/CreateNewEvent/:_id', create.CreateMethod);
 //======================================================
 
 var server = http.createServer(app);

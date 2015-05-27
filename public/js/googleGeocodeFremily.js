@@ -28,12 +28,22 @@ function initialize() {
 
 function fillInAddress() {
   // Get the place details from the autocomplete object.
-  var place = autocomplete.getPlace();
-  
-  for (var component in componentForm) {
-    document.getElementById("address").childNodes[1].value = '';
-    document.getElementById("address").childNodes[1].disabled = false;
-  }
+    var place = autocomplete.getPlace();
+
+    for (var component in componentForm) {
+        document.getElementById("address").childNodes[1].value = '';
+        document.getElementById("address").childNodes[1].disabled = false;
+        try
+        {
+            document.getElementById("errorlocation").style.visibility = "hidden";
+            familyDetails.district = place.address_components[2].long_name;//District
+            familyDetails.city = place.address_components[1].long_name;
+            familyDetails.country = place.address_components[3].long_name;
+        }
+        catch (e) {
+            document.getElementById("errorlocation").style.visibility = "visible";
+        }
+    }
 
   // Get each component of the address from the place details
   // and fill the corresponding field on the form.
@@ -62,6 +72,7 @@ function geolocate() {
       });
       autocomplete.setBounds(circle.getBounds());
     });
-  }
+    }
 }
+
 

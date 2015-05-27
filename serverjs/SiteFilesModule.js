@@ -17,16 +17,16 @@ exports.getFile = function(req , res , filePath){
 				contentType = 'text/javascript';
 				break;
 			case '.png':
-				contentType = 'image/png'
+				contentType = 'image/png';
 				break;
 			case '.gif':
-				contentType = 'image/gif'
+				contentType = 'image/gif';
 				break;
 			case '.jpg':
-				contentType = 'image/jpg'
+				contentType = 'image/jpg';
 				break;
 			case '.ico':
-				contentType = 'image/ico'
+				contentType = 'image/ico';
 				break;					
 		}
 		//checking if the file is exists in the server

@@ -1,26 +1,29 @@
 var parentsStractureSelected = 0; //[0=undefined, 1=Mother and father, 2=Father and father, 3=Mother and mother, 4=Mother, 5=Father]
 var signUpCurrentPhase = 1;
+var recoveryEmail = false;
 var familyDetails = {
+    CreateType: "Family",
     familyName: "",
-    firstParentName: "",
-    firstParentBirthday: "",
-    secondParentName: "",
-    secondParentBirthday: "",
+    parents: [],
     email: "",
-    password: "",
+    password1: "",
+    password2: "",
     address: "",
-    children: 1
+    district: "",
+    city:"",
+    country:"",
+    numberOfChildren: 1,
+    children: []
 };
-var childrenDetils = [];
-function child(name, birthday, sex) {
-    this.name = name;
-    this.birthday = birthday;
-    this.sex = sex;
-}
-;
+var profilepicture = null;
 
+function PersonObj(name, date, gender) {
+    this.nameOfPerson = name;
+    this.dateOfBirth = date;
+    this.gender = gender;
+};
 
-$(function() {
+$(function () {
     $("#slider").responsiveSlides({
         auto: true,
         pager: false,
@@ -45,6 +48,10 @@ function loginButtonClicked() {
     }
     else {
         document.getElementById("pswdInserted").className = document.getElementById("pswdInserted").className.replace(" noInputAlert", "");
+    }
+    if (emailInserted !== "" && pswdInserted !== "")
+    {
+        signInAjax(emailInserted,pswdInserted );
     }
 }
 
@@ -192,15 +199,19 @@ function signUpNext() {
         }
     }
     else if (signUpCurrentPhase === 3) {
-        if (checkPhase3Inputs() === false){
+        if (checkPhase3Inputs() === false) {
             document.getElementById("errorFremilyNotSelected").innerHTML = "All Information Is Necessary For Us..";
             document.getElementById("errorFremilyNotSelected").style.visibility = "visible";
         }
-        else{
+        else {
             document.getElementById("errorFremilyNotSelected").style.visibility = "hidden";
-            sendRequestForSignUp();
             signUpCurrentPhase++;
+            signUpAjax();
+            renderLastPhase();
         }
+    }
+    else if (signUpCurrentPhase === 4) {
+        window.location = "index.html";        
     }
 }
 
@@ -260,10 +271,12 @@ function renderPhaseThree() {
     drawChildrenTable();
 }
 
-function renderLastPhase(){
+function renderLastPhase() {
     $('#childreninfo').hide();
-    $('#signUpTitle').hide();
-    document.getElementById("signUpTitle").innerHTML = "Welcome To Fremily "+familyDetails.familyName+" Family!";   
+    $('#signUp').hide();
+    document.getElementById("previousButton").style.visibility = "hidden";
+    document.getElementById("signUpTitle").innerHTML = "Hello " + familyDetails.familyName + "'s! Welcome To Fremily! <br> A confirmation email was sent to you.";
+    document.getElementById("nextButton").innerHTML = "Finish";
 }
 //---------------------------------------------------------
 function checkPhase2Inputs() {
@@ -275,7 +288,8 @@ function checkPhase2Inputs() {
     var pswd2 = document.getElementById("pswd2").childNodes[1].value;
     var childrenAmmount = document.getElementById("numofchildren").childNodes[1].value;
     var address = document.getElementById("address").childNodes[1].value;
-
+    var familyPicture = document.getElementById("familyphoto").childNodes[1].value;
+    childrenAmmount = parseInt(childrenAmmount);
     if (parentsStractureSelected !== 4 && parentsStractureSelected !== 5) {
         var secondParentName = document.getElementById("parent2name").childNodes[1].value;
         var secondParentBirthday = document.getElementById("parent2dob").childNodes[1].value;
@@ -288,10 +302,40 @@ function checkPhase2Inputs() {
         return false;
     }
     else {
+        handleProfilePicture(familyPicture);
         fillDetailsOfFamily(familyName, firstParentName, firstParentBirthday, secondParentName, secondParentBirthday, emailAddress, pswd, childrenAmmount, address);
         return true;
     }
 }
+
+function handleProfilePicture(familyPicture)
+{
+    var file = document.getElementById("profilePicture");
+    if ((familyPicture !== "")&&(familyPicture !==null)){
+        profilepicture = file.files[0];
+    }
+}
+
+
+function upload(file) {
+    if (!file || !file.type.match(/image.*/))
+        return;
+    var fd = new FormData();
+    fd.append("image", file); 
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://api.imgur.com/2/upload.json"); // Boooom!
+    xhr.onload = function () {
+        // Big win!
+        // The URL of the image is:
+        JSON.parse(xhr.responseText).upload.links.imgur_page;
+    };
+    // Ok, I don't handle the errors. An exercice for the reader.
+    // And now, we send the formdata
+    xhr.send(fd);
+}
+
+
+
 
 function checkPasswordsMatch() {
     var pswd = document.getElementById("pswd").childNodes[1].value;
@@ -306,39 +350,82 @@ function checkPasswordsMatch() {
 
 function fillDetailsOfFamily(familyName, firstParentName, firstParentBirthday, secondParentName,
         secondParentBirthday, email, pswd, children, address) {
+    var parentOne = fillParentDetails(firstParentName, firstParentBirthday, 1);
+    familyDetails.parents.push(parentOne);
+    var parentTwo = fillParentDetails(secondParentName, secondParentBirthday, 2);
+    familyDetails.parents.push(parentTwo);
     familyDetails.familyName = familyName;
-    familyDetails.firstParentName = firstParentName;
-    familyDetails.firstParentBirthday = firstParentBirthday;
-    familyDetails.secondParentName = secondParentName;
-    familyDetails.secondParentBirthday = secondParentBirthday;
     familyDetails.email = email;
-    familyDetails.password = pswd;
-    familyDetails.children = children;
+    familyDetails.password1 = pswd;
+    familyDetails.password2 = pswd;
+    familyDetails.numberOfChildren = children;
     familyDetails.address = address;
 }
 
+function fillParentDetails(firstName, birthday, parentNumber)
+{
+    var personGender = new String();
+    if (parentsStractureSelected === 1)
+    {
+        if (parentNumber === 1)
+        {
+            personGender = "Female";
+        }
+        else
+        {
+            personGender = "Male";
+        }
+    }
+    else if (parentsStractureSelected === 2)
+    {
+        personGender = "Male";
+    }
+    else if (parentsStractureSelected === 3)
+    {
+        personGender = "Female";
+    }
+    else if (parentsStractureSelected === 4)
+    {
+        if (parentNumber === 1) {
+            personGender = "Female";
+        }
+        else {
+            return null;
+        }
+    }
+    else if (parentsStractureSelected === 5)
+    {
+        if (parentNumber === 1) {
+            personGender = "Male";
+        }
+        else {
+            return null;
+        }
+    }
+    return new PersonObj(firstName, birthday, personGender);
+}
 function drawChildrenTable() {
     var table = document.getElementById("childreninfo");
-    var childrenAmmount = parseInt(familyDetails.children);
+    var childrenAmmount = parseInt(familyDetails.numberOfChildren);
     var row;
     var cell;
     for (var i = 0; i < childrenAmmount; i++) {
         row = table.insertRow(i);
         cell = row.insertCell(0);
         cell.setAttribute("id", "child" + (i + 1) + "name");
-        cell.innerHTML = 'Child ' + (i + 1) + ' - Name:' + '<input type="text" id="child'+i+'NameInput" size ="13"  class="inputText" style="border:1px solid #000000">';
+        cell.innerHTML = 'Child ' + (i + 1) + ' - Name:' + '<input type="text" size ="13"  class="inputText" style="border:1px solid #000000">';
         cell = row.insertCell(1);
         cell.setAttribute("id", "child" + (i + 1) + "dob");
-        cell.innerHTML = 'Child ' + (i + 1) + ' - Birthday:' + '<input id="child'+i+'DateInput" type="date" size ="16"  class="inputText" style="border:1px solid #000000">';
+        cell.innerHTML = 'Child ' + (i + 1) + ' - Birthday:' + '<input type="date" size ="16"  class="inputText" style="border:1px solid #000000">';
         cell = row.insertCell(2);
         cell.setAttribute("id", "child" + (i + 1) + "sex");
-        cell.innerHTML = 'Sex:' + '<br><select id="child'+i+'SexInput"><option value="Sex">Sex</option><option value="Boy">Boy</option><option value="Girl">Girl</option></select>';
+        cell.innerHTML = 'Sex:' + '<br><select><option value="Sex">Sex</option><option value="Boy">Boy</option><option value="Girl">Girl</option></select>';
     }
     $('#childreninfo').show();
 }
 
 function checkPhase3Inputs() {
-    var childrenAmmount = familyDetails.children;
+    var childrenAmmount = familyDetails.numberOfChildren;
     for (var i = 1; i <= childrenAmmount; i++) {
         var idName = "child" + i + "name";
         var idBirthday = "child" + i + "dob";
@@ -350,25 +437,31 @@ function checkPhase3Inputs() {
             return false;
         }
         else {
-            var tempChild = new child(name, birthday, sex);
-            childrenDetils.push(tempChild);
+            var childCreated = new PersonObj(name, birthday, sex);
+            familyDetails.children.push(childCreated);
         }
     }
     return true;
 }
 
-function loginUser(){
-            var roi = {};
-        roi.email = "roital88@gmail.com";
-        roi.password = "123456";
-    $.ajax({
+function recoveryForgottenPassword()
+{
+    if (recoveryEmail === false) {
+        var elem = document.getElementById("emailforgotten");
+        elem.parentElement.removeChild(elem);
+        document.getElementById("recoverypswd").innerHTML = "Password Sent!";
+        document.getElementById("onlyemail").innerHTML = ' &nbsp<button id="forgotpswdbutton" onclick="recoveryForgottenPassword()">Apply</button><br><br><br><br><br> ';
+        document.getElementById("forgotpswdbutton").innerHTML = "OK";
+        document.getElementById("forgotpswdbutton").setAttribute('style', 'padding: 10px 30px;');
+        document.getElementById("forgotpswdbutton").style.visibility = "visible";
 
-        url : "/login" ,
-        type : 'POST',
-        contentType : "application/json",
-        data : JSON.stringify(roi),
-        success : function(){});},
-        error : function(){});}
-    });   
+        recoveryEmail = true;
+    }
+    else
+    {
+        console.log("HERE");
+        window.location = "index.html";
+        //TODO: Implement password sending on server.
+    }
 }
 
