@@ -18,6 +18,7 @@ var familySchema = new schema( objects.FamilyObjectSchema);
 var ppictureSchema = new schema( objects.PPictureSchema);
 var usersInDistrictSchema = new schema( objects.UsereInDistrictSchema);
 var eventSchema = new schema (objects.EventSchema);
+var serviceSupplierSchema = new schema(objects.ServiceSupplierSchema);
 //=========================================================
 
 //+++++++++++++++++++MODELS+++++++++++++++++++++++++++++++
@@ -27,33 +28,103 @@ var familyModel = mongoose.model('family' , familySchema);
 var ppictureModel = mongoose.model('pPictures', ppictureSchema);
 var usersInDistrictModel = mongoose.model('usersInDistrict', usersInDistrictSchema);
 var eventModel = mongoose.model('events', eventSchema );
+var serviceSupplierModel = mongoose.model('serviceSupplier', serviceSupplierSchema);
 //=========================================================
 //====================DATA BASE QUERIS=====================
+
+exports.CreateNewServiceSupplier = function(req, res){
+	var newServiceSupplier = new serviceSupplierModel({	creator : req.body.creator,
+														type : req.body.type,
+														name : req.body.name,
+														address : req.body.address,
+														phoneNumber : req.body.phoneNumber,
+														description : req.body.description,
+														pictureURL : "",
+														recomendedBy : [],
+														comments : []
+													});
+	console.log("created new Service supplier");
+	newServiceSupplier.save();
+	console.log(newServiceSupplier);
+	res.setHeader('Content-Type', 'application/json');
+	res.send(JSON.stringify({_id : newServiceSupplier._id}));
+}
+
+/*exports.EditEvent = function(req, res){
+	var idOfCreator = req.params.UserId;
+	var idOfEvent = req.params.EventId;
+	eventModel.findOne({_id : idOfEvent , "creatorOfEvent" : idOfCreator},funnction(err, data){
+		res.setHdeaders('Content-Type', 'application/json');
+		if(err){
+
+			res.send(JSON.stringify({err : err }));
+		}
+		else{
+
+		}
+
+
+	});
+};*/
+
+
+exports.getEventsById = function(req, res){
+	eventModel.find({_id: req.params._id}, function(err, data){
+		if(err)
+			red.end(JSON.strigify({error : 3000}));
+		else{
+			res.setHeader('Content-Type', 'application/json');
+			res.statusCode(200);
+			res.end();
+		}
+
+
+	})
+};
+
+
+
+
+exports.UpdateEventPicture = function(creatorid, eventid, path, callback ){
+	eventModel.findOne({_id : eventid, creatorOfEvent : creatorid}, function(err, data){
+		if(data.creatorOfEvent !== creatorid)
+			callback(3000);
+		else {
+			if (err)
+				callback(3000);
+			else {
+				data.mainEventPicture = path;
+				data.save();
+				callback(1000);
+			}
+		}
+	});
+
+};
+
 
 exports.CreateNewEvent = function(req, res){
 	var newEvent = new eventModel({
 									creatorOfEvent : req.params._id,
-									description : req.body.description,
-									title : req.body.title,
-									accessModifier : req.body.accessModifier,
-									country : req.body.country,
-									district : req.body.district,
-									city : req.body.city,
-									dateOfEvent : req.body.dateOfEvent,
-									address : req.body.address,
-									typeOfEvent : req.body.typeOfEvent,
+									description : req.body.Description,
+									EventType : req.body.EventType,
+									Privacy : req.body.Privacy,
+									Date : req.body.Date,
+									Time : req.body.Time,
+									Location : req.body.Location,
 									mainEventPicture : req.body.mainEventPicture
 								  });
 	console.log("Creating New Event");
-	var qurey = familyModel.find({ _id : req.params._id});
+	var query = familyModel.find({ _id : req.params._id});
 	query.select('friendList');
 	query.exec(function(err, data){
-		for(var i = 0; i < data.length ; i++){
+		console.log("##########freinds new event");
+		console.log(data);
+		for(var i = 0; i < data.length ; i++)
 			newEvent.participants.push(data[i]);
-		}
 	});
 	newEvent.save();
-	res.setHeader({'Content-Type' : 'application/json'});
+	res.setHeader('Content-Type' , 'application/json');
 	res.send(JSON.stringify({_id : newEvent._id}));
 	res.end();
 
@@ -75,10 +146,9 @@ exports.getUserFriendsById = function(req, res){
 			for(var i = 0 ; i < friendsData.length ; i++)
 			{
 				if(friendsData[i]._id == req.params._id)
-				{
 					friendsData.splice(i, 1);
-				}
-				friendsData[i]._id = null;
+				else
+					friendsData[i]._id = null;
 			}
 			res.setHeader('Content-Type','application/json');
 			res.statusCode = 200;

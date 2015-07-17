@@ -36,3 +36,36 @@ exports.checkPasswordsValidity = function (str1 , str2)
 	return validPassword;
 };
 
+
+//find Event By id
+//get type of event and date
+// return events according to the level of privacy in the district of the sercher
+exports.FindEvent = function (req,res){
+	dataBase.FindEvent(function(code){
+
+	});
+};
+
+//
+exports.FindAvialableEventsToAttend = function (req,res){
+
+};
+exports.FindServiceSupplierByType = function(req, res){
+
+
+};
+
+exports.GetAllCreatedServiceSupplierById = function(req, res){
+
+};
+
+//this function get _id of the deleter and the email of the deleted
+exports.DeleteFriend = function(req, res){
+
+
+};
+
+exports.AddFriend = function(req, res){
+
+
+};

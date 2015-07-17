@@ -35,9 +35,10 @@ CreateNewEvent = function(req, res)
 	Queries.CreateNewEvent(req, res);
 }
 
-CreateNewServiceSupplier = function(req, res)
+exports.CreateNewServiceSupplier = function(req, res)
 {
-
+	console.log("creating new service supplier")
+	Queries.CreateNewServiceSupplier(req, res);
 }
 
 CheckFemilyRequestValidity = function(req, res)
@@ -56,3 +57,14 @@ CheckEventRequestValidity = function(req, res)
 	//not implemented
 	return 1001;
 }
+
+
+//create new service supplier
+//needed to create object first
+//the district of the service supplier is determined according
+
+
+exports.CreateNewServiceSupplier = function(req, res){
+
+}
+

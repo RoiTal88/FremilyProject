@@ -43,7 +43,6 @@ exports.FamilyObject = function(
 	this.email  = email;
 	this.numberOfChildren = numberOfChildren;
 	this.children = [];
-
 	this.city = city;
 	this.country = country;
 	this.street = street;
@@ -95,23 +94,19 @@ exports.UsereInDistrict = function(districtName){
 exports.EventSchema =  {
 	creatorOfEvent : String,
 	description : String,
-	title : String,
-	accessModifier : Number,
-	country : String,
-	district : String,
-	city : String,
-	dateOfEvent : Date,
-	address : String,
-	participants : [],
-	typeOfEvent : String,
+	EventType : String,
+	Privacy : String,
+	Date : String,
+	Time : String,
+	Location : String,
 	mainEventPicture : String,
+	participants : [],
 	relatedPictures : []
 }
 
-exports.EventsObject = function(creatorOfEvent, description, title, accessModifier, country, district, city,								dateOfEvent, address, typeOfEvent) {
+exports.EventsObject = function(creatorOfEvent, description, accessModifier, country, district, city,								dateOfEvent, address, typeOfEvent) {
 	this.creatorOfEvent = creatorOfEvent;
 	this.description = description;
-	this.title = title;
 	this.accessModifier = accessModifier;
 	this.country = country;
 	this.district = district;
@@ -121,3 +116,28 @@ exports.EventsObject = function(creatorOfEvent, description, title, accessModifi
 	this.typeOfEvent = typeOfEvent;
 
 }
+
+exports.ServiceSupplierSchema = {
+	creator : String,
+	type : String,
+	name : String,
+	address : String,
+	phoneNumber : String,
+	description : String,
+	pictureURL : String,
+	recomendedBy : [String],
+	comments : [{name : String, comment: String}]
+};
+
+exports.ServiceSupplierObject = function(creator, type, name, address, phoneNumber, description){
+	this.creator = creator;
+	this.type = type;
+	this.name = name;
+	this.address = address;
+	this.phoneNumber = phoneNumber;
+	this.description = description;
+	this.pictureUrl = "";
+	this.recomendedBy = [];
+	this.comments = [];
+
+};

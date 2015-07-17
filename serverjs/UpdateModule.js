@@ -8,6 +8,7 @@ exports.UpdateMethod = function(req, res){
 			UpdateProfilePicture(req, res);
 			break;
 		case 'EventPicturs':
+			UpdateEventPicture(req, res);
 			break;
 		case 'FamilyInfo':
 			UpdateFamilyInfo(req, res);
@@ -23,7 +24,33 @@ UpdateFamilyInfo = function(req, res)
 	dataBase.UpdateFamily(req, res);
 }
 
+UpdateEventPicture = function(req, res){
+	dataBase.UpdateEventPicture(req, res);
+}
 
+exports.UpdateEventMainPicture = function(req, res) {
+	var userID = req.params._userid;
+	var eventID = req.params._eventid;
+	var picture = req.files.eventPic;
+	if (!picture)
+		res.end();
+	else{
+		var path = '/users/' + userID + '/createdEventsPic/' + picture.name;
+		dataBase.UpdateEventPicture(userID, eventID, path, function (code) {
+			switch (code) {
+				case 1000:
+					fs.writeFile('public/' + path, picture.buffer, function () {
+					});
+					res.statusCode = 200;
+					break;
+				case 3000:
+					res.statusCode = 500;
+					break;
+			}
+			res.end();
+		});
+	}
+};
 
 exports.UpdateProfilePicture = function(req , res ){
 	var uploaderID = req.params._id;
@@ -61,3 +88,16 @@ exports.UpdateProfilePicture = function(req , res ){
 		}
 	});
 }
+
+//update existig event
+exports.UdateEvent =  function (req, res){
+	console.log(req.body.Event);
+	dataBase.findEventAndUpDate(function(msg){
+
+
+	}); //implement
+
+	//find the event by id
+
+};
+

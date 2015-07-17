@@ -39,6 +39,8 @@ app.get('/signup' , function(req,res){
 	files.getFile(req,res,'/public/signUpPage.html');
 });
 app.get('/getUserFriends/:_id', queries.getUserFriendsById );
+app.get('/getEventCreatedByUser/:_id', queries.getEventsById);
+
 
 
 
@@ -54,9 +56,12 @@ app.post('/login', queries.userLogin);
 //app.post('/nLogin' , queries.newUserLogin);
 app.post('/Update', update.UpdateMethod);
 app.post('/UpdatePP/:_id' , update.UpdateProfilePicture);
+app.post('/UpdateEP/:_userid/:_eventid', update.UpdateEventMainPicture);
 app.post('/Create', create.CreateMethod);
 app.post('/familyInfo', queries.GetFamilyInfo);
 app.post('/CreateNewEvent/:_id', create.CreateMethod);
+//app.post('/EditEvent', update.UpdateEvent);
+app.post('/CreateNewServiceSupplier/', queries.CreateNewServiceSupplier)
 //======================================================
 
 var server = http.createServer(app);
