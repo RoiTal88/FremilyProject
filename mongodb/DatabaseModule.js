@@ -32,6 +32,80 @@ var serviceSupplierModel = mongoose.model('serviceSupplier', serviceSupplierSche
 //=========================================================
 //====================DATA BASE QUERIS=====================
 
+
+// app.delete
+exports.deleteFriend = function(req, res){
+	var deleter = req.body.deleter;
+	var deleted = req.body.deleted;
+	familyModel.find({ _id : deleter }, function(err, data){
+		if(err)	{
+			console.log("error", error)
+			res.statusCode = 500;
+			res.end();
+		}
+		else {
+			delete data.friendList[deleted];
+			data.save(function(err){
+				err ? console.log('deleted!') : console.log(err);
+				res.statusCode = err ? 500 : 200;
+				res();
+			});
+		}
+	});
+} 
+
+//     /getAllServiceSupplierCreatedById/_id
+exports.getAllServiceSupplierCreatedById = function(req, res){
+	var creatorid = req.params._id;
+	serviceSupplierModele.find({creator : creatorid}, function(err, data){
+		if(err){
+			console.log(err)
+			res.statusCode = 500;
+			res.end();
+		}
+		else {
+			res.setHeader('Content-Type', 'application/json')		
+			res.statusCode =200;
+			res.end(data);
+		}
+	})
+}
+
+//     /findServiceSupplierByType/_id/type
+exports.findServiceSupplierByType = function(req, res){
+	var finderId = req.params._id;
+	var stype = req.params.type;
+
+	serviceSupplierModele.find({type : stype},function(err, data){
+		if(err){
+			console.log(err)
+			res.statusCode = 500;
+			res.end();
+		}
+		else{
+			res.setHeader('Content-Type', 'application/json')		
+			res.statusCode =200;
+			res.end(data);
+		}
+	})
+}
+
+//big one with lot of logic
+exports.FindEvents = function(req, res){
+
+}
+
+
+
+exports.UpdateEventDetails = function(uid, eid, event, cb){
+	eventModel.update({_id : eid , creatorOfEvent : uid}, {$set : event}, function(err, data){
+		console.log(data);
+		if(err) cb({error : "server error"})
+		else if(data == null) cb({data : "not found"})
+		else cb(data);
+	})
+}
+
 exports.CreateNewServiceSupplier = function(req, res){
 	var newServiceSupplier = new serviceSupplierModel({	creator : req.body.creator,
 														type : req.body.type,
@@ -47,7 +121,8 @@ exports.CreateNewServiceSupplier = function(req, res){
 	newServiceSupplier.save();
 	console.log(newServiceSupplier);
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify({_id : newServiceSupplier._id}));
+	res.send(JSON.stringify({id : newServiceSupplier._id}));
+	res.end();
 }
 
 /*exports.EditEvent = function(req, res){
@@ -69,12 +144,16 @@ exports.CreateNewServiceSupplier = function(req, res){
 
 
 exports.getEventsById = function(req, res){
-	eventModel.find({_id: req.params._id}, function(err, data){
+	console.log(req.params._id);
+	eventModel.find({creatorOfEvent: req.params._id}, function(err, data){
+
+		res.statusCode=200;
 		if(err)
-			red.end(JSON.strigify({error : 3000}));
+			res.end(JSON.stringify({error : 3000}));
 		else{
+			console.log(data);
 			res.setHeader('Content-Type', 'application/json');
-			res.statusCode(200);
+			res.send(data);
 			res.end();
 		}
 
@@ -93,6 +172,7 @@ exports.UpdateEventPicture = function(creatorid, eventid, path, callback ){
 			if (err)
 				callback(3000);
 			else {
+				console.log("$$#%$%#$picture path", path)
 				data.mainEventPicture = path;
 				data.save();
 				callback(1000);
@@ -104,7 +184,9 @@ exports.UpdateEventPicture = function(creatorid, eventid, path, callback ){
 
 
 exports.CreateNewEvent = function(req, res){
+	
 	var newEvent = new eventModel({
+									title : req.body.Title || 'not specified',
 									creatorOfEvent : req.params._id,
 									description : req.body.Description,
 									EventType : req.body.EventType,
@@ -112,7 +194,7 @@ exports.CreateNewEvent = function(req, res){
 									Date : req.body.Date,
 									Time : req.body.Time,
 									Location : req.body.Location,
-									mainEventPicture : req.body.mainEventPicture
+									mainEventPicture : ""
 								  });
 	console.log("Creating New Event");
 	var query = familyModel.find({ _id : req.params._id});

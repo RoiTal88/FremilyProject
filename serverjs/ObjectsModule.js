@@ -93,6 +93,7 @@ exports.UsereInDistrict = function(districtName){
 
 exports.EventSchema =  {
 	creatorOfEvent : String,
+	title : String,
 	description : String,
 	EventType : String,
 	Privacy : String,
@@ -104,9 +105,10 @@ exports.EventSchema =  {
 	relatedPictures : []
 }
 
-exports.EventsObject = function(creatorOfEvent, description, accessModifier, country, district, city,								dateOfEvent, address, typeOfEvent) {
+exports.EventsObject = function(creatorOfEvent, description, accessModifier, country, district, city,title,dateOfEvent, address, typeOfEvent) {
 	this.creatorOfEvent = creatorOfEvent;
 	this.description = description;
+	this.title = title;
 	this.accessModifier = accessModifier;
 	this.country = country;
 	this.district = district;

@@ -13,8 +13,12 @@ exports.UpdateMethod = function(req, res){
 		case 'FamilyInfo':
 			UpdateFamilyInfo(req, res);
 		break;
+		case 'ServiceSupplier':
+			UpdateServiceSupplierPicture(req, res);
 		default:
-
+			res.statusCode = 404;
+			setHeader('Content-Type', 'application/json');
+			res.send({err : 'bad UpdateType'});
 			break;
 	}
 }
@@ -28,28 +32,50 @@ UpdateEventPicture = function(req, res){
 	dataBase.UpdateEventPicture(req, res);
 }
 
+exports.UpdateEventDetails = function(req, res){
+	console.log(req.params.userid + " " +req.params.eventid)
+	dataBase.UpdateEventDetails(req.params.userid, req.params.eventid, req.body ,function(data) {
+		if(data.error){
+			res.statusCode = 500;
+			res.end();
+		}
+		else{
+			res.setHeader('Content-Type', 'application/json');
+			res.statusCode = 200;
+			res.send(JSON.stringify(data));
+			res.end();
+		}
+	});
+}
+
 exports.UpdateEventMainPicture = function(req, res) {
 	var userID = req.params._userid;
 	var eventID = req.params._eventid;
 	var picture = req.files.eventPic;
-	if (!picture)
-		res.end();
-	else{
-		var path = '/users/' + userID + '/createdEventsPic/' + picture.name;
-		dataBase.UpdateEventPicture(userID, eventID, path, function (code) {
-			switch (code) {
-				case 1000:
-					fs.writeFile('public/' + path, picture.buffer, function () {
-					});
-					res.statusCode = 200;
-					break;
-				case 3000:
-					res.statusCode = 500;
-					break;
-			}
-			res.end();
-		});
+	var path;
+	if(picture) console.log(1);
+	if (!picture){
+		picture = {};
+		console.log("empty picture");
+		picture.name = "eventDefault.jpg";
+		picture.originalname ="eventDefault.jpg";
+		picture.buffer = fs.readFileSync('./public/defaults/event.jpg');
 	}
+	path = '/users/' + userID + '/createdEventsPic/' + picture.name;
+	dataBase.UpdateEventPicture(userID, eventID, path, function (code) {
+		switch (code) {
+			case 1000:
+				fs.writeFile('public/' + path, picture.buffer, function () {
+				});
+				res.statusCode = 200;
+				break;
+			case 3000:
+				res.statusCode = 500;
+				break;
+		}
+		res.end();
+	});
+	
 };
 
 exports.UpdateProfilePicture = function(req , res ){

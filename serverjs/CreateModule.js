@@ -52,19 +52,11 @@ CheckFemilyRequestValidity = function(req, res)
 	}
 }
 
-CheckEventRequestValidity = function(req, res)
-{
-	//not implemented
-	return 1001;
-}
+
 
 
 //create new service supplier
 //needed to create object first
 //the district of the service supplier is determined according
 
-
-exports.CreateNewServiceSupplier = function(req, res){
-
-}
 
