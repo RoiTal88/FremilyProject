@@ -93,11 +93,12 @@ exports.UsereInDistrict = function(districtName){
 
 exports.EventSchema =  {
 	creatorOfEvent : String,
-	title : String,
+	Title : String,
+	district : String,
 	description : String,
 	EventType : String,
 	Privacy : String,
-	Date : String,
+	Date : Date,
 	Time : String,
 	Location : String,
 	mainEventPicture : String,
@@ -108,7 +109,7 @@ exports.EventSchema =  {
 exports.EventsObject = function(creatorOfEvent, description, accessModifier, country, district, city,title,dateOfEvent, address, typeOfEvent) {
 	this.creatorOfEvent = creatorOfEvent;
 	this.description = description;
-	this.title = title;
+	this.Title = title;
 	this.accessModifier = accessModifier;
 	this.country = country;
 	this.district = district;
@@ -126,6 +127,7 @@ exports.ServiceSupplierSchema = {
 	address : String,
 	phoneNumber : String,
 	description : String,
+	district : String,
 	pictureURL : String,
 	recomendedBy : [String],
 	comments : [{name : String, comment: String}]

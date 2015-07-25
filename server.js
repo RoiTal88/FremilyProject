@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE, CONNECT');
     next();
 });
 app.use(function (req, res, next) {
@@ -42,8 +43,9 @@ app.get('/signup' , function(req,res){
 app.get('/getUserFriends/:_id', queries.getUserFriendsById );
 app.get('/getEventCreatedByUser/:_id', queries.getEventsById);
 //update event
-
-
+app.get('/getAllSPById/:_id', queries.getAllServiceSupplierCreatedById);
+app.get('/getAllSPByType/:_id/type', queries.findServiceSupplierByType);
+app.get('/findServiceSupplierByType/:_id/:type', queries.findServiceSupplierByType)
 
 
 //======================For Files======================
@@ -64,8 +66,12 @@ app.post('/familyInfo', queries.GetFamilyInfo);
 app.post('/CreateNewEvent/:_id', create.CreateMethod);
 //app.post('/EditEvent', update.UpdateEvent);
 app.post('/CreateNewServiceSupplier/', queries.CreateNewServiceSupplier)
-app.post('/UpdateEventDetails/:_userid/:eventid', update.UpdateEventDetails)
+app.post('/UpdateEventDetails/:userid/:eventid', update.UpdateEventDetails)
 app.post('/deleteFriend/:deleter/:deleted' , queries.deleteFriend);
+app.post('/findEvents/:_id', queries.getEvetsByParams);
+app.post('/UpdateSPPicture/:_userid/:_serviceid', update.UpdateSPPicture)
+app.delete('/deleteEvent/:_uid/:_eid',queries.deleteEvent)
+
 //to do
 /*
 function - list created events
@@ -79,7 +85,7 @@ find event by logic!
 
 var server = http.createServer(app);
 
-server.listen(80,function(){
+server.listen(3000,function(){
 	console.log("Fremily server is listining on port  \n");
 });
 /*app.listen(3000, 'localhost',function(){

@@ -32,6 +32,76 @@ var serviceSupplierModel = mongoose.model('serviceSupplier', serviceSupplierSche
 //=========================================================
 //====================DATA BASE QUERIS=====================
 
+exports.deleteEvent = function(req, res){
+	console.log("delet#$%^%$#@@#$%^&*()",req.params._uid , "   ", req.params._eid)
+	eventModel.findOneAndRemove({_id : req.params._eid, creatorOfEvent : req.params._uid},function(err, d, data){
+
+		if (err){
+			res.statusCode = 500;
+			res.setHeader("Content-Type", "application/json")
+			res.send(JSON.stringify({err : "cant delete"}));
+			res.end();
+		}
+		else{
+			console.log(d, data)
+			res.statusCode =200;
+			res.setHeader("Content-Type", "application/json");
+			res.send(JSON.stringify({ok :1}));					
+		}
+		
+	})
+}
+
+
+exports.getEvetsByParams = function(req, res){
+	var type = req.body.type , dateArray = req.body.date, date= [];
+	var dateFrom = dateArray[0];
+	var dateTo = dateArray[1];
+	
+
+	var d1 = dateFrom.split("-");
+	var d2 = dateTo.split("-");
+	
+	var from = new Date(d1[2], d1[1]-1, d1[0]);  // -1 because months are from 0 to 11
+	var to   = new Date(d2[2], d2[1]-1, d2[0]);
+	date.push(from);
+	date.push(to);
+		
+	familyModel.findOne({_id : req.params._id},{district:1, email:1}, function(err, data){
+		if(err || !type || !date){
+			res.statusCode =404;
+			res.end();
+		}
+		console.log(date)
+		var query = eventModel.find() , dist = [];
+		dist.push(data.district);
+		query.where('EventType').in(type);
+		//query.where('Date').gte(date[0]).lte(date[1]);
+		query.where('district').in(dist);
+		/*query.where('')
+		query.where*/
+		query.exec(function(err, result){
+			//console.log("this is the event results", result)
+			var eventResult = []
+			for(var i = 0 ; i< result.length; i++){
+				if(result[i].Privacy != 'CLOSED' || result[i].participants.indexOf(data.email) != -1){
+					console.log(Date.parse(result[i].date))
+					if(date[0] <= Date.parse(result[i].Date) && date[1] >= Date.parse(result[i].Date) )
+						eventResult.push(result[i]);
+				}
+			}
+			res.setHeader("Content-Type", "application/json");
+			res.statusCode = 200;
+			res.send(eventResult);
+			res.end();
+			return;
+		})
+	})
+
+
+
+}
+
 
 // app.delete
 exports.deleteFriend = function(req, res){
@@ -75,18 +145,21 @@ exports.getAllServiceSupplierCreatedById = function(req, res){
 exports.findServiceSupplierByType = function(req, res){
 	var finderId = req.params._id;
 	var stype = req.params.type;
-
-	serviceSupplierModele.find({type : stype},function(err, data){
-		if(err){
-			console.log(err)
-			res.statusCode = 500;
-			res.end();
-		}
-		else{
-			res.setHeader('Content-Type', 'application/json')		
-			res.statusCode =200;
-			res.end(data);
-		}
+	familyModel.findOne({_id : finderId},{district: 1},function(err, data){
+		serviceSupplierModel.find({type : stype, district : data.district},function(err, data){
+			console.log(data);
+			if(err){
+				console.log(err)
+				res.statusCode = 500;
+				res.end();
+			}
+			else{
+				res.setHeader('Content-Type', 'application/json')		
+				res.statusCode =200;
+				res.send(data)
+				res.end();
+			}
+		})
 	})
 }
 
@@ -98,31 +171,36 @@ exports.FindEvents = function(req, res){
 
 
 exports.UpdateEventDetails = function(uid, eid, event, cb){
+	console.log('event update database model');
 	eventModel.update({_id : eid , creatorOfEvent : uid}, {$set : event}, function(err, data){
-		console.log(data);
+		console.log("event data _id", data);
 		if(err) cb({error : "server error"})
 		else if(data == null) cb({data : "not found"})
-		else cb(data);
+		else cb(eid || data);
 	})
 }
 
 exports.CreateNewServiceSupplier = function(req, res){
-	var newServiceSupplier = new serviceSupplierModel({	creator : req.body.creator,
-														type : req.body.type,
-														name : req.body.name,
-														address : req.body.address,
-														phoneNumber : req.body.phoneNumber,
-														description : req.body.description,
-														pictureURL : "",
-														recomendedBy : [],
-														comments : []
-													});
-	console.log("created new Service supplier");
-	newServiceSupplier.save();
-	console.log(newServiceSupplier);
-	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify({id : newServiceSupplier._id}));
-	res.end();
+	familyModel.findOne({_id : req.body.creator},{district :1}, function(err,data){
+		console.log(data.district);
+		var newServiceSupplier = new serviceSupplierModel({	creator : req.body.creator,
+															type : req.body.type,
+															name : req.body.name,
+															address : req.body.address,
+															phoneNumber : req.body.phoneNumber,
+															description : req.body.description,
+															district : data.district,
+															pictureURL : "",
+															recomendedBy : [],
+															comments : []
+														});
+		console.log("created new Service supplier");
+		newServiceSupplier.save();
+		console.log(newServiceSupplier);
+		res.setHeader('Content-Type', 'application/json');
+		res.send(JSON.stringify({id : newServiceSupplier._id}));
+		res.end();
+	})
 }
 
 /*exports.EditEvent = function(req, res){
@@ -162,7 +240,23 @@ exports.getEventsById = function(req, res){
 };
 
 
+exports.UpdateServicePicture = function(creatorid, serviceid, path, callback ){
+	serviceSupplierModel.findOne({_id : serviceid, creator : creatorid}, function(err, data){
+		if(data.creator !== creatorid)
+			callback(3000);
+		else {
+			if (err)
+				callback(3000);
+			else {
+				console.log("$$#%$%#$picture path", path)
+				data.pictureURL = path;
+				data.save();
+				callback(1000);
+			}
+		}
+	});
 
+};
 
 exports.UpdateEventPicture = function(creatorid, eventid, path, callback ){
 	eventModel.findOne({_id : eventid, creatorOfEvent : creatorid}, function(err, data){
@@ -185,30 +279,40 @@ exports.UpdateEventPicture = function(creatorid, eventid, path, callback ){
 
 exports.CreateNewEvent = function(req, res){
 	
-	var newEvent = new eventModel({
-									title : req.body.Title || 'not specified',
+	
+	console.log("+++++++++++++++++++++++++++++++++++++++++++Creating New Event");
+	var query = familyModel.findOne({ _id : req.params._id});
+	query.select('friendList');
+	query.select('district');
+	query.exec(function(err, data){
+
+		var newEvent = new eventModel({
+									Title : req.body.Title || 'not specified',
 									creatorOfEvent : req.params._id,
 									description : req.body.Description,
 									EventType : req.body.EventType,
+									district : data.district,
 									Privacy : req.body.Privacy,
 									Date : req.body.Date,
 									Time : req.body.Time,
 									Location : req.body.Location,
 									mainEventPicture : ""
 								  });
-	console.log("Creating New Event");
-	var query = familyModel.find({ _id : req.params._id});
-	query.select('friendList');
-	query.exec(function(err, data){
-		console.log("##########freinds new event");
-		console.log(data);
-		for(var i = 0; i < data.length ; i++)
-			newEvent.participants.push(data[i]);
+
+		console.log("district is::::::",data.district);
+		newEvent.district = data.district;
+		if(req.body.Privacy == 'CLOSED'){
+			for(var i = 0; i < data.friendList.length ; i++){
+				//console.log(data[i])
+				newEvent.participants.push(data.friendList[i]);
+			}
+		}
+		newEvent.save();
+		res.setHeader('Content-Type' , 'application/json');
+		res.send(JSON.stringify({_id : newEvent._id}));
+		res.end();
 	});
-	newEvent.save();
-	res.setHeader('Content-Type' , 'application/json');
-	res.send(JSON.stringify({_id : newEvent._id}));
-	res.end();
+	
 
 }
 

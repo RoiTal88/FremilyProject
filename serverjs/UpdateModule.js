@@ -33,7 +33,7 @@ UpdateEventPicture = function(req, res){
 }
 
 exports.UpdateEventDetails = function(req, res){
-	console.log(req.params.userid + " " +req.params.eventid)
+	console.log('update event:####',req.params.userid + " " +req.params.eventid)
 	dataBase.UpdateEventDetails(req.params.userid, req.params.eventid, req.body ,function(data) {
 		if(data.error){
 			res.statusCode = 500;
@@ -42,11 +42,44 @@ exports.UpdateEventDetails = function(req, res){
 		else{
 			res.setHeader('Content-Type', 'application/json');
 			res.statusCode = 200;
-			res.send(JSON.stringify(data));
+			console.log("event id")
+			res.send(JSON.stringify({_id : data}));
 			res.end();
 		}
 	});
 }
+
+exports.UpdateSPPicture = function(req, res) {
+	var userID = req.params._userid;
+	var serviceID = req.params._serviceid;
+	var picture = req.files.SPPic;
+	var path;
+	if(picture) console.log(1);
+	if (!picture){
+		picture = {};
+		console.log("empty picture");
+		picture.name = "serviceDefault.jpg";
+		picture.originalname ="serviceDefault.jpg";
+		picture.buffer = fs.readFileSync('public/defaults/service.jpg');
+	}
+	path = '/users/' + userID + '/createdEventsPic/' + picture.name;
+	dataBase.UpdateServicePicture(userID, serviceID, path, function (code) {
+		switch (code) {
+			case 1000:
+				fs.writeFile('public/' + path, picture.buffer, function () {
+				});
+				res.statusCode = 200;
+				break;
+			case 3000:
+				res.statusCode = 500;
+				break;
+		}
+		res.end();
+	});
+	
+};
+
+
 
 exports.UpdateEventMainPicture = function(req, res) {
 	var userID = req.params._userid;
@@ -59,7 +92,7 @@ exports.UpdateEventMainPicture = function(req, res) {
 		console.log("empty picture");
 		picture.name = "eventDefault.jpg";
 		picture.originalname ="eventDefault.jpg";
-		picture.buffer = fs.readFileSync('./public/defaults/event.jpg');
+		picture.buffer = fs.readFileSync('public/defaults/event.jpg');
 	}
 	path = '/users/' + userID + '/createdEventsPic/' + picture.name;
 	dataBase.UpdateEventPicture(userID, eventID, path, function (code) {
