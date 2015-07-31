@@ -145,3 +145,20 @@ exports.ServiceSupplierObject = function(creator, type, name, address, phoneNumb
 	this.comments = [];
 
 };
+
+
+exports.BulletInBoject = function(creatorId, time, content, creator){
+	this.creatorId = creator;
+	this.time = time;
+	this.content = content;
+	this.creator = creator;
+	this.district = "";
+}
+ 
+exports.BulletinSchema = {
+	creatorId : String,
+	creator : String,
+	time : String,
+	content : String,
+	district : String
+}

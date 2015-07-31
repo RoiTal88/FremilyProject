@@ -19,6 +19,7 @@ var ppictureSchema = new schema( objects.PPictureSchema);
 var usersInDistrictSchema = new schema( objects.UsereInDistrictSchema);
 var eventSchema = new schema (objects.EventSchema);
 var serviceSupplierSchema = new schema(objects.ServiceSupplierSchema);
+var bulletinSchema = new schema(objects.BulletinSchema);
 //=========================================================
 
 //+++++++++++++++++++MODELS+++++++++++++++++++++++++++++++
@@ -29,8 +30,159 @@ var ppictureModel = mongoose.model('pPictures', ppictureSchema);
 var usersInDistrictModel = mongoose.model('usersInDistrict', usersInDistrictSchema);
 var eventModel = mongoose.model('events', eventSchema );
 var serviceSupplierModel = mongoose.model('serviceSupplier', serviceSupplierSchema);
+var bulletinModel = mongoose.model('bulletin', bulletinSchema);
 //=========================================================
 //====================DATA BASE QUERIS=====================
+exports.updatePassword = function(req, res){
+	console.log(req.body)
+
+	familyModel.findOne({_id : req.params._id}, function(err, data){
+		if (err) {
+			res.statusCode =500;
+			res.end();
+			return;
+		}
+		else{ 
+			data.password = req.body.newPassword;
+			data.save(function(err){
+			if (err) {
+				res.statusCode =500;
+				res.end();
+				return;
+			}else{
+				loginModel.findOne({familyId : req.params._id}, function(err, data){
+					if (err) {
+						res.statusCode =500;
+						res.end();
+						return;
+					} else {
+						data.password = req.body.newPassword;
+						data.save(function(err){
+							if (err) {
+								res.statusCode =500;
+								res.end();
+								return;
+							} else {
+								res.statusCode =200;
+								res.setHeader('Content-Type', 'application/json');
+								res.send(err || {password : data.password});
+								res.end();	
+								return;
+							}
+
+						})
+						
+					}
+
+				})
+			
+			}
+			})
+			
+		}
+	})
+}
+
+
+
+exports.getPassword = function(req, res){
+	familyModel.findOne({_id : req.params._id},function(err, data){
+			if (err) res.statusCode =500;
+			else res.statusCode =200;
+			res.setHeader('Content-Type', 'application/json');
+			res.send(err || {password : data.password});
+			res.end();
+		
+	})
+}
+
+
+exports.getAllFamiliesByDistrict = function(req, res){
+	familyModel.findOne({_id : req.params._id},{district : 1},function(err,data){
+		if (err){
+			res.statusCode =500;
+			res.end(err);
+			return;
+		}
+		familyModel.find({district : data.district}, function(error, data){
+			if (err) res.statusCode =500;
+			else res.statusCode =200;
+			res.setHeader('Content-Type', 'application/json');
+			res.send(err || data);
+			res.end();
+		})
+	})
+}
+
+
+exports.getServiceSupplierByDistrict = function(req, res){
+	familyModel.findOne({_id : req.params._id},{district : 1},function(err,data){
+		if (err){
+			res.statusCode =500;
+			res.end(err);
+			return;
+		}
+		serviceSupplierModel.find({district : data.district}, function(error, data){
+			if (err) res.statusCode =500;
+			else res.statusCode =200;
+			res.setHeader('Content-Type', 'application/json');
+			res.send(err || data);
+			res.end();
+		})
+	})
+}
+
+
+exports.getEventsByDistrict = function(req, res){
+	familyModel.findOne({_id : req.params._id},{district : 1},function(err,data){
+		if (err){
+			res.statusCode =500;
+			res.end(err);
+			return;
+		}
+		eventModel.find({district : data.district}, function(error, data){
+			if (err) res.statusCode =500;
+			else res.statusCode =200;
+			res.setHeader('Content-Type', 'application/json');
+			res.send(err || data);
+			res.end();
+		})
+	})
+}
+
+
+
+exports.getBulletins = function(req, res){
+	familyModel.findOne({_id : req.params._id}, function(err, data){
+		bulletinModel.find({district : data.district}, {creatorId : 0}, function(err,data){
+			if(err) res.statusCode = 500;
+			else res.statusCode = 200;
+			res.setHeader('Content-Type', 'application/json')
+			res.send(err || data);
+			res.end();
+		})
+	})
+}
+
+
+exports.addBulletin = function(req, res){
+	familyModel.findOne({_id : req.params._id}, function(err, data){
+		var newBulletin = new bulletinModel({
+												creatorId : req.params._id,
+												time : req.body.time,
+												creator : req.body.creator,
+												content : req.body.content,
+												district : data.district
+											})
+		newBulletin.save(function(err){
+			if(err) res.statusCode = 500;
+			else res.statusCode = 200;
+			res.setHeader('Content-Type', 'application/json');
+			res.end();
+		});
+	})
+	
+}
 
 exports.deleteEvent = function(req, res){
 	console.log("delet#$%^%$#@@#$%^&*()",req.params._uid , "   ", req.params._eid)
@@ -437,6 +589,7 @@ exports.SignUpNewFamily = function(req,res){
 
 exports.userLogin = function(req , res){
 	loginModel.findOne({email : req.body.email , password : req.body.password } , function(err , doc){
+		console.log(doc)
 		if(doc)
 		{
 			res.setHeader('Content-Type', 'application/json');

@@ -46,7 +46,11 @@ app.get('/getEventCreatedByUser/:_id', queries.getEventsById);
 app.get('/getAllSPById/:_id', queries.getAllServiceSupplierCreatedById);
 app.get('/getAllSPByType/:_id/type', queries.findServiceSupplierByType);
 app.get('/findServiceSupplierByType/:_id/:type', queries.findServiceSupplierByType)
-
+app.get('/getBulletin/:_id', queries.getBulletins);
+app.get('/getEventsByDistrict/:_id', queries.getEventsByDistrict)
+app.get('/getServiceSupplierByDistrict/:_id', queries.getServiceSupplierByDistrict)
+app.get('/getAllFamiliesByDistrict/:_id', queries.getAllFamiliesByDistrict)
+app.get('/getPassword/:_id', queries.getPassword)
 
 //======================For Files======================
 app.get('*', function(req,res){
@@ -70,7 +74,9 @@ app.post('/UpdateEventDetails/:userid/:eventid', update.UpdateEventDetails)
 app.post('/deleteFriend/:deleter/:deleted' , queries.deleteFriend);
 app.post('/findEvents/:_id', queries.getEvetsByParams);
 app.post('/UpdateSPPicture/:_userid/:_serviceid', update.UpdateSPPicture)
-app.delete('/deleteEvent/:_uid/:_eid',queries.deleteEvent)
+app.post('/createNewBulletin/:_id', queries.addBulletin);
+app.post('/updatePassword/:_id', queries.updatePassword)
+app.delete('/deleteEvent/:_uid/:_eid',queries.deleteEvent);
 
 //to do
 /*
