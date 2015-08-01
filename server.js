@@ -23,11 +23,12 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE, CONNECT');
     next();
 });
+app.use(bodyParser.urlencoded({extended  : true}))
 app.use(function (req, res, next) {
   res.header("X-powered-by", "RoiTal");
   next();
 });
-
+app.use(express.static(__dirname + '/public')); 
 app.use(multer({dest: './upload' , inMemory : true}));
 //===================================================================================================
 
