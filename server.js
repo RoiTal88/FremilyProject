@@ -72,7 +72,7 @@ app.post('/CreateNewEvent/:_id', create.CreateMethod);
 app.post('/CreateNewServiceSupplier/', queries.CreateNewServiceSupplier)
 app.post('/UpdateEventDetails/:userid/:eventid', update.UpdateEventDetails)
 app.post('/deleteFriend/:deleter/:deleted' , queries.deleteFriend);
-app.post('/findEvents/:_id', queries.getEvetsByParams);
+app.post('/fe/:_id', queries.getEvetsByParams);
 app.post('/UpdateSPPicture/:_userid/:_serviceid', update.UpdateSPPicture)
 app.post('/createNewBulletin/:_id', queries.addBulletin);
 app.post('/updatePassword/:_id', queries.updatePassword)

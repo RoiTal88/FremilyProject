@@ -33,6 +33,7 @@ CreateNewFemily = function(req, res)
 CreateNewEvent = function(req, res)
 {
 	Queries.CreateNewEvent(req, res);
+	return;
 }
 
 exports.CreateNewServiceSupplier = function(req, res)
@@ -49,6 +50,9 @@ CheckFemilyRequestValidity = function(req, res)
 		res.setHeader('Content-Type','application/json');
 		res.statusCode(406);
 		res.end(JSON.stringify({error : 2003 , msg : 'user must logout first'}));
+	}
+	else{
+		res.end();
 	}
 }
 

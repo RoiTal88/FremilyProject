@@ -110,6 +110,7 @@ exports.getAllFamiliesByDistrict = function(req, res){
 			res.setHeader('Content-Type', 'application/json');
 			res.send(err || data);
 			res.end();
+			return;
 		})
 	})
 }
@@ -198,7 +199,8 @@ exports.deleteEvent = function(req, res){
 			console.log(d, data)
 			res.statusCode =200;
 			res.setHeader("Content-Type", "application/json");
-			res.send(JSON.stringify({ok :1}));					
+			res.send(JSON.stringify({ok :1}));			
+			res.end();		
 		}
 		
 	})
@@ -206,35 +208,46 @@ exports.deleteEvent = function(req, res){
 
 
 exports.getEvetsByParams = function(req, res){
-	var type = req.body.type , dateArray = req.body.date, date= [];
+	console.log("get events by params")
+	var type = req.body.param , dateArray = req.body.date, date= [];
+	console.log(dateArray);
 	var dateFrom = dateArray[0];
 	var dateTo = dateArray[1];
 	
 
 	var d1 = dateFrom.split("-");
 	var d2 = dateTo.split("-");
+	console.log(d1, d2);
 	
 	var from = new Date(d1[2], d1[1]-1, d1[0]);  // -1 because months are from 0 to 11
 	var to   = new Date(d2[2], d2[1]-1, d2[0]);
+	console.log(from,to)
 	date.push(from);
 	date.push(to);
-		
 	familyModel.findOne({_id : req.params._id},{district:1, email:1}, function(err, data){
-		if(err || !type || !date){
+		console.log(data)
+		if(err){
+			console.log("^%$#@",err);;
 			res.statusCode =404;
 			res.end();
+			return;
 		}
-		console.log(date)
 		var query = eventModel.find() , dist = [];
 		dist.push(data.district);
 		query.where('EventType').in(type);
 		//query.where('Date').gte(date[0]).lte(date[1]);
 		query.where('district').in(dist);
-		/*query.where('')
-		query.where*/
+		console.log(dist, type)
 		query.exec(function(err, result){
-			//console.log("this is the event results", result)
-			var eventResult = []
+			console.log("this is the event results", result)
+			if (err){
+				console.log("not found event", err)
+				res.statusCode= 200;
+				console.log(err ? err : result)
+				res.end({err : err});
+				return;
+			}
+			var eventResult = [];
 			for(var i = 0 ; i< result.length; i++){
 				if(result[i].Privacy != 'CLOSED' || result[i].participants.indexOf(data.email) != -1){
 					console.log(Date.parse(result[i].date))
@@ -264,13 +277,15 @@ exports.deleteFriend = function(req, res){
 			console.log("error", error)
 			res.statusCode = 500;
 			res.end();
+			return;
 		}
 		else {
 			delete data.friendList[deleted];
 			data.save(function(err){
 				err ? console.log('deleted!') : console.log(err);
 				res.statusCode = err ? 500 : 200;
-				res();
+				res.end();
+				return;
 			});
 		}
 	});
@@ -284,11 +299,13 @@ exports.getAllServiceSupplierCreatedById = function(req, res){
 			console.log(err)
 			res.statusCode = 500;
 			res.end();
+			return;
 		}
 		else {
 			res.setHeader('Content-Type', 'application/json')		
 			res.statusCode =200;
 			res.end(data);
+			return;
 		}
 	})
 }
@@ -304,12 +321,14 @@ exports.findServiceSupplierByType = function(req, res){
 				console.log(err)
 				res.statusCode = 500;
 				res.end();
+				return;
 			}
 			else{
 				res.setHeader('Content-Type', 'application/json')		
 				res.statusCode =200;
 				res.send(data)
 				res.end();
+				return;
 			}
 		})
 	})
@@ -352,6 +371,7 @@ exports.CreateNewServiceSupplier = function(req, res){
 		res.setHeader('Content-Type', 'application/json');
 		res.send(JSON.stringify({id : newServiceSupplier._id}));
 		res.end();
+		return;
 	})
 }
 
@@ -463,6 +483,7 @@ exports.CreateNewEvent = function(req, res){
 		res.setHeader('Content-Type' , 'application/json');
 		res.send(JSON.stringify({_id : newEvent._id}));
 		res.end();
+		return;
 	});
 	
 
@@ -500,6 +521,7 @@ exports.SignUpNewFamily = function(req,res){
 /*	console.log("signing up new family");
 	console.log(req.body);*/
     //check password validity
+
     console.log(req.body);
     req.body.email = req.body.email.toLowerCase();
     if(mainFunctions.checkPasswordsValidity(req.body.password1 , req.body.password2) == false)
@@ -565,6 +587,7 @@ exports.SignUpNewFamily = function(req,res){
 				req.body.children[i].gender
 				);
 		}
+
 		newFamily.save();
 		//creating new log in the log in collection for future logins
 		//on the fly object
@@ -583,6 +606,8 @@ exports.SignUpNewFamily = function(req,res){
 		utilityFunction.addNewUserToDistrictMembers(newFamily._id, req.body.email ,req.body.district);
 		res.cookie('_id',newFamily._id.toString(),{maxAge : 1000*60*10});
 		res.send(JSON.stringify({ id : newFamily._id}));
+		res.end();
+		return;
 	});
 };
 
@@ -601,6 +626,7 @@ exports.userLogin = function(req , res){
 			res.setHeader('Content-Type', 'application/json');
 			res.send(JSON.stringify({id : null}));
 		}
+		res.end();
 	});
 };
 
@@ -620,6 +646,8 @@ exports.newUserLogin = function (req,res){
 			res.setHeader('Content-Type', 'application/json');
 			res.send(JSON.stringify({ id :newLogin._id}));
 		}
+		res.end();
+		return;
 	});
 };
 
@@ -628,6 +656,8 @@ exports.getAllUsers = function (req,res){
 		if(err) docs = err;
 		res.setHeader('Content-Type', 'application/json');
 		res.send(JSON.stringify(docs));
+		res.end();
+		return;
 	});
 };
 

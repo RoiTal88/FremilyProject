@@ -19,6 +19,7 @@ exports.UpdateMethod = function(req, res){
 			res.statusCode = 404;
 			setHeader('Content-Type', 'application/json');
 			res.send({err : 'bad UpdateType'});
+			res.end();
 			break;
 	}
 }
@@ -76,7 +77,6 @@ exports.UpdateSPPicture = function(req, res) {
 		}
 		res.end();
 	});
-	
 };
 
 
